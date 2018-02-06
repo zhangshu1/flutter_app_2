@@ -1,6 +1,6 @@
 # flutter_app_2
 
-A new Flutter application.
+A Flutter mobile manual for pre-mature babies
 
 ## Getting Started
 
