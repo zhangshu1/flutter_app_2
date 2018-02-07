@@ -117,6 +117,7 @@ class CurrentStatePage extends StatelessWidget{
   Widget build(BuildContext context){
     return new Scaffold(
       appBar: new AppBar(
+        backgroundColor: Colors.grey,
         title: new Text('Current Status', textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
         actions: <Widget>[
           new IconButton(
@@ -171,6 +172,7 @@ class RiskHistory extends StatelessWidget{
   Widget build(BuildContext context){
     return new Scaffold(
       appBar: new AppBar(
+        backgroundColor: Colors.grey,
         title: new Text("Risk History", textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
         actions: <Widget>[
           new IconButton(
@@ -189,6 +191,7 @@ class LabWork extends StatelessWidget{
   Widget build(BuildContext context){
     return new Scaffold(
       appBar: new AppBar(
+        backgroundColor: Colors.grey,
         title: new Text("Lab Work", textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
         actions: <Widget>[
           new IconButton(
@@ -207,6 +210,7 @@ class PSSATForm extends StatelessWidget{
   Widget build(BuildContext context){
     return new Scaffold(
       appBar: new AppBar(
+        backgroundColor: Colors.grey,
         title: new Text("PSSAT Form", textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
         actions: <Widget>[
           new IconButton(
