@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'risk_monitor.dart';
 import 'ActivityMonitor.dart';
+//import 'RiskHistory.dart';
 
 void main() {
   runApp(
@@ -84,6 +85,7 @@ class MenuPage extends StatelessWidget {
                         color: Colors.grey[200],
                         child: new Text("Risk History", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                         onPressed: (){Navigator.of(context).pushNamed("/RiskHistory");}
+//                        onPressed: riskHistoryMenu
                     ),
                   ),
                   new Container(
