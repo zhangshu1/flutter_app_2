@@ -44,6 +44,24 @@ class CustomizeCarePlan extends StatelessWidget{
               ],
             ),
           ),
+
+          new Container(
+            padding: new EdgeInsets.symmetric(horizontal: 15.0),
+            alignment: Alignment.centerRight,
+            child: new RaisedButton(
+              onPressed: (){showDialog(
+                  context: context,
+                  child: new AlertDialog(
+                    content: new Text('Are you sure you want to keep this care plan?'),
+                    actions: <Widget>[
+                      new RaisedButton(onPressed: null, child: new Text('Cancel'),),
+                      new RaisedButton(onPressed: null, child: new Text('Yes'),),
+                    ],
+                  ),
+              );},
+              child: new Text('Save'),
+            ),
+          ),
         ],
       ),
     );
