@@ -29,7 +29,6 @@ class MenuPage extends StatelessWidget {
     // Scaffold is a layout for the major Material Design widgets.
     return new Scaffold(
         appBar: new AppBar(
-          backgroundColor: Colors.grey,
           leading: new IconButton(
             icon: new Icon(Icons.menu),
             tooltip: 'Navigation menu',
@@ -55,7 +54,6 @@ class MenuPage extends StatelessWidget {
                       margin: new EdgeInsets.only(bottom: 1.0),
                       height: 50.0,
                       child: new RaisedButton(
-                          color: Colors.grey[200],
                           child: new Text("Current State", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                           onPressed: (){Navigator.of(context).pushNamed("/CurrentStatePage");}
                       )
@@ -64,7 +62,6 @@ class MenuPage extends StatelessWidget {
                     margin: new EdgeInsets.only(bottom: 1.0),
                     height: 50.0,
                     child: new RaisedButton(
-                      color: Colors.grey[200],
                       child: new Text("Risk Monitor", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                       onPressed: (){Navigator.of(context).pushNamed("/RiskMonitor");},
                     ),
@@ -73,7 +70,6 @@ class MenuPage extends StatelessWidget {
                     margin: new EdgeInsets.only(bottom: 1.0),
                     height: 50.0,
                     child: new RaisedButton(
-                        color: Colors.grey[200],
                         child: new Text("Activity Monitor", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                         onPressed: (){Navigator.of(context).pushNamed("/ActivityMonitor");}
                     ),
@@ -82,7 +78,6 @@ class MenuPage extends StatelessWidget {
                     margin: new EdgeInsets.only(bottom: 1.0),
                     height: 50.0,
                     child: new RaisedButton(
-                        color: Colors.grey[200],
                         child: new Text("Risk History", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                         onPressed: (){Navigator.of(context).pushNamed("/RiskHistory");}
 //                        onPressed: riskHistoryMenu
@@ -92,7 +87,6 @@ class MenuPage extends StatelessWidget {
                     margin: new EdgeInsets.only(bottom: 1.0),
                     height: 50.0,
                     child: new RaisedButton(
-                        color: Colors.grey[200],
                         child: new Text("Lab Work", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                         onPressed: (){Navigator.of(context).pushNamed("/LabWork");}
                     ),
@@ -101,7 +95,6 @@ class MenuPage extends StatelessWidget {
                     margin: new EdgeInsets.only(bottom: 1.0),
                     height: 50.0,
                     child: new RaisedButton(
-                        color: Colors.grey[200],
                         child: new Text("PSSAT Form", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                         onPressed: (){Navigator.of(context).pushNamed("/PSSATForm");}
                     ),
@@ -119,7 +112,6 @@ class CurrentStatePage extends StatelessWidget{
   Widget build(BuildContext context){
     return new Scaffold(
       appBar: new AppBar(
-        backgroundColor: Colors.grey,
         title: new Text('Current Status', textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
         actions: <Widget>[
           new IconButton(
@@ -174,7 +166,6 @@ class RiskHistory extends StatelessWidget{
   Widget build(BuildContext context){
     return new Scaffold(
       appBar: new AppBar(
-        backgroundColor: Colors.grey,
         title: new Text("Risk History", textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
         actions: <Widget>[
           new IconButton(
@@ -193,7 +184,6 @@ class LabWork extends StatelessWidget{
   Widget build(BuildContext context){
     return new Scaffold(
       appBar: new AppBar(
-        backgroundColor: Colors.grey,
         title: new Text("Lab Work", textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
         actions: <Widget>[
           new IconButton(
@@ -212,7 +202,6 @@ class PSSATForm extends StatelessWidget{
   Widget build(BuildContext context){
     return new Scaffold(
       appBar: new AppBar(
-        backgroundColor: Colors.grey,
         title: new Text("PSSAT Form", textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
         actions: <Widget>[
           new IconButton(

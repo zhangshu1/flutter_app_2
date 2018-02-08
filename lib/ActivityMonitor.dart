@@ -10,7 +10,6 @@ class ActivityMonitor extends StatelessWidget{
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        backgroundColor: Colors.grey,
         title: new Text('Activity Monitor'),
         actions: <Widget>[
           new Container(

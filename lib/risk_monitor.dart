@@ -15,7 +15,6 @@ class RiskMonitor extends StatelessWidget {
           'Risk Monitor',
           style: Theme.of(context).textTheme.display1.copyWith(color: Colors.black), textScaleFactor: 0.6
         ),
-        backgroundColor: Colors.grey,
       ),
 
       body: new Column(
@@ -101,12 +100,12 @@ class RiskMonitor extends StatelessWidget {
       ),
 
     bottomNavigationBar: new Container(
-          color: Colors.grey,
+          color: Colors.blue[300],
           height: 100.0,
           alignment: Alignment.center,
             child: new RaisedButton(
               // COLOR NOT SHOWING
-                highlightColor: Colors.blueGrey,
+                highlightColor: Colors.blue,
                 onPressed: null,
                 child: new Text(
                     'Care Plan',
