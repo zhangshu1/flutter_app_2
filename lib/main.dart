@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'risk_monitor.dart';
+import 'RiskMonitor.dart';
 import 'ActivityMonitor.dart';
-//import 'RiskHistory.dart';
+import 'RiskHistory.dart';
 
 void main() {
   runApp(
@@ -161,23 +161,23 @@ class CurrentStatePage extends StatelessWidget{
 //  }
 //}
 
-class RiskHistory extends StatelessWidget{
-  @override
-  Widget build(BuildContext context){
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("Risk History", textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
-        actions: <Widget>[
-          new IconButton(
-            icon: new Icon(Icons.search),
-            tooltip: 'Search',
-            onPressed: null,
-          ),
-        ],
-      ),
-    );
-  }
-}
+//class RiskHistory extends StatelessWidget{
+//  @override
+//  Widget build(BuildContext context){
+//    return new Scaffold(
+//      appBar: new AppBar(
+//        title: new Text("Risk History", textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
+//        actions: <Widget>[
+//          new IconButton(
+//            icon: new Icon(Icons.search),
+//            tooltip: 'Search',
+//            onPressed: null,
+//          ),
+//        ],
+//      ),
+//    );
+//  }
+//}
 
 class LabWork extends StatelessWidget{
   @override
