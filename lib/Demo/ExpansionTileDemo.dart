@@ -26,37 +26,50 @@ class Entry {
 
 // The entire multilevel list displayed by this app.
 final List<Entry> data = <Entry>[
-  new Entry('Chapter A',
+  new Entry('Current State'),
+  new Entry('Risk Monitor',
     <Entry>[
-      new Entry('Section A0',
-        <Entry>[
-          new Entry('Item A0.1'),
-          new Entry('Item A0.2'),
-          new Entry('Item A0.3'),
-        ],
-      ),
-      new Entry('Section A1'),
-      new Entry('Section A2'),
+      new Entry('Hypotension'),
+      new Entry('Hypothermia'),
+      new Entry('Pneumothorax')
     ],
   ),
-  new Entry('Chapter B',
+  new Entry('Activity Monitor'),
+  new Entry('Risk History',
     <Entry>[
-      new Entry('Section B0'),
-      new Entry('Section B1'),
+      new Entry('All'),
+      new Entry('Hypotension'),
+      new Entry('Hypothermia'),
+      new Entry('Pneumothorax')
     ],
   ),
-  new Entry('Chapter C',
+  new Entry('Lab Work',
     <Entry>[
-      new Entry('Section C0'),
-      new Entry('Section C1'),
-      new Entry('Section C2',
+      new Entry('View Recommended Test'),
+      new Entry('Order Additional Test'),
+      new Entry('Enter Patient Report'),
+      new Entry('View Patient Report'),
+      new Entry('View Recommended Medication')
+    ],
+  ),
+  new Entry("PSSAT Form"),
+  new Entry('S.T.A.B.L.E',
+    <Entry>[
+      new Entry('Sugar',
         <Entry>[
-          new Entry('Item C2.0'),
-          new Entry('Item C2.1'),
-          new Entry('Item C2.2'),
-          new Entry('Item C2.3'),
+          new Entry("Calculators"),
+          new Entry("Conventors"),
+          new Entry("Risk & Treatment"),
+          new Entry("Quick Slides"),
+          new Entry("Quick Cards"),
+          new Entry("Educational Material")
         ],
       ),
+      new Entry('Temperature'),
+      new Entry('Airway'),
+      new Entry('Blood Pressure'),
+      new Entry('Lab Work'),
+      new Entry('Emotional Support')
     ],
   ),
 ];
