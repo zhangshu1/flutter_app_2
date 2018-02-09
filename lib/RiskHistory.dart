@@ -48,58 +48,56 @@ class RiskHistory extends StatelessWidget{
                 )
               ),
               new Container(
-                  margin: new EdgeInsets.only(bottom: 1.0),
-                  height: 50.0,
-                  child: new RaisedButton(
-                    child: new Text("Hypoglycemia", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
+                margin: new EdgeInsets.only(bottom: 1.0),
+                height: 50.0,
+                child: new RaisedButton(
+                  child: new Text("Hypoglycemia", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
 //                    onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Hypoglycemia");}
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            new MaterialPageRoute(
-                              builder: (_) => new RiskHistory_Hypoglycemia(),
-                            )
-                        );
-                      }
-                  )
-              ),
-              new Container(
-                  margin: new EdgeInsets.only(bottom: 1.0),
-                  height: 50.0,
-                  child: new RaisedButton(
-                      child: new Text("Pneumothorax", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
-//                      onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Pneumothorax");}
-                      onPressed: () {
-                        Navigator.push(
+                    onPressed: () {
+                      Navigator.push(
                           context,
                           new MaterialPageRoute(
-                            builder: (_) => new RiskHistory_Pneumothorax(),
+                            builder: (_) => new RiskHistory_Hypoglycemia(),
                           )
-                        );
-                      }
-                  )
+                      );
+                    }
+                )
               ),
               new Container(
-                  margin: new EdgeInsets.only(bottom: 1.0),
-                  height: 50.0,
-                  child: new RaisedButton(
-                      child: new Text("Hypothermia", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
-//                      onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Hypothermia");}
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          new MaterialPageRoute(
-                            builder: (_) => new RiskHistory_Hypothermia(),
-                          )
-                        );
-                      }
-                  )
+                margin: new EdgeInsets.only(bottom: 1.0),
+                height: 50.0,
+                child: new RaisedButton(
+                  child: new Text("Pneumothorax", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
+//                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Pneumothorax");}
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                        builder: (_) => new RiskHistory_Pneumothorax(),
+                      )
+                    );
+                  }
+                )
               ),
-
+              new Container(
+                margin: new EdgeInsets.only(bottom: 1.0),
+                height: 50.0,
+                child: new RaisedButton(
+                  child: new Text("Hypothermia", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
+//                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Hypothermia");}
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                        builder: (_) => new RiskHistory_Hypothermia(),
+                      )
+                    );
+                  }
+                )
+              ),
             ],
           ),
         )
-
       ),
     );
   }
