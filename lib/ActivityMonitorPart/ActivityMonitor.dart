@@ -77,15 +77,17 @@ List<Choice> choices = <Choice>[
                 onPressed: null,
                 child: new Row(
                   children: <Widget>[
-                    new Container(
-                      height: 50.0,
-                      width: 200.0,
-                      padding: const EdgeInsets.all(8.0),
-                      child: new Text('12:45 a.m:   Administer Glucose Level',),
-                      alignment: Alignment.centerLeft,
+                    new Expanded(
+                        child: new Container(
+                            height: 50.0,
+                            padding: const EdgeInsets.all(8.0),
+                            alignment: Alignment.centerLeft,
+                            child: new Text('12:32 a.m:   IV Treatment Started',)
+                        )
                     ),
+
                     new Container(
-                      width: 100.0,
+                      width: 50.0,
                       alignment: Alignment.centerRight,
                       child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
                     )
@@ -104,15 +106,17 @@ List<Choice> choices = <Choice>[
                 onPressed: null,
                 child: new Row(
                   children: <Widget>[
-                    new Container(
-                      height: 50.0,
-                      width: 200.0,
-                      padding: const EdgeInsets.all(8.0),
-                      child: new Text('12:30 a.m   IV Treatment Started',),
-                      alignment: Alignment.centerLeft,
+                    new Expanded(
+                        child: new Container(
+                            height: 50.0,
+                            padding: const EdgeInsets.all(8.0),
+                            alignment: Alignment.centerLeft,
+                            child: new Text('12:20 a.m   Hypoglycemia confirmed',)
+                        )
                     ),
+
                     new Container(
-                      width: 100.0,
+                      width: 50.0,
                       alignment: Alignment.centerRight,
                       child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
                     )
@@ -122,19 +126,84 @@ List<Choice> choices = <Choice>[
           ),
 
           new Container(
+            decoration: const BoxDecoration(
+                border: const Border(
+                  bottom: const BorderSide(width: 1.0, color: Colors.grey),
+                )
+            ),
             child: new FlatButton(
                 onPressed: null,
                 child: new Row(
                   children: <Widget>[
-                    new Container(
-                      height: 50.0,
-                      width: 200.0,
-                      padding: const EdgeInsets.all(8.0),
-                      child: new Text('12:22 a.m   Waiting for Serum Glucose ',),
-                      alignment: Alignment.centerLeft,
+                    new Expanded(
+                        child: new Container(
+                            height: 50.0,
+                            padding: const EdgeInsets.all(8.0),
+                            alignment: Alignment.centerLeft,
+                            child: new Text('12:12 a.m   Symptoms visible',)
+                        )
                     ),
+
                     new Container(
-                      width: 100.0,
+                      width: 50.0,
+                      alignment: Alignment.centerRight,
+                      child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
+                    )
+                  ],
+                )
+            ),
+          ),
+
+          new Container(
+            decoration: const BoxDecoration(
+                border: const Border(
+                  bottom: const BorderSide(width: 1.0, color: Colors.grey),
+                )
+            ),
+            child: new FlatButton(
+                onPressed: null,
+                child: new Row(
+                  children: <Widget>[
+                    new Expanded(
+                        child: new Container(
+                            height: 50.0,
+                            padding: const EdgeInsets.all(8.0),
+                            alignment: Alignment.centerLeft,
+                            child: new Text('12:10 a.m   Bedside Evaluation',)
+                        )
+                    ),
+
+                    new Container(
+                      width: 50.0,
+                      alignment: Alignment.centerRight,
+                      child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
+                    )
+                  ],
+                )
+            ),
+          ),
+
+          new Container(
+            decoration: const BoxDecoration(
+                border: const Border(
+                  bottom: const BorderSide(width: 1.0, color: Colors.grey),
+                )
+            ),
+            child: new FlatButton(
+                onPressed: null,
+                child: new Row(
+                  children: <Widget>[
+                    new Expanded(
+                        child: new Container(
+                            height: 50.0,
+                            padding: const EdgeInsets.all(8.0),
+                            alignment: Alignment.centerLeft,
+                            child: new Text('12:01 a.m:  Potential Risk - Hypoglycemia',)
+                        )
+                    ),
+
+                    new Container(
+                      width: 50.0,
                       alignment: Alignment.centerRight,
                       child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
                     )
@@ -186,15 +255,17 @@ List<Choice> choices = <Choice>[
                 onPressed: null,
                 child: new Row(
                   children: <Widget>[
-                    new Container(
-                      height: 50.0,
-                      width: 200.0,
-                      padding: const EdgeInsets.all(8.0),
-                      child: new Text('12:45 a.m:   Administer Glucose Level',),
-                      alignment: Alignment.centerLeft,
+                    new Expanded(
+                        child: new Container(
+                            height: 50.0,
+                            padding: const EdgeInsets.all(8.0),
+                            alignment: Alignment.centerLeft,
+                            child: new Text('12:45 a.m:   Administer Glucose Level',)
+                        )
                     ),
+
                     new Container(
-                      width: 100.0,
+                      width: 50.0,
                       alignment: Alignment.centerRight,
                       child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
                     )
@@ -213,15 +284,17 @@ List<Choice> choices = <Choice>[
                 onPressed: null,
                 child: new Row(
                   children: <Widget>[
-                    new Container(
-                      height: 50.0,
-                      width: 200.0,
-                      padding: const EdgeInsets.all(8.0),
-                      child: new Text('12:30 a.m   IV Treatment Started',),
-                      alignment: Alignment.centerLeft,
+                    new Expanded(
+                        child: new Container(
+                            height: 50.0,
+                            padding: const EdgeInsets.all(8.0),
+                            alignment: Alignment.centerLeft,
+                            child: new Text('12:30 a.m   IV Treatment Started',)
+                        )
                     ),
+
                     new Container(
-                      width: 100.0,
+                      width: 50.0,
                       alignment: Alignment.centerRight,
                       child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
                     )
@@ -231,19 +304,26 @@ List<Choice> choices = <Choice>[
           ),
 
           new Container(
+            decoration: const BoxDecoration(
+                border: const Border(
+                  bottom: const BorderSide(width: 1.0, color: Colors.grey),
+                )
+            ),
             child: new FlatButton(
                 onPressed: null,
                 child: new Row(
                   children: <Widget>[
-                    new Container(
-                      height: 50.0,
-                      width: 200.0,
-                      padding: const EdgeInsets.all(8.0),
-                      child: new Text('12:22 a.m   Waiting for Serum Glucose ',),
-                      alignment: Alignment.centerLeft,
+                    new Expanded(
+                        child: new Container(
+                            height: 50.0,
+                            padding: const EdgeInsets.all(8.0),
+                            alignment: Alignment.centerLeft,
+                            child: new Text('12:22 a.m   Waiting for Serum Glucose',)
+                        )
                     ),
+
                     new Container(
-                      width: 100.0,
+                      width: 50.0,
                       alignment: Alignment.centerRight,
                       child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
                     )
@@ -295,15 +375,17 @@ List<Choice> choices = <Choice>[
                 onPressed: null,
                 child: new Row(
                   children: <Widget>[
-                    new Container(
-                      height: 50.0,
-                      width: 200.0,
-                      padding: const EdgeInsets.all(8.0),
-                      child: new Text('12:45 a.m:   Administer Glucose Level',),
-                      alignment: Alignment.centerLeft,
+                    new Expanded(
+                        child: new Container(
+                            height: 50.0,
+                            padding: const EdgeInsets.all(8.0),
+                            alignment: Alignment.centerLeft,
+                            child: new Text('01:05 a.m:  Evaluate Pneumothorax',)
+                        )
                     ),
+
                     new Container(
-                      width: 100.0,
+                      width: 50.0,
                       alignment: Alignment.centerRight,
                       child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
                     )
@@ -322,37 +404,17 @@ List<Choice> choices = <Choice>[
                 onPressed: null,
                 child: new Row(
                   children: <Widget>[
-                    new Container(
-                      height: 50.0,
-                      width: 200.0,
-                      padding: const EdgeInsets.all(8.0),
-                      child: new Text('12:30 a.m   IV Treatment Started',),
-                      alignment: Alignment.centerLeft,
+                    new Expanded(
+                      child: new Container(
+                        height: 50.0,
+                        padding: const EdgeInsets.all(8.0),
+                        alignment: Alignment.centerLeft,
+                        child: new Text('01:30 a.m   Evaluate Glucose Level',)
+                      )
                     ),
-                    new Container(
-                      width: 100.0,
-                      alignment: Alignment.centerRight,
-                      child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
-                    )
-                  ],
-                )
-            ),
-          ),
 
-          new Container(
-            child: new FlatButton(
-                onPressed: null,
-                child: new Row(
-                  children: <Widget>[
                     new Container(
-                      height: 50.0,
-                      width: 200.0,
-                      padding: const EdgeInsets.all(8.0),
-                      child: new Text('12:22 a.m   Waiting for Serum Glucose ',),
-                      alignment: Alignment.centerLeft,
-                    ),
-                    new Container(
-                      width: 100.0,
+                      width: 50.0,
                       alignment: Alignment.centerRight,
                       child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
                     )

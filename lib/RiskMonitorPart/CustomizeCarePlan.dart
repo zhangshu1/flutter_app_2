@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'CreateCarePlan.dart';
 
 void main() => runApp(new MaterialApp(
     title: 'Customize Care Plan',
     home: new CustomizeCarePlan(),
+    routes: <String, WidgetBuilder> {
+      '/CreateCarePlan': (BuildContext context) => new CreateCarePlan(),
+    },
 ));
 
 class CustomizeCarePlan extends StatelessWidget{
@@ -54,8 +58,8 @@ class CustomizeCarePlan extends StatelessWidget{
                   child: new AlertDialog(
                     content: new Text('Are you sure you want to keep this care plan?'),
                     actions: <Widget>[
-                      new RaisedButton(onPressed: null, child: new Text('Cancel'),),
-                      new RaisedButton(onPressed: null, child: new Text('Yes'),),
+                      new RaisedButton(onPressed: (){Navigator.pop(context);}, child: new Text('Cancel'),),
+                      new RaisedButton(onPressed: (){Navigator.of(context).pushNamed('/CreateCarePlan');}, child: new Text('Yes'),),
                     ],
                   ),
               );},
@@ -118,8 +122,6 @@ class CarePlanListState extends State<CarePlanList>{
     return new Container(
       height: 500.0,
       child: new Column(
-//        mainAxisSize: MainAxisSize.max,
-//        crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
           new Expanded(
               child: new ListView(

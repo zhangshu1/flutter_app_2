@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'CustomizeCarePlan.dart';
+import 'MyCarePlan.dart';
 
 void main() => runApp(new MaterialApp(
   title: 'Care Plan Page',
   home: new CarePlan(),
+  routes: <String, WidgetBuilder>{
+    '/CustomizeCarePlan': (BuildContext context) => new CustomizeCarePlan(),
+    '/MyCarePlan': (BuildContext context) => new MyCarePlan(),
+  },
 ));
 
 class CarePlan extends StatelessWidget{
@@ -10,9 +16,6 @@ class CarePlan extends StatelessWidget{
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-//        leading: new IconButton(
-//            icon: new Icon(Icons.arrow_drop_down_circle, size: 42.0, color: Colors.white,),
-//            onPressed: null),
         title: new Text(
             'Suggested Care Plan',
             style: Theme.of(context).textTheme.display1.copyWith(color: Colors.white), textScaleFactor: 0.6,
@@ -57,7 +60,7 @@ class CarePlan extends StatelessWidget{
                       new Column(
                         children: <Widget>[
                           new RaisedButton(
-                            onPressed: null,
+                            onPressed: (){Navigator.of(context).pushNamed('/CustomizeCarePlan');},
                             child: new Text('Customize My Plan', style: new TextStyle(color: Colors.black),),
                           ),
                         ],
@@ -65,7 +68,7 @@ class CarePlan extends StatelessWidget{
                       new Column(
                         children: <Widget>[
                           new RaisedButton(
-                            onPressed: null,
+                            onPressed: (){Navigator.of(context).pushNamed('/MyCarePlan');},
                             child: new Text('Proceed >>', style: new TextStyle(color: Colors.black),),
                           ),
                         ],
