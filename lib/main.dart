@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'RiskMonitor.dart';
-import 'ActivityMonitor.dart';
+import 'package:flutter_app_2/RiskMonitorPart/RiskMonitor.dart';
+import 'ActivityMonitorPart/ActivityMonitor.dart';
 //import 'RiskHistory.dart';
 
 void main() {
