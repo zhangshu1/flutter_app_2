@@ -16,7 +16,7 @@ void main() {
           routes: <String, WidgetBuilder>{
             //home page is automatically defiend as:
             //"/": (BuildContext context) => new MenuPage(),
-            "/CurrentState": (BuildContext context) => new CurrentStatePage(),
+            "/CurrentState": (BuildContext context) => new CurrentState(),
             "/RiskMonitor": (BuildContext context) => new RiskMonitor(),
             "/ActivityMonitor": (BuildContext context) => new ActivityMonitor(),
             "/RiskHistory": (BuildContext context) => new RiskHistory(),
@@ -187,7 +187,7 @@ class MenuPage extends StatelessWidget {
                       child: new RaisedButton(
 //                  child: new Icon(Icons.note),
                           child: new Text("Current State", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
-                          onPressed: (){Navigator.of(context).pushNamed("/CurrentStatePage");}
+                          onPressed: (){Navigator.of(context).pushNamed("/CurrentState");}
                       )
                   ),
                   new Container(
@@ -239,7 +239,7 @@ class MenuPage extends StatelessWidget {
   }
 }
 
-class CurrentStatePage extends StatelessWidget{
+class CurrentState extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return new Scaffold(
@@ -271,5 +271,3 @@ class PSSATForm extends StatelessWidget{
     );
   }
 }
-
-
