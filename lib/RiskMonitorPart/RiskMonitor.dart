@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_2/RiskMonitorPart/CarePlan.dart';
+import 'CarePlan.dart';
 
 //void main() => runApp(new MaterialApp(
 //  title: 'Risk Monitor Page',
@@ -231,7 +231,7 @@ class RiskMonitor extends StatelessWidget {
       ),
 
     bottomNavigationBar: new Container(
-          color: Colors.blue,
+          color: Colors.blue[300],
           height: 100.0,
           alignment: Alignment.center,
             child: new RaisedButton(
