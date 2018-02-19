@@ -1,45 +1,24 @@
 import 'package:flutter/material.dart';
 
-import 'CurrentStatePart/CurrentState.dart';
-import 'RiskMonitorPart/RiskMonitor.dart';
-import 'ActivityMonitorPart/ActivityMonitor.dart';
-import 'RiskHistoryPart/RiskHistory.dart';
-import 'RiskHistoryPart/RiskHistory_All.dart';
-import 'RiskHistoryPart/RiskHistory_Hypoglycemia.dart';
-import 'RiskHistoryPart/RiskHistory_Pneumothorax.dart';
-import 'RiskHistoryPart/RiskHistory_Hypothermia.dart';
-import 'LabWorkPart/LabWork.dart';
-//import 'PssatForm/PssatForm.dart';
+import 'ViewRecTests.dart';
+import 'OrderAdditionalTest.dart';
+import 'EnterPatientReports.dart';
+import 'ViewPatientReports.dart';
+import 'ViewRecMedication.dart';
 
-void main() {
-  runApp(
-    new MaterialApp(
-      title: 'Menu Page',
-      home: new MenuPage(),
-      routes: <String, WidgetBuilder>{
-        //home page is automatically defiend as:
-        //"/": (BuildContext context) => new MenuPage(),
-        "/CurrentState": (BuildContext context) => new CurrentState(),
-        "/RiskMonitor": (BuildContext context) => new RiskMonitor(),
-        "/ActivityMonitor": (BuildContext context) => new DefaultTabController(length: choices.length, child: new ActivityMonitor()),
-        "/RiskHistory": (BuildContext context) => new RiskHistory(),
-        "/LabWork": (BuildContext context) => new LabWork(),
-//        "/PSSATForm": (BuildContext context) => new PSSATForm(),
-        "/RiskHistory_All": (BuildContext context) => new RiskHistory_All(),
-        "/RiskHistory_Hypoglycemia": (BuildContext context) => new RiskHistory_Hypoglycemia(),
-        "/RiskHistory_Pneumothorax": (BuildContext context) => new RiskHistory_Pneumothorax(),
-        "/RiskHistory_Hypothermia": (BuildContext context) => new RiskHistory_Hypothermia()
-      }
-    )
-  );
-}
+//void main() => runApp(
+//  new MaterialApp(
+//    title: 'Risk History Page',
+//    home: new RiskHistory(),
+//    },
+//  )
+//);
 
-class MenuPage extends StatelessWidget {
+class LabWork extends StatelessWidget{
   @override
-  Widget build(BuildContext context) {
-    // Scaffold is a layout for the major Material Design widgets.
+  Widget build(BuildContext context){
     return new Scaffold(
-      drawer: new Drawer(
+      endDrawer: new Drawer(
         child: new ListView(
           children: <Widget>[
             //DrawerHeader for future use (dashboard, login page etc.)
@@ -51,27 +30,27 @@ class MenuPage extends StatelessWidget {
             //current state
             const ListTile(
               title: const Text('Current State'),
-//                onTap: () => Navigator.pushNamed(context, "/CurrentState"),
+//                onTap: ,
             ),
 
             //risk monitor
             new ExpansionTile(
-              title: const Text('Risk Monitor'),
-              backgroundColor: Theme.of(context).accentColor.withOpacity(0.025),
-              children: const <Widget>[
-                const ListTile(
-                  title: const Text('Hypotension'),
+                title: const Text('Risk Monitor'),
+                backgroundColor: Theme.of(context).accentColor.withOpacity(0.025),
+                children: const <Widget>[
+                  const ListTile(
+                    title: const Text('Hypotension'),
 //                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Hypothermia'),
+                  ),
+                  const ListTile(
+                    title: const Text('Hypothermia'),
 //                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Pneumothorax'),
+                  ),
+                  const ListTile(
+                    title: const Text('Pneumothorax'),
 //                      onTap: ,
-                )
-              ]
+                  )
+                ]
             ),
 
             //activity monitor
@@ -170,74 +149,102 @@ class MenuPage extends StatelessWidget {
         ),
       ),
       appBar: new AppBar(
-//        leading: new IconButton(
-//          icon: new Icon(Icons.menu),
-//          tooltip: 'Navigation menu',
-//          onPressed: null
-//        ),
-        title: new Text('Options', textAlign: TextAlign.left, style: new TextStyle(color: Colors.black)),
+        title: new Text("Lab Work", style: new TextStyle(color: Colors.black), textAlign: TextAlign.left),
       ),
 
-      // body is the majority of the screen.
       body: new Container(
         child: new Center(
           child: new Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               new Container(
-                  margin: new EdgeInsets.only(bottom: 1.0),
-                  height: 50.0,
-                  child: new RaisedButton(
-//                  child: new Icon(Icons.note),
-                      child: new Text("Current State", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
-                      onPressed: (){Navigator.of(context).pushNamed("/CurrentState");}
-                  )
+                margin: new EdgeInsets.only(bottom: 1.0),
+                height: 50.0,
+                child: new RaisedButton(
+                  child: new Text("View Recommended Test", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
+//                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/All");}
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                        builder: (_) => new ViewRecTests(),
+                      )
+                    );
+                  }
+                )
               ),
+
               new Container(
                 margin: new EdgeInsets.only(bottom: 1.0),
                 height: 50.0,
                 child: new RaisedButton(
-                  child: new Text("Risk Monitor", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
-                  onPressed: (){Navigator.of(context).pushNamed("/RiskMonitor");},
-                ),
+                  child: new Text("Order Additional Tests", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
+//                    onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Hypoglycemia");}
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                        builder: (_) => new OrderAdditionalTests(),
+                      )
+                    );
+                  }
+                )
               ),
+
               new Container(
                 margin: new EdgeInsets.only(bottom: 1.0),
                 height: 50.0,
                 child: new RaisedButton(
-                    child: new Text("Activity Monitor", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
-                    onPressed: (){Navigator.of(context).pushNamed("/ActivityMonitor");}
-                ),
+                  child: new Text("Enter Patient Reports", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
+//                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Pneumothorax");}
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                        builder: (_) => new EnterPatientReports(),
+                      )
+                    );
+                  }
+                )
               ),
+
               new Container(
                 margin: new EdgeInsets.only(bottom: 1.0),
                 height: 50.0,
                 child: new RaisedButton(
-                    child: new Text("Risk History", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
-                    onPressed: (){Navigator.of(context).pushNamed("/RiskHistory");}
-//                  onPressed: riskHistoryMenu
-                ),
+                  child: new Text("View Patient Reports", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
+//                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Hypothermia");}
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                        builder: (_) => new ViewPatientReports(),
+                      )
+                    );
+                  }
+                )
               ),
+
               new Container(
                 margin: new EdgeInsets.only(bottom: 1.0),
                 height: 50.0,
                 child: new RaisedButton(
-                    child: new Text("Lab Work", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
-                    onPressed: (){Navigator.of(context).pushNamed("/LabWork");}
-                ),
+                  child: new Text("View Recommended Medications", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
+//                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Hypothermia");}
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                        builder: (_) => new ViewRecMedications(),
+                      )
+                    );
+                  }
+                )
               ),
-              new Container(
-                margin: new EdgeInsets.only(bottom: 1.0),
-                height: 50.0,
-                child: new RaisedButton(
-                    child: new Text("PSSAT Form", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
-                    onPressed: (){Navigator.of(context).pushNamed("/PSSATForm");}
-                ),
-              )
             ],
           ),
         )
-      )
+      ),
     );
   }
 }
