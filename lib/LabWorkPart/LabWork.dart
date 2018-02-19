@@ -1,20 +1,31 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(new MaterialApp(
-    title: 'Customize Care Plan',
-    home: new CustomizeCarePlan(),
-));
+import '../Material/MenuDrawer.dart';
 
-class CustomizeCarePlan extends StatelessWidget{
+import 'ViewRecTest.dart';
+import 'OrderAdditionalTest.dart';
+import 'EnterPatientReports.dart';
+import 'ViewPatientReports.dart';
+import 'ViewRecMedication.dart';
+
+//void main() => runApp(
+//  new MaterialApp(
+//    title: 'Risk History Page',
+//    home: new RiskHistory(),
+//    },
+//  )
+//);
+
+class LabWork extends StatelessWidget{
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return new Scaffold(
       endDrawer: new Drawer(
         child: new ListView(
           children: <Widget>[
             //DrawerHeader for future use (dashboard, login page etc.)
             new DrawerHeader(
-              child: new Text('Menu Options'),
+              child: new Text('Log In'),
               padding: new EdgeInsets.only(left: 10.0, right: 50.0, top: 3.0, bottom: 0.0),
             ),
 
@@ -140,126 +151,101 @@ class CustomizeCarePlan extends StatelessWidget{
         ),
       ),
       appBar: new AppBar(
-        title: new Text('Customize Care Plan'),
+        title: new Text("Lab Work", style: new TextStyle(color: Colors.black), textAlign: TextAlign.left),
       ),
 
-      body: new Column(
-        children: <Widget>[
-          new Container(
-            padding: new EdgeInsets.all(15.0),
-            child: new Text('Please select the care actions in sequence to create your own customized care plan.'),
+      body: new Container(
+        child: new Center(
+          child: new Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              new Container(
+                margin: new EdgeInsets.only(bottom: 1.0),
+                height: 50.0,
+                child: new RaisedButton(
+                  child: new Text("View Recommended Test", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
+//                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/All");}
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                        builder: (_) => new ViewRecTest(),
+                      )
+                    );
+                  }
+                )
+              ),
+
+              new Container(
+                margin: new EdgeInsets.only(bottom: 1.0),
+                height: 50.0,
+                child: new RaisedButton(
+                  child: new Text("Order Additional Tests", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
+//                    onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Hypoglycemia");}
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                        builder: (_) => new OrderAdditionalTests(),
+                      )
+                    );
+                  }
+                )
+              ),
+
+              new Container(
+                margin: new EdgeInsets.only(bottom: 1.0),
+                height: 50.0,
+                child: new RaisedButton(
+                  child: new Text("Enter Patient Reports", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
+//                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Pneumothorax");}
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                        builder: (_) => new EnterPatientReports(),
+                      )
+                    );
+                  }
+                )
+              ),
+
+              new Container(
+                margin: new EdgeInsets.only(bottom: 1.0),
+                height: 50.0,
+                child: new RaisedButton(
+                  child: new Text("View Patient Reports", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
+//                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Hypothermia");}
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                        builder: (_) => new ViewPatientReports(),
+                      )
+                    );
+                  }
+                )
+              ),
+
+              new Container(
+                margin: new EdgeInsets.only(bottom: 1.0),
+                height: 50.0,
+                child: new RaisedButton(
+                  child: new Text("View Recommended Medications", style: new TextStyle(color: Colors.black, fontSize: 20.0)),
+//                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Hypothermia");}
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                        builder: (_) => new ViewRecMedications(),
+                      )
+                    );
+                  }
+                )
+              ),
+            ],
           ),
-
-          new Container(
-            padding: new EdgeInsets.only(left: 15.0),
-            alignment: Alignment.centerLeft,
-            child: new Text(
-                'Suggested Care Plan',
-                style: new TextStyle(color: Colors.green, fontSize: 20.0),),
-          ),
-
-          new Container(
-            child: new CarePlanList(
-              carePlan: [
-                new CarePlan('Establish IV access', false),
-                new CarePlan('infuse D10W at 80 mL/kg/day ', false),
-                new CarePlan('Calculate rate', false),
-                new CarePlan('Screen the blood sugar', false),
-                new CarePlan('Treat hypoglycemia', false),
-                new CarePlan('Calculate D10W bolus (2 mL/kg)', false),
-                new CarePlan('Treat hypotension', false),
-                new CarePlan('Calculate saline bolus (10 mL/kg)', false),
-                new CarePlan('Treat anemia', false),
-                new CarePlan('Calculate packed red blood cell transfusion volume (10 mL/kg)', false),
-              ],
-            ),
-          ),
-
-          new Container(
-            padding: new EdgeInsets.symmetric(horizontal: 15.0),
-            alignment: Alignment.centerRight,
-            child: new RaisedButton(
-              onPressed: (){showDialog(
-                  context: context,
-                  child: new AlertDialog(
-                    content: new Text('Are you sure you want to keep this care plan?'),
-                    actions: <Widget>[
-                      new RaisedButton(onPressed: null, child: new Text('Cancel'),),
-                      new RaisedButton(onPressed: null, child: new Text('Yes'),),
-                    ],
-                  ),
-              );},
-              child: new Text('Save'),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-// Implement ListView
-class CarePlan{
-  String content;
-  bool isCheck;
-
-  CarePlan(this.content, this.isCheck);
-}
-
-class CarePlanItem extends StatefulWidget{
-  final CarePlan carePlan;
-  CarePlanItem(CarePlan carePlan):
-      carePlan = carePlan,
-      super(key: new ObjectKey(carePlan));
-  @override
-  CarePlanItemState createState() => new CarePlanItemState(carePlan);
-}
-
-class CarePlanItemState extends State<CarePlanItem>{
-  final CarePlan carePlan;
-  CarePlanItemState(this.carePlan);
-
-  @override
-  Widget build(BuildContext context){
-    return new ListTile(
-      title: new Row(
-        children: <Widget>[
-          new Checkbox(value: carePlan.isCheck, onChanged: (bool value){
-            setState((){carePlan.isCheck = value;});
-          }),
-          new Expanded(child: new Text(carePlan.content))
-        ],
-      ),
-    );
-  }
-}
-
-class CarePlanList extends StatefulWidget{
-  CarePlanList({Key key, this.carePlan}): super(key: key);
-  List<CarePlan> carePlan;
-
-  @override
-  CarePlanListState createState() => new CarePlanListState();
-}
-
-class CarePlanListState extends State<CarePlanList>{
-  @override
-  Widget build(BuildContext context){
-    return new Container(
-      height: 500.0,
-      child: new Column(
-//        mainAxisSize: MainAxisSize.max,
-//        crossAxisAlignment: CrossAxisAlignment.end,
-        children: <Widget>[
-          new Expanded(
-              child: new ListView(
-                padding: new EdgeInsets.symmetric(vertical: 8.0),
-                children: widget.carePlan.map((CarePlan carePlan){
-                      return new CarePlanItem(carePlan);
-                    }).toList(),
-              )
-          )
-        ],
+        )
       ),
     );
   }
