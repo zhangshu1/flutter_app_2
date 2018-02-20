@@ -1,138 +1,13 @@
 import 'package:flutter/material.dart';
 
+import '../Material/MenuDrawer.dart';
+
 class RiskHistory_All extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       endDrawer: new Drawer(
-        child: new ListView(
-          children: <Widget>[
-            //DrawerHeader for future use (dashboard, login page etc.)
-            new DrawerHeader(
-              child: new Text('Log In'),
-              padding: new EdgeInsets.only(left: 10.0, right: 50.0, top: 3.0, bottom: 0.0),
-            ),
-
-            //current state
-            const ListTile(
-              title: const Text('Current State'),
-//                onTap: ,
-            ),
-
-            //risk monitor
-            new ExpansionTile(
-                title: const Text('Risk Monitor'),
-                backgroundColor: Theme.of(context).accentColor.withOpacity(0.025),
-                children: const <Widget>[
-                  const ListTile(
-                    title: const Text('Hypotension'),
-//                      onTap: ,
-                  ),
-                  const ListTile(
-                    title: const Text('Hypothermia'),
-//                      onTap: ,
-                  ),
-                  const ListTile(
-                    title: const Text('Pneumothorax'),
-//                      onTap: ,
-                  )
-                ]
-            ),
-
-            //activity monitor
-            const ListTile(
-              title: const Text('Activity Monitor'),
-//                onTap: ,
-            ),
-
-            //risk history
-            new ExpansionTile(
-              title: const Text('Risk Hisotry'),
-              backgroundColor: Theme.of(context).accentColor.withOpacity(0.025),
-              children: <Widget>[
-                const ListTile(
-                  title: const Text('All'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Hypoglycemia'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Pneumothorax'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Hypothermia'),
-//                      onTap: ,
-                )
-              ],
-            ),
-
-            //lab work
-            new ExpansionTile(
-              title: new Text('Lab Work'),
-              backgroundColor: Theme.of(context).accentColor.withOpacity(0.025),
-              children: <Widget>[
-                const ListTile(
-                  title: const Text('View Recommended Test'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Order Additional Test'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Enter Patient Report'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('View Patient Report'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Enter Recommended Medication'),
-//                      onTap: ,
-                )
-              ],
-            ),
-
-            //PSSAT form
-            const ListTile(title: const Text('PSSAT Form')),
-
-            //STABLE
-            new ExpansionTile(
-              title: new Text('S.T.A.B.L.E'),
-              backgroundColor: Theme.of(context).accentColor.withOpacity(0.025),
-              children: <Widget>[
-                const ListTile(
-                  title: const Text('Sugar'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Temperature'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Airway'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Blood Pressure'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Lab Work'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Emotional Support'),
-//                      onTap: ,
-                )
-              ],
-            )
-          ],
-        ),
+        child: new MenuDrawer(),
       ),
       appBar: new AppBar(
 //        leading: new IconButton(
@@ -142,6 +17,8 @@ class RiskHistory_All extends StatelessWidget {
           'All Risk Hisotry',
           style: Theme.of(context).textTheme.display1.copyWith(color: Colors.white), textScaleFactor: 0.6,
         ),
+
+        //TODO: show current patient info on/under AppBar
       ),
 
       body: new Column(
@@ -150,7 +27,59 @@ class RiskHistory_All extends StatelessWidget {
             alignment: Alignment.center,
             child: new Column(
               children: <Widget>[
-                new Text("To be continued")
+                new Table(  //TODO: horizontal view
+                  children: <TableRow>[
+                    new TableRow(
+                      children: <Widget>[
+                        new TableCell(child: new Text('Time')),
+                        new TableCell(child: new Text('Hypoglycemia (Blood Glucose)')),
+                        new TableCell(child: new Text('Pneumothorax')),
+                        new TableCell(child: new Text('Hypothermia'))
+                      ]
+                    ),
+                    new TableRow(
+                      children: <Widget>[
+                        new TableCell(child: new Text('09:00')),
+                        new TableCell(child: new Text('Normal - 60')),
+                        new TableCell(child: new Text('Potential Risk')),
+                        new TableCell(child: new Text('Potential Risk'))
+                      ]
+                    ),
+                    new TableRow(
+                      children: <Widget>[
+                        new TableCell(child: new Text('06:00')),
+                        new TableCell(child: new Text('Under observation - 43')),
+                        new TableCell(child: new Text('Potential Risk')),
+                        new TableCell(child: new Text('Potential Risk'))
+                      ]
+                    ),
+                    new TableRow(
+                      children: <Widget>[
+                        new TableCell(child: new Text('04:00')),
+                        new TableCell(child: new Text('Actual Risk - 24')),
+                        new TableCell(child: new Text('Potential Risk')),
+                        new TableCell(child: new Text('Potential Risk'))
+                      ]
+                    ),
+                    new TableRow(
+                      children: <Widget>[
+                        new TableCell(child: new Text('03:00')),
+                        new TableCell(child: new Text('Actual Risk - 22.50')),
+                        new TableCell(child: new Text('Potential Risk')),
+                        new TableCell(child: new Text('Potential Risk'))
+                      ]
+                    ),
+                    new TableRow(
+                      children: <Widget>[
+                        new TableCell(child: new Text('01:00')),
+                        new TableCell(child: new Text('Potential Risk')),
+                        new TableCell(child: new Text('Potential Risk')),
+                        new TableCell(child: new Text('Potential Risk'))
+                      ]
+                    )
+                  ],
+
+                ),
               ],
             )
           )
@@ -159,3 +88,8 @@ class RiskHistory_All extends StatelessWidget {
     );
   }
 }
+
+void main() => runApp(new MaterialApp(
+  title: 'All Risk History',
+  home: new RiskHistory_All(),
+));

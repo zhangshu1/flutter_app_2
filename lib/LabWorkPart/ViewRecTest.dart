@@ -4,11 +4,11 @@ import '../Material/MenuDrawer.dart';
 import '../Material/MyCheckbox.dart';
 
 //void main() => runApp(new MaterialApp(
-//  title: 'Order Additional Tests',
-//  home: new OrderAdditionalTests(),
+//  title: 'View Recommended Test',
+//    home: new ViewRecTest(),
 //));
 
-class OrderAdditionalTests extends StatelessWidget {
+class ViewRecTest extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -16,9 +16,16 @@ class OrderAdditionalTests extends StatelessWidget {
         child: new MenuDrawer(),
       ),
       appBar: new AppBar(
+//        leading: new IconButton(
+//          icon: new Icon(Icons.arrow_drop_down_circle, size: 42.0, color: Colors.white,),
+//          onPressed: null),
         title: new Text(
-          'Order Additional Tests',
-          style: Theme.of(context).textTheme.display1.copyWith(color: Colors.white), textScaleFactor: 0.6,
+          'View Recommended Test',
+          style: Theme
+            .of(context)
+            .textTheme
+            .display1
+            .copyWith(color: Colors.white), textScaleFactor: 0.6,
         ),
       ),
 
@@ -30,12 +37,32 @@ class OrderAdditionalTests extends StatelessWidget {
               child: new MyCheckboxList(
                 myCheckbox: [
                   new MyCheckbox(false, 'Daily repeated CBC with differential'),  //TODO: add icon to explain terms
-                  new MyCheckbox(false, 'CRP (C-Reactive Protein)'),
-                  new MyCheckbox(false, 'Blood gas'),
-                  new MyCheckbox(false, 'Electrolytes'),
-                  new MyCheckbox(false, 'Clotting studies'),
+                  new MyCheckbox(false, 'CRP (C-Reactive Protein)')
                 ],
-              )
+              ),
+            ),
+
+            new Container(
+              child: new Column(
+                children: <Widget>[
+                  new Container(
+                    child: new Text('Risk-specific Medical Tests'),
+                    alignment: Alignment.center
+                  ),
+                  new Container(
+                    child: new Text('Owing to, abnormal reflex, the following tests are recommended', style: new TextStyle(color: Colors.orange),),
+                  )
+                ],
+              ),
+            ),
+
+            new Container(
+              child: new MyCheckboxList(
+                myCheckbox: [
+                  new MyCheckbox(false, 'Electrolytes'),
+                  new MyCheckbox(false, 'Clotting studies')
+                ],
+              ),
             ),
 
             new RaisedButton(   //TODO: check if any box is checked
@@ -70,7 +97,7 @@ class OrderAdditionalTests extends StatelessWidget {
                   )
                 );
               }
-            )
+            ),
 
           ],
         )
