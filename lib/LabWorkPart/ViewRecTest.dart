@@ -33,7 +33,7 @@ class ViewRecTest extends StatelessWidget {
         alignment: Alignment.center,
         child: new Column(
           children: <Widget>[
-            new Container(
+            new Container(    //TODO: adjust container size
               child: new MyCheckboxList(
                 myCheckbox: [
                   new MyCheckbox(false, 'Daily repeated CBC with differential'),  //TODO: add icon to explain terms
@@ -46,11 +46,11 @@ class ViewRecTest extends StatelessWidget {
               child: new Column(
                 children: <Widget>[
                   new Container(
-                    child: new Text('Risk-specific Medical Tests'),
+                    child: new Text('Risk-specific Medical Tests', style: new TextStyle(fontSize: 16.0),),
                     alignment: Alignment.center
                   ),
                   new Container(
-                    child: new Text('Owing to, abnormal reflex, the following tests are recommended', style: new TextStyle(color: Colors.orange),),
+                    child: new Text('Owing to, abnormal reflex, the following tests are recommended', style: new TextStyle(color: Colors.orange), textAlign: TextAlign.center,),
                   )
                 ],
               ),
