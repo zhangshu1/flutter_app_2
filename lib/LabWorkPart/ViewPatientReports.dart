@@ -1,138 +1,20 @@
 import 'package:flutter/material.dart';
 
+import '../Material/MenuDrawer.dart';
+import 'CBCReport.dart';
+
+//void main() => runApp(new MaterialApp(
+//  title: 'View Patient Reports',
+//    home: new ViewPatientReports(),
+//));
+
 class ViewPatientReports extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+//    Decoration rowDeco = new Decoration();
     return new Scaffold(
       endDrawer: new Drawer(
-        child: new ListView(
-          children: <Widget>[
-            //DrawerHeader for future use (dashboard, login page etc.)
-            new DrawerHeader(
-              child: new Text('Log In'),
-              padding: new EdgeInsets.only(left: 10.0, right: 50.0, top: 3.0, bottom: 0.0),
-            ),
-
-            //current state
-            const ListTile(
-              title: const Text('Current State'),
-//                onTap: ,
-            ),
-
-            //risk monitor
-            new ExpansionTile(
-                title: const Text('Risk Monitor'),
-                backgroundColor: Theme.of(context).accentColor.withOpacity(0.025),
-                children: const <Widget>[
-                  const ListTile(
-                    title: const Text('Hypotension'),
-//                      onTap: ,
-                  ),
-                  const ListTile(
-                    title: const Text('Hypothermia'),
-//                      onTap: ,
-                  ),
-                  const ListTile(
-                    title: const Text('Pneumothorax'),
-//                      onTap: ,
-                  )
-                ]
-            ),
-
-            //activity monitor
-            const ListTile(
-              title: const Text('Activity Monitor'),
-//                onTap: ,
-            ),
-
-            //risk history
-            new ExpansionTile(
-              title: const Text('Risk Hisotry'),
-              backgroundColor: Theme.of(context).accentColor.withOpacity(0.025),
-              children: <Widget>[
-                const ListTile(
-                  title: const Text('All'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Hypoglycemia'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Pneumothorax'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Hypothermia'),
-//                      onTap: ,
-                )
-              ],
-            ),
-
-            //lab work
-            new ExpansionTile(
-              title: new Text('Lab Work'),
-              backgroundColor: Theme.of(context).accentColor.withOpacity(0.025),
-              children: <Widget>[
-                const ListTile(
-                  title: const Text('View Recommended Test'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Order Additional Test'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Enter Patient Report'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('View Patient Report'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Enter Recommended Medication'),
-//                      onTap: ,
-                )
-              ],
-            ),
-
-            //PSSAT form
-            const ListTile(title: const Text('PSSAT Form')),
-
-            //STABLE
-            new ExpansionTile(
-              title: new Text('S.T.A.B.L.E'),
-              backgroundColor: Theme.of(context).accentColor.withOpacity(0.025),
-              children: <Widget>[
-                const ListTile(
-                  title: const Text('Sugar'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Temperature'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Airway'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Blood Pressure'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Lab Work'),
-//                      onTap: ,
-                ),
-                const ListTile(
-                  title: const Text('Emotional Support'),
-//                      onTap: ,
-                )
-              ],
-            )
-          ],
-        ),
+        child: new MenuDrawer(),
       ),
       appBar: new AppBar(
 //        leading: new IconButton(
@@ -140,21 +22,86 @@ class ViewPatientReports extends StatelessWidget {
 //          onPressed: null),
         title: new Text(
           'View Patient Reports',
-          style: Theme.of(context).textTheme.display1.copyWith(color: Colors.white), textScaleFactor: 0.6,
+          style: Theme
+              .of(context)
+              .textTheme
+              .display1
+              .copyWith(color: Colors.white), textScaleFactor: 0.6,
         ),
       ),
 
-      body: new Column(
-        children: <Widget>[
-          new Container(
-              alignment: Alignment.center,
-              child: new Column(
-                children: <Widget>[
-                  new Text("To be continued")
-                ],
+      body: new Container(
+        padding: new EdgeInsets.only(top: 20.0, left: 2.0),
+        child: new Table( //TODO: horizontal view
+            columnWidths: const <int, TableColumnWidth>{
+              0: const FixedColumnWidth(190.0),
+              1: const FixedColumnWidth(100.0),
+              2: const FixedColumnWidth(70.0),
+            },
+            border: new TableBorder(
+                top: new BorderSide(color: const Color(0x42000000), width: 1.0),
+                bottom: new BorderSide(
+                    color: const Color(0x42000000), width: 1.0),
+                left: new BorderSide(
+                    color: const Color(0x42000000), width: 1.0),
+                right: new BorderSide(
+                    color: const Color(0x42000000), width: 1.0),
+                verticalInside: new BorderSide(
+                    width: 1.0, color: const Color(0x42000000)),
+                //Colors.black45
+                horizontalInside: new BorderSide(
+                    width: 1.0, color: const Color(0x61000000))
+            ),
+            defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+
+            children: <TableRow>[
+              new TableRow(
+                  children: <Widget>[
+                    new TableCell(child: new Text(
+                        '  Ordered Tests', style: new TextStyle(height: 1.8))),
+                    new TableCell(child: new Text('Date', textAlign: TextAlign.center, style: new TextStyle(height: 1.8))),
+                    new TableCell(child: new Text('Time', textAlign: TextAlign.center, style: new TextStyle(height: 1.8)))
+                  ],
+                  decoration: new BoxDecoration(color: const Color(0xFFE0E0E0))
+              ),
+              new TableRow(
+                  children: <Widget>[
+                    new TableCell(child: new FlatButton(
+                      onPressed: () {Navigator.push(context, new MaterialPageRoute(builder: (_) => new CBCReport(),));},
+                      child: new Text('  CBC with Differential', style: new TextStyle(height: 1.5)))),
+                    new TableCell(child: new Text('02/21/2018', textAlign: TextAlign.center, style: new TextStyle(height: 1.5))),
+                    new TableCell(child: new Text('13:33', textAlign: TextAlign.center, style: new TextStyle(height: 1.5)))
+                  ]
+              ),
+              new TableRow(
+                  children: <Widget>[
+                    new TableCell(child: new FlatButton(onPressed: null,
+                        child: new Text('  CRP (C-Reactive Protein)', style: new TextStyle(height: 1.5)))),
+                    new TableCell(child: new Text('02/21/2018', textAlign: TextAlign.center, style: new TextStyle(height: 1.5))),
+                    new TableCell(child: new Text('13:33', textAlign: TextAlign.center, style: new TextStyle(height: 1.5)))
+                  ]
+              ),
+              new TableRow(
+                  children: <Widget>[
+                    new TableCell(child: new FlatButton(onPressed: null,
+                        child: new Text('  Clotting Studies',
+                            style: new TextStyle(height: 1.5)))),
+                    new TableCell(child: new Text('02/21/2018', textAlign: TextAlign.center, style: new TextStyle(height: 1.5))),
+                    new TableCell(child: new Text('13:33', textAlign: TextAlign.center, style: new TextStyle(height: 1.5)))
+                  ]
+              ),
+              new TableRow(
+                  children: <Widget>[
+                    new TableCell(child: new FlatButton(onPressed: null,
+                        child: new Text('  Electrolytes',
+                            style: new TextStyle(height: 1.5)))),
+                    new TableCell(child: new Text('02/21/2018', textAlign: TextAlign.center, style: new TextStyle(height: 1.5))),
+                    new TableCell(child: new Text('13:33', textAlign: TextAlign.center, style: new TextStyle(height: 1.5)))
+                  ]
               )
-          )
-        ],
+            ]
+
+        ),
       ),
     );
   }
