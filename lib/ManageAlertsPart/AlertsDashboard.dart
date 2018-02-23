@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'AddAlert.dart';
 import 'SeeDetails.dart';
 
-void main() => runApp(new MaterialApp(
-  title: 'Alerts Dashboard',
-  home: new AlertsDashboard(),
-  routes: <String, WidgetBuilder> {
-    '/AddAlert': (BuildContext context) => new AddAlert(),
-    '/SeeDetails': (BuildContext context) => new SeeDetails(),
-  },
-));
+void main() =>
+    runApp(new MaterialApp(
+      title: 'Alerts Dashboard',
+      home: new AlertsDashboard(),
+      routes: <String, WidgetBuilder>{
+        '/AddAlert': (BuildContext context) => new AddAlert(),
+        '/SeeDetails': (BuildContext context) => new SeeDetails(),
+      },
+    ));
 
 class AlertsDashboard extends StatelessWidget {
   @override
@@ -20,7 +21,9 @@ class AlertsDashboard extends StatelessWidget {
       ),
 
       floatingActionButton: new FloatingActionButton(
-        onPressed: (){Navigator.of(context).pushNamed('/AddAlert');},
+        onPressed: () {
+          Navigator.of(context).pushNamed('/AddAlert');
+        },
         tooltip: 'Add', // used by assistive technologies
         child: new Icon(Icons.add),
       ),
@@ -36,7 +39,9 @@ class AlertsDashboard extends StatelessWidget {
                   subtitle: const Text('Blood Glucose Screening\n'
                       'June 23, 2011 at 11:37 p.m'),
                   isThreeLine: true,
-                  onTap: (){Navigator.of(context).pushNamed('/SeeDetails');},
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/SeeDetails');
+                  },
                 ),
               ],
             ),
@@ -51,7 +56,9 @@ class AlertsDashboard extends StatelessWidget {
                   subtitle: const Text('Monitor Blood Pressure\n'
                       'June 23, 2011 at 11:37 p.m'),
                   isThreeLine: true,
-                  onTap: (){Navigator.of(context).pushNamed('/SeeDetails');},
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/SeeDetails');
+                  },
                 ),
               ],
             ),

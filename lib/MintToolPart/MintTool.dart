@@ -15,59 +15,64 @@ class MintToolState extends State<MintTool> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(
-        title: new Text('Mint Tool'),
-      ),
+        appBar: new AppBar(
+          title: new Text('Mint Tool'),
+        ),
 
-      body: new CustomScrollView(
-        slivers: <Widget>[
-          const SliverAppBar(
-            expandedHeight: 150.0,
-            flexibleSpace: const FlexibleSpaceBar(
-              title: const Text('Mortality Index for Neonatal\n            Transportation\n               (MINT) score'),
+        body: new CustomScrollView(
+          slivers: <Widget>[
+            const SliverAppBar(
+              expandedHeight: 150.0,
+              flexibleSpace: const FlexibleSpaceBar(
+                title: const Text(
+                    'Mortality Index for Neonatal\n            Transportation\n               (MINT) score'),
+              ),
             ),
-          ),
 
-          new SliverList(
-            delegate: new SliverChildBuilderDelegate(
-              (BuildContext context, int index) {
-                return new Column(
-                  children: <Widget>[
-                    new Container(
-                      padding: new EdgeInsets.all(20.0),
-                      child: new Column(
-                        children: <Widget>[
-                          new pH(),
-                          new Age(),
-                          new Apgar(),
-                          new BirthWeight(),
-                          new PaO2(),
-                          new Abnormality(),
-                          new Status(),
+            new SliverList(
+              delegate: new SliverChildBuilderDelegate(
+                    (BuildContext context, int index) {
+                  return new Column(
+                    children: <Widget>[
+                      new Container(
+                        padding: new EdgeInsets.all(20.0),
+                        child: new Column(
+                          children: <Widget>[
+                            new pH(),
+                            new Age(),
+                            new Apgar(),
+                            new BirthWeight(),
+                            new PaO2(),
+                            new Abnormality(),
+                            new Status(),
 //                          new Container(height: 500.0, width: 500.0, child: new Result(),),
-                          new RaisedButton(
-                            //Show simple dialog
-                            onPressed: (){showDialog(
-                              context: context,
-                              child: new SimpleDialog(
-                                children: <Widget>[
-                                  new Container(height: 600.0, width: 600.0, child: new Result(),),
-                                ],
-                              ),
-                            );},
-                            child: new Text('Calculate'),
-                          ),
-                        ],
+                            new RaisedButton(
+                              //Show simple dialog
+                              onPressed: () {
+                                showDialog(
+                                  context: context,
+                                  child: new SimpleDialog(
+                                    children: <Widget>[
+                                      new Container(height: 600.0,
+                                        width: 600.0,
+                                        child: new Result(),),
+                                    ],
+                                  ),
+                                );
+                              },
+                              child: new Text('Calculate'),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
-                );
-              },
-              childCount: 1,
+                    ],
+                  );
+                },
+                childCount: 1,
+              ),
             ),
-          ),
-        ],
-      )
+          ],
+        )
     );
   }
 }
@@ -230,7 +235,8 @@ class BirthWeightState extends State<BirthWeight> {
                     value: string,
                   );
                 }).toList(),
-                onChanged: (string) => setState(() => originalBirthWeight = string),
+                onChanged: (string) =>
+                    setState(() => originalBirthWeight = string),
               )
             ],
           ),
@@ -314,7 +320,8 @@ class AbnormalityState extends State<Abnormality> {
                     value: string,
                   );
                 }).toList(),
-                onChanged: (string) => setState(() => originalAbnormality = string),
+                onChanged: (string) =>
+                    setState(() => originalAbnormality = string),
               )
             ],
           ),

@@ -48,7 +48,10 @@ class MyScaffold extends StatelessWidget {
           new MyAppBar(
             title: new Text(
               'Example title',
-              style: Theme.of(context).primaryTextTheme.title,
+              style: Theme
+                  .of(context)
+                  .primaryTextTheme
+                  .title,
             ),
           ),
           new Expanded(

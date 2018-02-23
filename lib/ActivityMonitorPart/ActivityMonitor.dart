@@ -17,7 +17,7 @@ class ActivityMonitor extends StatelessWidget {
       appBar: new AppBar(
         title: new Text('Activity Monitor'),
         bottom: new TabBar(
-            tabs: choices.map((Choice choice){
+            tabs: choices.map((Choice choice) {
               return new Tab(
                 text: choice.title,
               );
@@ -28,7 +28,7 @@ class ActivityMonitor extends StatelessWidget {
         children: choices.map((Choice choice) {
           return new Padding(
             padding: const EdgeInsets.all(16.0),
-            child: new ChoiceCard(choice : choice,),
+            child: new ChoiceCard(choice: choice,),
           );
         }).toList(),
       ),
@@ -39,6 +39,7 @@ class ActivityMonitor extends StatelessWidget {
 class Choice {
   final String title;
   final Container container;
+
   Choice(this.title, this.container);
 }
 
@@ -87,14 +88,16 @@ List<Choice> choices = <Choice>[
                             height: 50.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
-                            child: new Text('12:32 a.m:   IV Treatment Started',)
+                            child: new Text(
+                              '12:32 a.m:   IV Treatment Started',)
                         )
                     ),
 
                     new Container(
                       width: 50.0,
                       alignment: Alignment.centerRight,
-                      child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
+                      child: new Icon(
+                          Icons.arrow_forward_ios, color: Colors.black),
                     )
                   ],
                 )
@@ -116,14 +119,16 @@ List<Choice> choices = <Choice>[
                             height: 50.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
-                            child: new Text('12:20 a.m   Hypoglycemia confirmed',)
+                            child: new Text(
+                              '12:20 a.m   Hypoglycemia confirmed',)
                         )
                     ),
 
                     new Container(
                       width: 50.0,
                       alignment: Alignment.centerRight,
-                      child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
+                      child: new Icon(
+                          Icons.arrow_forward_ios, color: Colors.black),
                     )
                   ],
                 )
@@ -152,7 +157,8 @@ List<Choice> choices = <Choice>[
                     new Container(
                       width: 50.0,
                       alignment: Alignment.centerRight,
-                      child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
+                      child: new Icon(
+                          Icons.arrow_forward_ios, color: Colors.black),
                     )
                   ],
                 )
@@ -181,7 +187,8 @@ List<Choice> choices = <Choice>[
                     new Container(
                       width: 50.0,
                       alignment: Alignment.centerRight,
-                      child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
+                      child: new Icon(
+                          Icons.arrow_forward_ios, color: Colors.black),
                     )
                   ],
                 )
@@ -203,14 +210,16 @@ List<Choice> choices = <Choice>[
                             height: 50.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
-                            child: new Text('12:01 a.m:  Potential Risk - Hypoglycemia',)
+                            child: new Text(
+                              '12:01 a.m:  Potential Risk - Hypoglycemia',)
                         )
                     ),
 
                     new Container(
                       width: 50.0,
                       alignment: Alignment.centerRight,
-                      child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
+                      child: new Icon(
+                          Icons.arrow_forward_ios, color: Colors.black),
                     )
                   ],
                 )
@@ -265,14 +274,16 @@ List<Choice> choices = <Choice>[
                             height: 50.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
-                            child: new Text('12:45 a.m:   Administer Glucose Level',)
+                            child: new Text(
+                              '12:45 a.m:   Administer Glucose Level',)
                         )
                     ),
 
                     new Container(
                       width: 50.0,
                       alignment: Alignment.centerRight,
-                      child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
+                      child: new Icon(
+                          Icons.arrow_forward_ios, color: Colors.black),
                     )
                   ],
                 )
@@ -301,7 +312,8 @@ List<Choice> choices = <Choice>[
                     new Container(
                       width: 50.0,
                       alignment: Alignment.centerRight,
-                      child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
+                      child: new Icon(
+                          Icons.arrow_forward_ios, color: Colors.black),
                     )
                   ],
                 )
@@ -323,14 +335,16 @@ List<Choice> choices = <Choice>[
                             height: 50.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
-                            child: new Text('12:22 a.m   Waiting for Serum Glucose',)
+                            child: new Text(
+                              '12:22 a.m   Waiting for Serum Glucose',)
                         )
                     ),
 
                     new Container(
                       width: 50.0,
                       alignment: Alignment.centerRight,
-                      child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
+                      child: new Icon(
+                          Icons.arrow_forward_ios, color: Colors.black),
                     )
                   ],
                 )
@@ -385,14 +399,16 @@ List<Choice> choices = <Choice>[
                             height: 50.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
-                            child: new Text('01:05 a.m:  Evaluate Pneumothorax',)
+                            child: new Text(
+                              '01:05 a.m:  Evaluate Pneumothorax',)
                         )
                     ),
 
                     new Container(
                       width: 50.0,
                       alignment: Alignment.centerRight,
-                      child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
+                      child: new Icon(
+                          Icons.arrow_forward_ios, color: Colors.black),
                     )
                   ],
                 )
@@ -410,18 +426,20 @@ List<Choice> choices = <Choice>[
                 child: new Row(
                   children: <Widget>[
                     new Expanded(
-                      child: new Container(
-                        height: 50.0,
-                        padding: const EdgeInsets.all(8.0),
-                        alignment: Alignment.centerLeft,
-                        child: new Text('01:30 a.m   Evaluate Glucose Level',)
-                      )
+                        child: new Container(
+                            height: 50.0,
+                            padding: const EdgeInsets.all(8.0),
+                            alignment: Alignment.centerLeft,
+                            child: new Text(
+                              '01:30 a.m   Evaluate Glucose Level',)
+                        )
                     ),
 
                     new Container(
                       width: 50.0,
                       alignment: Alignment.centerRight,
-                      child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
+                      child: new Icon(
+                          Icons.arrow_forward_ios, color: Colors.black),
                     )
                   ],
                 )

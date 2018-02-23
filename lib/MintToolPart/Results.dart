@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(new MaterialApp(
-  title: 'Results Dashboard',
-  home: new Result(),
-));
+void main() =>
+    runApp(new MaterialApp(
+      title: 'Results Dashboard',
+      home: new Result(),
+    ));
 
 var assetImage = new AssetImage('images/result.png');
 var resultImage = new Image(image: assetImage);
@@ -13,7 +14,7 @@ class Result extends StatefulWidget {
   ResultState createState() => new ResultState();
 }
 
-class ResultState extends State<Result> with SingleTickerProviderStateMixin{
+class ResultState extends State<Result> with SingleTickerProviderStateMixin {
   TabController _tabController;
 
   @override
@@ -45,15 +46,15 @@ class ResultState extends State<Result> with SingleTickerProviderStateMixin{
 //            ),
 //          ),
 
-          new TabBarView(
-            controller: _tabController,
-            children: choices.map((Choice choice) {
-              return new Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: new ChoiceCard(choice: choice),
-              );
-            }).toList(),
-          ),
+      new TabBarView(
+        controller: _tabController,
+        children: choices.map((Choice choice) {
+          return new Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: new ChoiceCard(choice: choice),
+          );
+        }).toList(),
+      ),
     );
   }
 }
@@ -61,6 +62,7 @@ class ResultState extends State<Result> with SingleTickerProviderStateMixin{
 class Choice {
   String title;
   Widget container;
+
   Choice(this.title, this.container);
 }
 
@@ -81,17 +83,24 @@ class Container1 extends StatelessWidget {
               children: <Widget>[
                 new Container(
                   padding: new EdgeInsets.only(left: 5.0),
-                  child: new Icon(Icons.warning, color: Colors.red, size: 60.0,),
+                  child: new Icon(
+                    Icons.warning, color: Colors.red, size: 60.0,),
                 ),
                 new Container(
                   padding: new EdgeInsets.all(15.0),
                   child: new RichText(
                     text: new TextSpan(
                       children: <TextSpan>[
-                        new TextSpan(text: 'The MINT Score is ', style: new TextStyle(color: Colors.black)),
-                        new TextSpan(text: '7\n', style: new TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
-                        new TextSpan(text: 'And the probability of\ndeath is ', style: new TextStyle(color: Colors.black)),
-                        new TextSpan(text: '0.30', style: new TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+                        new TextSpan(text: 'The MINT Score is ',
+                            style: new TextStyle(color: Colors.black)),
+                        new TextSpan(text: '7\n',
+                            style: new TextStyle(color: Colors.black,
+                                fontWeight: FontWeight.bold)),
+                        new TextSpan(text: 'And the probability of\ndeath is ',
+                            style: new TextStyle(color: Colors.black)),
+                        new TextSpan(text: '0.30',
+                            style: new TextStyle(color: Colors.black,
+                                fontWeight: FontWeight.bold)),
                       ],
                     ),
                   ),
@@ -105,7 +114,8 @@ class Container1 extends StatelessWidget {
           ),
           new Container(
             padding: new EdgeInsets.symmetric(horizontal: 20.0),
-            child: new Text('The higher the Mint score, the probability of death of the Infant is more. '),
+            child: new Text(
+                'The higher the Mint score, the probability of death of the Infant is more. '),
           ),
         ],
       ),
@@ -123,69 +133,123 @@ class Container2 extends StatelessWidget {
         children: <TableRow>[
           new TableRow(
             children: <TableCell>[
-              new TableCell(child: new Text('Factor', style: new TextStyle(height: 2.5,), textAlign: TextAlign.center,)),
-              new TableCell(child: new Text('Value', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
-              new TableCell(child: new Text('Points', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                'Factor', style: new TextStyle(height: 2.5,),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                'Value', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                'Points', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
             ],
             decoration: new BoxDecoration(color: Colors.grey),
           ),
           new TableRow(
             children: <TableCell>[
-              new TableCell(child: new Text('pH', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
-              new TableCell(child: new Text('7.1', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
-              new TableCell(child: new Text('4', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                'pH', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                '7.1', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                '4', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
             ],
           ),
           new TableRow(
             children: <TableCell>[
-              new TableCell(child: new Text('Age', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
-              new TableCell(child: new Text('2', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
-              new TableCell(child: new Text('0', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
-            ],
-            decoration: new BoxDecoration(color: Colors.grey),
-          ),
-          new TableRow(
-            children: <TableCell>[
-              new TableCell(child: new Text('Apgar (1min)', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
-              new TableCell(child: new Text('7', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
-              new TableCell(child: new Text('0', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
-            ],
-          ),
-          new TableRow(
-            children: <TableCell>[
-              new TableCell(child: new Text('Birth Weight', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
-              new TableCell(child: new Text('1400', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
-              new TableCell(child: new Text('1', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                'Age', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                '2', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                '0', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
             ],
             decoration: new BoxDecoration(color: Colors.grey),
           ),
           new TableRow(
             children: <TableCell>[
-              new TableCell(child: new Text('PaO2', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
-              new TableCell(child: new Text('3', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
-              new TableCell(child: new Text('2', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                'Apgar (1min)', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                '7', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                '0', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
             ],
           ),
           new TableRow(
             children: <TableCell>[
-              new TableCell(child: new Text('Congenital abnormality', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
-              new TableCell(child: new Text('No', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
-              new TableCell(child: new Text('0', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                'Birth Weight', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                '1400', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                '1', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
             ],
             decoration: new BoxDecoration(color: Colors.grey),
           ),
           new TableRow(
             children: <TableCell>[
-              new TableCell(child: new Text('Intubated Status', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
-              new TableCell(child: new Text('No', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
-              new TableCell(child: new Text('0', style: new TextStyle(height: 2.5), textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                'PaO2', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                '3', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                '2', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
             ],
           ),
           new TableRow(
             children: <TableCell>[
-              new TableCell(child: new Text('Total', style: new TextStyle(color: Colors.red, height: 2.5), textAlign: TextAlign.center,)),
-              new TableCell(child: new Text('-', style: new TextStyle(color: Colors.red, height: 2.5), textAlign: TextAlign.center,)),
-              new TableCell(child: new Text('7', style: new TextStyle(color: Colors.red, height: 2.5), textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                'Congenital abnormality', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                'No', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                '0', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+            ],
+            decoration: new BoxDecoration(color: Colors.grey),
+          ),
+          new TableRow(
+            children: <TableCell>[
+              new TableCell(child: new Text(
+                'Intubated Status', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                'No', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                '0', style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+            ],
+          ),
+          new TableRow(
+            children: <TableCell>[
+              new TableCell(child: new Text(
+                'Total', style: new TextStyle(color: Colors.red, height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                '-', style: new TextStyle(color: Colors.red, height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                '7', style: new TextStyle(color: Colors.red, height: 2.5),
+                textAlign: TextAlign.center,)),
             ],
             decoration: new BoxDecoration(color: Colors.grey),
           ),
@@ -197,7 +261,8 @@ class Container2 extends StatelessWidget {
 
 class ChoiceCard extends StatelessWidget {
   final Choice choice;
-  const ChoiceCard({Key key, this.choice}): super(key: key);
+
+  const ChoiceCard({Key key, this.choice}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
