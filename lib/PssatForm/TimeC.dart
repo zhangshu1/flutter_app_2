@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../Material/MenuDrawer.dart';
 
-class PssatForm extends StatelessWidget {
+class TimeC extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -11,7 +11,8 @@ class PssatForm extends StatelessWidget {
       ),
 
       appBar: new AppBar(
-        title: new Text("Lab Work", style: new TextStyle(color: Colors.black),
+        title: new Text(
+            "Time C", style: new TextStyle(color: Colors.black),
             textAlign: TextAlign.left),
       ),
 
@@ -22,3 +23,10 @@ class PssatForm extends StatelessWidget {
     );
   }
 }
+
+//void main() => runApp(
+//  new MaterialApp(
+//    title: 'Time C',
+//    home: new TimeC(),
+//  )
+//);

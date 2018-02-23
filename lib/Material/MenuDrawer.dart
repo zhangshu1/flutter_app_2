@@ -3,45 +3,60 @@ import 'package:flutter/material.dart';
 class MenuDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ListView(    //TODO: scroll panel
+    return new ListView( //TODO: scroll panel
       children: <Widget>[
         //DrawerHeader for future use (dashboard, login page etc.)
         new DrawerHeader(
           child: new Column(
             children: <Widget>[
               new Container(
-                  child: new FlatButton(
-                    onPressed: null, //TODO: add links for all onTaps
-                    child: new Text('Log In', style: new TextStyle(color: Colors.black, fontSize: 16.0, fontWeight: FontWeight.w500), textAlign: TextAlign.left),
-                  ),
-                  alignment: Alignment.centerLeft,
-                  padding: new EdgeInsets.all(1.0),
+                child: new FlatButton(
+                  onPressed: null, //TODO: add links for all onTaps
+                  child: new Text('Log In', style: new TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w500), textAlign: TextAlign.left),
+                ),
+                alignment: Alignment.centerLeft,
+                padding: new EdgeInsets.all(1.0),
               ),
 
               new Container(
-                  child: new FlatButton(
-                      onPressed: null, //TODO: user can search patient after logging in, if not can only see FAQs etc.
-                      child: new Text(' Search Patient', style: new TextStyle(color: Colors.black, fontSize: 16.0, fontWeight: FontWeight.w500), textAlign: TextAlign.left),
-                  ),
-                  alignment: Alignment.centerLeft,
-                  padding: new EdgeInsets.all(1.0),
+                child: new FlatButton(
+                  onPressed: null,
+                  //TODO: user can search patient after logging in, if not can only see FAQs etc.
+                  child: new Text(' Search Patient', style: new TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w500), textAlign: TextAlign.left),
+                ),
+                alignment: Alignment.centerLeft,
+                padding: new EdgeInsets.all(1.0),
               ),
 
               new Container(
-                  child: new FlatButton(
-                      onPressed: null, //TODO: Go back to login page (main.dart) if log out
-                      child: new Text(' Log Out', style: new TextStyle(color: Colors.black, fontSize: 16.0, fontWeight: FontWeight.w500), textAlign: TextAlign.left)
-                  ),
-                  alignment: Alignment.centerLeft,
-                  padding: new EdgeInsets.all(1.0),
+                child: new FlatButton(
+                    onPressed: null,
+                    //TODO: Go back to login page (main.dart) if log out
+                    child: new Text(' Log Out', style: new TextStyle(
+                        color: Colors.black,
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w500), textAlign: TextAlign.left)
+                ),
+                alignment: Alignment.centerLeft,
+                padding: new EdgeInsets.all(1.0),
               ),
             ],
           ),
         ),
 
         //current state
-        const ListTile(
+        new ListTile(
           title: const Text('Current State'),
+          onTap: () {
+            Navigator.of(context).pop();
+            Navigator.of(context).pushNamed('/CurrentState');
+          },
 //          onTap: () => Navigator.pushNamed(context, "/CurrentState"),
 //          onTap: Navigator.pop(context),
 //          onTap: Navigator.popAndPushNamed(context, '/CurrentState')
@@ -49,155 +64,213 @@ class MenuDrawer extends StatelessWidget {
 
         //risk monitor
         new ExpansionTile(
-            title: new Text('Risk Monitor', style: new TextStyle(fontSize: 14.0, fontWeight: FontWeight.w500)),
+            title: new Text('Risk Monitor', style: new TextStyle(
+                fontSize: 14.0, fontWeight: FontWeight.w500)),
             backgroundColor: Theme
                 .of(context)
                 .accentColor
                 .withOpacity(0.025),
-            children: const <Widget>[
-              const ListTile(
+            children: <Widget>[
+              new ListTile( //TODO: links
                 title: const Text('    Hypotension'),
-//                  onTap: (){},
+//                onTap: () { Navigator.of(context).pushNamed('/CurrentState'); },
               ),
-              const ListTile(
+              new ListTile(
                 title: const Text('    Hypothermia'),
-//                      onTap: ,
+//                onTap: () { Navigator.of(context).pushNamed('/CurrentState'); },
               ),
-              const ListTile(
+              new ListTile(
                 title: const Text('    Pneumothorax'),
-//                      onTap: ,
+//                onTap: () { Navigator.of(context).pushNamed('/CurrentState'); },
               )
             ]
         ),
 
         //activity monitor
-        const ListTile(
+        new ListTile(
           title: const Text('Activity Monitor'),
-//                onTap: ,
+          onTap: () {
+            Navigator.of(context).pop();
+            Navigator.of(context).pushNamed('/ActivityMonitor');
+          },
         ),
 
         //risk history
         new ExpansionTile(
-          title: new Text('Risk Hisotry', style: new TextStyle(fontSize: 14.0, fontWeight: FontWeight.w500)),
+          title: new Text('Risk Hisotry', style: new TextStyle(
+              fontSize: 14.0, fontWeight: FontWeight.w500)),
           backgroundColor: Theme
               .of(context)
               .accentColor
               .withOpacity(0.025),
           children: <Widget>[
-            const ListTile(
+            new ListTile(
               title: const Text('    All'),
-//                      onTap: ,
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/RiskHistory/All');
+              },
             ),
-            const ListTile(
+            new ListTile(
               title: const Text('    Hypoglycemia'),
-//                      onTap: ,
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/RiskHistory/Hypoglycemia');
+              },
             ),
-            const ListTile(
+            new ListTile(
               title: const Text('    Pneumothorax'),
-//                      onTap: ,
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/RiskHistory/Pneumothorax');
+              },
             ),
-            const ListTile(
+            new ListTile(
               title: const Text('    Hypothermia'),
-//                      onTap: ,
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/RiskHistory/Hypothermia');
+              },
             )
           ],
         ),
 
         //lab work
         new ExpansionTile(
-          title: new Text('Lab Work', style: new TextStyle(fontSize: 14.0, fontWeight: FontWeight.w500)),
+          title: new Text('Lab Work', style: new TextStyle(
+              fontSize: 14.0, fontWeight: FontWeight.w500)),
           backgroundColor: Theme
               .of(context)
               .accentColor
               .withOpacity(0.025),
           children: <Widget>[
-            const ListTile(
+            new ListTile(
               title: const Text('    View Recommended Test'),
-//                      onTap: ,
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/LabWork/ViewRecTest');
+              },
             ),
-            const ListTile(
+            new ListTile(
               title: const Text('    Order Additional Test'),
-//                      onTap: ,
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/LabWork/OrderAdditionalTest');
+              },
             ),
-            const ListTile(
+            new ListTile(
               title: const Text('    Enter Patient Report'),
-//                      onTap: ,
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/LabWork/EnterPatientReports');
+              },
             ),
-            const ListTile(
+            new ListTile(
               title: const Text('    View Patient Report'),
-//                      onTap: ,
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/LabWork/ViewPatientReports');
+              },
             ),
-            const ListTile(
+            new ListTile(
               title: const Text('Enter Recommended Medication'),
-//                      onTap: ,
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/LabWork/ViewRecMedications');
+              },
             )
           ],
         ),
 
         //PSSAT form
         new ExpansionTile(
-          title: new Text('PSSAT Form', style: new TextStyle(fontSize: 14.0, fontWeight: FontWeight.w500)),
+          title: new Text('PSSAT Form', style: new TextStyle(
+              fontSize: 14.0, fontWeight: FontWeight.w500)),
           backgroundColor: Theme
               .of(context)
               .accentColor
               .withOpacity(0.025),
           children: <Widget>[
-            const ListTile(
+            new ListTile(
+              title: const Text('    PSSAT Form Direction'),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/PssatFormDir');
+              },
+            ),
+            new ListTile(
               title: const Text('    Patient Information'),
-        //                      onTap: ,
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/PssatForm/PatientInfo');
+              },
             ),
-            const ListTile(
+            new ListTile(
               title: const Text('    Time A'),
-        //                      onTap: ,
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/PssatForm/TimeA');
+              },
             ),
-            const ListTile(
+            new ListTile(
               title: const Text('    Time B'),
-        //                      onTap: ,
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/PssatForm/TimeB');
+              },
             ),
-            const ListTile(
+            new ListTile(
               title: const Text('    Time C'),
-        //                      onTap: ,
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/PssatForm/TimeC');
+              },
             ),
-            const ListTile(
+            new ListTile(
               title: const Text('    Specific Interventions'),
-        //                      onTap: ,
-            ),
-            const ListTile(
-              title: const Text('    Self Evaluation Q'),
-        //                      onTap: ,
-            )
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/PssatForm/Interventions');
+              },),
+            new ListTile(
+              title: const Text('    Self Evaluation Questions'),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/PssatForm/SelfEvaluation');
+              },)
           ],
         ),
 
         //STABLE
         new ExpansionTile(
-          title: new Text('S.T.A.B.L.E', style: new TextStyle(fontSize: 14.0, fontWeight: FontWeight.w500)),
+          title: new Text('S.T.A.B.L.E', style: new TextStyle(
+              fontSize: 14.0, fontWeight: FontWeight.w500)),
           backgroundColor: Theme
               .of(context)
               .accentColor
               .withOpacity(0.025),
           children: <Widget>[
-            const ListTile(
+            new ListTile(
               title: const Text('    Sugar'),
 //                      onTap: ,
             ),
-            const ListTile(
+            new ListTile(
               title: const Text('    Temperature'),
 //                      onTap: ,
             ),
-            const ListTile(
+            new ListTile(
               title: const Text('    Airway'),
 //                      onTap: ,
             ),
-            const ListTile(
+            new ListTile(
               title: const Text('    Blood Pressure'),
 //                      onTap: ,
             ),
-            const ListTile(
+            new ListTile(
               title: const Text('    Lab Work'),
 //                      onTap: ,
             ),
-            const ListTile(
+            new ListTile(
               title: const Text('    Emotional Support'),
 //                      onTap: ,
             )

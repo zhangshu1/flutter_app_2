@@ -10,7 +10,19 @@ import 'RiskHistoryPart/RiskHistory_Hypoglycemia.dart';
 import 'RiskHistoryPart/RiskHistory_Pneumothorax.dart';
 import 'RiskHistoryPart/RiskHistory_Hypothermia.dart';
 import 'LabWorkPart/LabWork.dart';
-//import 'PssatForm/PssatForm.dart';
+import 'LabWorkPart/ViewRecTest.dart';
+import 'LabWorkPart/OrderAdditionalTests.dart';
+import 'LabWorkPart/EnterPatientReports.dart';
+import 'LabWorkPart/ViewPatientReports.dart';
+import 'LabWorkPart/ViewRecMedication.dart';
+import 'PssatForm/PssatFormDir.dart';
+import 'PssatForm/PssatFormMenu.dart';
+import 'PssatForm/PatientInfo.dart';
+import 'PssatForm/TimeA.dart';
+import 'PssatForm/TimeB.dart';
+import 'PssatForm/TimeC.dart';
+import 'PssatForm/Interventions.dart';
+import 'PssatForm/SelfEvaluation.dart';
 
 void main() {
   runApp(
@@ -22,15 +34,41 @@ void main() {
         //home page is automatically defiend as:
         //"/": (BuildContext context) => new MenuPage(),
         "/CurrentState": (BuildContext context) => new CurrentState(),
+
         "/RiskMonitor": (BuildContext context) => new RiskMonitor(),
+
         "/ActivityMonitor": (BuildContext context) => new DefaultTabController(length: choices.length, child: new ActivityMonitor()),
+
         "/RiskHistory": (BuildContext context) => new RiskHistory(),
+        "/RiskHistory/All": (BuildContext context) => new RiskHistory_All(),
+        "/RiskHistory/Hypoglycemia": (
+            BuildContext context) => new RiskHistory_Hypoglycemia(),
+        "/RiskHistory/Pneumothorax": (
+            BuildContext context) => new RiskHistory_Pneumothorax(),
+        "/RiskHistory/Hypothermia": (
+            BuildContext context) => new RiskHistory_Hypothermia(),
+
         "/LabWork": (BuildContext context) => new LabWork(),
-//        "/PSSATForm": (BuildContext context) => new PSSATForm(),
-        "/RiskHistory_All": (BuildContext context) => new RiskHistory_All(),
-        "/RiskHistory_Hypoglycemia": (BuildContext context) => new RiskHistory_Hypoglycemia(),
-        "/RiskHistory_Pneumothorax": (BuildContext context) => new RiskHistory_Pneumothorax(),
-        "/RiskHistory_Hypothermia": (BuildContext context) => new RiskHistory_Hypothermia()
+        "/LabWork/ViewRecTest": (BuildContext context) => new ViewRecTest(),
+        "/LabWork/OrderAdditionalTest": (
+            BuildContext context) => new OrderAdditionalTests(),
+        "/LabWork/EnterPatientReports": (
+            BuildContext context) => new EnterPatientReports(),
+        "/LabWork/ViewPatientReports": (
+            BuildContext context) => new ViewPatientReports(),
+        "/LabWork/ViewRecMedications": (
+            BuildContext context) => new ViewRecMedications(),
+
+        "/PssatFormDir": (BuildContext context) => new PssatFormDir(),
+        "/PssatFormMenu": (BuildContext context) => new PssatFormMenu(),
+        "/PssatForm/PatientInfo": (BuildContext context) => new PatientInfo(),
+        "/PssatForm/TimeA": (BuildContext context) => new TimeA(),
+        "/PssatForm/TimeB": (BuildContext context) => new TimeB(),
+        "/PssatForm/TimeC": (BuildContext context) => new TimeC(),
+        "/PssatForm/Interventions": (
+            BuildContext context) => new Interventions(),
+        "/PssatForm/SelfEvaluation": (
+            BuildContext context) => new SelfEvaluation(),
       }
     )
   );
