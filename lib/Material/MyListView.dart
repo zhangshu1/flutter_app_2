@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Option {
-  IconData icon;
+  Icon icon;
   String title;
-  Option(this.icon, this.title);
+  BuildContext context;
+  Route route;
+  Option(this.icon, this.title, this.context, this.route);
 }
 
 class OptionItem extends StatefulWidget {
@@ -29,8 +31,14 @@ class OptionItemState extends State<OptionItem> {
         ),
       ),
       child: new ListTile(
-        leading: new Icon(option.icon),
+        leading: option.icon,
         title: new Text(option.title),
+        onTap: (){
+          Navigator.push(
+            option.context,
+            option.route,
+          );
+        },
       ),
     );
   }
