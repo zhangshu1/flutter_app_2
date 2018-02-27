@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(new MaterialApp(
-  title: 'See Details',
-  home: new SeeDetails(),
-));
+void main() =>
+    runApp(new MaterialApp(
+      title: 'See Details',
+      home: new SeeDetails(),
+    ));
 
 class SeeDetails extends StatefulWidget {
   @override

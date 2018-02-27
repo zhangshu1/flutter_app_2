@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../Material/MenuDrawer.dart';
 
-void main() => runApp(new MaterialApp(
-  title: 'Current State',
-  home: new CurrentState(),
-));
+void main() =>
+    runApp(new MaterialApp(
+      title: 'Current State',
+      home: new CurrentState(),
+    ));
 
 var assetImage = new AssetImage('images/pic.jpg');
 var image = new Image(image: assetImage);

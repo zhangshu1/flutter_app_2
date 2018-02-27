@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'CreateCarePlan.dart';
 
-void main() => runApp(new MaterialApp(
-    title: 'Customize Care Plan',
-    home: new CustomizeCarePlan(),
-    routes: <String, WidgetBuilder> {
-      '/CreateCarePlan': (BuildContext context) => new CreateCarePlan(),
-    },
-));
+void main() =>
+    runApp(new MaterialApp(
+      title: 'Customize Care Plan',
+      home: new CustomizeCarePlan(),
+      routes: <String, WidgetBuilder>{
+        '/CreateCarePlan': (BuildContext context) => new CreateCarePlan(),
+      },
+    ));
 
-class CustomizeCarePlan extends StatelessWidget{    //TODO: cant go back after customized
+class CustomizeCarePlan extends StatelessWidget {
+  //TODO: cant go back after customized
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -21,15 +23,16 @@ class CustomizeCarePlan extends StatelessWidget{    //TODO: cant go back after c
         children: <Widget>[
           new Container(
             padding: new EdgeInsets.all(15.0),
-            child: new Text('Please select the care actions in sequence to create your own customized care plan.'),
+            child: new Text(
+                'Please select the care actions in sequence to create your own customized care plan.'),
           ),
 
           new Container(
             padding: new EdgeInsets.only(left: 15.0),
             alignment: Alignment.centerLeft,
             child: new Text(
-                'Suggested Care Plan',
-                style: new TextStyle(color: Colors.green, fontSize: 20.0),),
+              'Suggested Care Plan',
+              style: new TextStyle(color: Colors.green, fontSize: 20.0),),
           ),
 
           new Container(
@@ -44,7 +47,9 @@ class CustomizeCarePlan extends StatelessWidget{    //TODO: cant go back after c
                 new CarePlan('Treat hypotension', false),
                 new CarePlan('Calculate saline bolus (10 mL/kg)', false),
                 new CarePlan('Treat anemia', false),
-                new CarePlan('Calculate packed red blood cell transfusion volume (10 mL/kg)', false),
+                new CarePlan(
+                    'Calculate packed red blood cell transfusion volume (10 mL/kg)',
+                    false),
               ],
             ),
           ),
@@ -53,16 +58,23 @@ class CustomizeCarePlan extends StatelessWidget{    //TODO: cant go back after c
             padding: new EdgeInsets.symmetric(horizontal: 15.0),
             alignment: Alignment.centerRight,
             child: new RaisedButton(
-              onPressed: (){showDialog(
+              onPressed: () {
+                showDialog(
                   context: context,
                   child: new AlertDialog(
-                    content: new Text('Are you sure you want to keep this care plan?'),
+                    content: new Text(
+                        'Are you sure you want to keep this care plan?'),
                     actions: <Widget>[
-                      new RaisedButton(onPressed: (){Navigator.pop(context);}, child: new Text('Cancel'),),
-                      new RaisedButton(onPressed: (){Navigator.of(context).pushNamed('/CreateCarePlan');}, child: new Text('Yes'),),
+                      new RaisedButton(onPressed: () {
+                        Navigator.pop(context);
+                      }, child: new Text('Cancel'),),
+                      new RaisedButton(onPressed: () {
+                        Navigator.of(context).pushNamed('/CreateCarePlan');
+                      }, child: new Text('Yes'),),
                     ],
                   ),
-              );},
+                );
+              },
               child: new Text('Save'),
             ),
           ),
@@ -73,33 +85,39 @@ class CustomizeCarePlan extends StatelessWidget{    //TODO: cant go back after c
 }
 
 // Implement ListView
-class CarePlan{
+class CarePlan {
   String content;
   bool isCheck;
 
   CarePlan(this.content, this.isCheck);
 }
 
-class CarePlanItem extends StatefulWidget{
+class CarePlanItem extends StatefulWidget {
   final CarePlan carePlan;
-  CarePlanItem(CarePlan carePlan):
-      carePlan = carePlan,
-      super(key: new ObjectKey(carePlan));
+
+  CarePlanItem(CarePlan carePlan)
+      :
+        carePlan = carePlan,
+        super(key: new ObjectKey(carePlan));
+
   @override
   CarePlanItemState createState() => new CarePlanItemState(carePlan);
 }
 
-class CarePlanItemState extends State<CarePlanItem>{
+class CarePlanItemState extends State<CarePlanItem> {
   final CarePlan carePlan;
+
   CarePlanItemState(this.carePlan);
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return new ListTile(
       title: new Row(
         children: <Widget>[
-          new Checkbox(value: carePlan.isCheck, onChanged: (bool value){
-            setState((){carePlan.isCheck = value;});
+          new Checkbox(value: carePlan.isCheck, onChanged: (bool value) {
+            setState(() {
+              carePlan.isCheck = value;
+            });
           }),
           new Expanded(child: new Text(carePlan.content))
         ],
@@ -108,17 +126,17 @@ class CarePlanItemState extends State<CarePlanItem>{
   }
 }
 
-class CarePlanList extends StatefulWidget{
-  CarePlanList({Key key, this.carePlan}): super(key: key);
+class CarePlanList extends StatefulWidget {
+  CarePlanList({Key key, this.carePlan}) : super(key: key);
   List<CarePlan> carePlan;
 
   @override
   CarePlanListState createState() => new CarePlanListState();
 }
 
-class CarePlanListState extends State<CarePlanList>{
+class CarePlanListState extends State<CarePlanList> {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return new Container(
       height: 500.0,
       child: new Column(
@@ -126,9 +144,9 @@ class CarePlanListState extends State<CarePlanList>{
           new Expanded(
               child: new ListView(
                 padding: new EdgeInsets.symmetric(vertical: 8.0),
-                children: widget.carePlan.map((CarePlan carePlan){
-                      return new CarePlanItem(carePlan);
-                    }).toList(),
+                children: widget.carePlan.map((CarePlan carePlan) {
+                  return new CarePlanItem(carePlan);
+                }).toList(),
               )
           )
         ],

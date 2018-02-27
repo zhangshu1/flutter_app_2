@@ -39,13 +39,14 @@ class PssatFormDir extends StatelessWidget {
                 style: new TextStyle(fontSize: 18.0),),
             ),
             new Container(
-              padding: new EdgeInsets.only(top: 50.0, left: 15.0, right: 15.0),
-              child: new RaisedButton(
-                onPressed: () {
-                  Navigator.of(context).pushNamed('/PssatFormMenu');
-                },
-                child: const Text('Continue'),
-              )
+                padding: new EdgeInsets.only(
+                    top: 50.0, left: 15.0, right: 15.0),
+                child: new RaisedButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/PssatFormMenu');
+                  },
+                  child: const Text('Continue'),
+                )
             )
           ],
         ),

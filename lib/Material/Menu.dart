@@ -4,15 +4,16 @@ class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: const Text('ExpansionTile'),
-        ),
-        body: new ListView.builder(
-          itemBuilder: (BuildContext context, int index) => new EntryItem(data[index]),
-          itemCount: data.length,
-        ),
-      )
+        home: new Scaffold(
+          appBar: new AppBar(
+            title: const Text('ExpansionTile'),
+          ),
+          body: new ListView.builder(
+            itemBuilder: (BuildContext context, int index) =>
+            new EntryItem(data[index]),
+            itemCount: data.length,
+          ),
+        )
     );
   }
 }
@@ -45,6 +46,7 @@ class EntryItem extends StatelessWidget {
 // One entry in the multilevel list displayed by this app.
 class Entry {
   Entry(this.title, [this.children = const <Entry>[]]);
+
   final String title;
   final List<Entry> children;
 }

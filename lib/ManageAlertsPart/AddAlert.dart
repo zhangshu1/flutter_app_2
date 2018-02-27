@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 //import 'AlertsDashboard.dart';
 
-void main() => runApp(new MaterialApp(
-  title: 'Add Alert',
-  home: new AddAlert(),
+void main() =>
+    runApp(new MaterialApp(
+      title: 'Add Alert',
+      home: new AddAlert(),
 //  routes: <String, WidgetBuilder> {
 //    '/AlertsDashboard': (BuildContext context) => new AlertsDashboard(),
 //  },
-));
+    ));
 
 class AddAlert extends StatefulWidget {
   @override
@@ -98,9 +99,9 @@ class PatientState extends State<Patient> {
     'Patient3',
     'Patient4',
   ];
-  
+
   String originalPatient = patients[0];
-  
+
   @override
   Widget build(BuildContext context) {
     return new Column(
