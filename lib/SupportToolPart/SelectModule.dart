@@ -35,6 +35,7 @@ class SelectModuleState extends State<SelectModule> {
       body: new Container(
         child: new ModuleListView(
           modules: [
+            // Some problems with images, cannot be shown
             new Module(new ImageIcon(assetImageAirway), 'Sugar', new MaterialPageRoute(builder: (_) => new Sugar(),)),
             new Module(new ImageIcon(assetImageAirway), 'Temperature', null),
             new Module(new ImageIcon(assetImageAirway), 'Airway', null),
