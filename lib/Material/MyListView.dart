@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
 class Option {
-  IconData icon;
+  Icon icon;
   String title;
-
-  Option(this.icon, this.title);
+  BuildContext context;
+  Route route;
+  Option(this.icon, this.title, this.context, this.route);
 }
 
 class OptionItem extends StatefulWidget {
   final Option option;
-
-  OptionItem(Option option)
-      :
+  OptionItem(Option option):
         option = option,
         super(key: new ObjectKey(option));
 
@@ -21,7 +20,6 @@ class OptionItem extends StatefulWidget {
 
 class OptionItemState extends State<OptionItem> {
   final Option option;
-
   OptionItemState(this.option);
 
   @override
@@ -33,8 +31,14 @@ class OptionItemState extends State<OptionItem> {
         ),
       ),
       child: new ListTile(
-        leading: new Icon(option.icon),
+        leading: option.icon,
         title: new Text(option.title),
+        onTap: (){
+          Navigator.push(
+            option.context,
+            option.route,
+          );
+        },
       ),
     );
   }
@@ -42,8 +46,7 @@ class OptionItemState extends State<OptionItem> {
 
 class MyListView extends StatefulWidget {
   List<Option> options;
-
-  MyListView({Key key, this.options}) : super(key: key);
+  MyListView({Key key, this.options}): super(key: key);
 
   @override
   MyListViewState createState() => new MyListViewState();
