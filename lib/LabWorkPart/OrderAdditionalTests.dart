@@ -47,18 +47,14 @@ class OrderAdditionalTests extends StatelessWidget {
               new RaisedButton(   //TODO: check if any box is checked
                   child: new Text('Submit'),
                   onPressed: () {
-                    if (!cb1.isChecked && !cb2.isChecked && !cb3.isChecked &&
-                        !cb4.isChecked && !cb5.isChecked) {
+                    if (!cb1.isChecked && !cb2.isChecked && !cb3.isChecked && !cb4.isChecked && !cb5.isChecked) {
                       showDialog(
                           context: context,
                           child: new AlertDialog(
-                            content: const Text(
-                                'Please select at least one test to continue'),
+                            content: const Text('Please select at least one test to continue'),
                             actions: <Widget>[
                               new RaisedButton(
-                                onPressed: () {
-                                  Navigator.of(context).pop();
-                                },
+                                onPressed: () {Navigator.of(context).pop();},
                                 child: const Text('OK'),
                               )
                             ],
@@ -69,14 +65,11 @@ class OrderAdditionalTests extends StatelessWidget {
                       showDialog(
                           context: context,
                           child: new AlertDialog(
-                            content: new Text(
-                                'Are you sure to order this test?'),
+                            content: new Text('Are you sure to order this test?'),
                             actions: <Widget>[
                               new RaisedButton(
                                   child: new Text('Cancel'),
-                                  onPressed: () {
-                                    Navigator.of(context).pop();
-                                  }
+                                  onPressed: () {Navigator.of(context).pop();}
                               ),
 
                               new RaisedButton(
@@ -85,8 +78,7 @@ class OrderAdditionalTests extends StatelessWidget {
                                     showDialog(
                                         context: context,
                                         child: new AlertDialog(
-                                          content: new Text(
-                                              'New test added successfully!'),
+                                          content: new Text('New test added successfully!'),
                                           actions: <Widget>[
                                             //TODO: used 2 pop functions
                                             new RaisedButton(
