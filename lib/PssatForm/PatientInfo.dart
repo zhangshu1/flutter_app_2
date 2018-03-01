@@ -34,7 +34,6 @@ class PatientInfoState extends State<PatientInfo> {
   final GlobalKey<FormState> _formKey = new GlobalKey<FormState>();
   final _scaffoldKey = new GlobalKey<ScaffoldState>();
 
-//  String _ddBirthOrder;
   String _ddGender;
   String _ddEstGa;
   String _ddGrowth;
@@ -48,31 +47,16 @@ class PatientInfoState extends State<PatientInfo> {
   String _dd20Min;
 
   final List<String> _gender = <String>['Female', 'Male'];
-  final List<String> _estGa = <String>[
-    'GA 1', 'GA 2', 'GA 3', 'GA 4', 'GA 5', 'GA 6',
-  ];
-  final List<String> _growth = <String>[
-    'Growth 1', 'Growth 2', 'Growth 3', 'Growth 4', 'Growth 5', 'Growth 6'];
+  final List<String> _estGa = <String>['GA 1', 'GA 2', 'GA 3', 'GA 4', 'GA 5', 'GA 6'];
+  final List<String> _growth = <String>['Growth 1', 'Growth 2', 'Growth 3', 'Growth 4', 'Growth 5', 'Growth 6'];
   final List<String> _admitted = <String>['Central', 'East', 'West', 'Other'];
   final List<String> _resuscitation = <String>['True', 'False'];
-  final List<String> _referral = <String>[
-    'Referral 1',
-    'Referral 2',
-    'Referral 3',
-    'Referral 4',
-    'Referral 5',
-    'Referral 6'
-  ];
-  final List<String> _at1Min = <String>[
-    'Apgar 1', 'Apgar 2', 'Apgar 3', 'Apgar 4', 'Apgar 5', 'Apgar 6'];
-  final List<String> _at5Min = <String>[
-    'Apgar 1', 'Apgar 2', 'Apgar 3', 'Apgar 4', 'Apgar 5', 'Apgar 6'];
-  final List<String> _at10Min = <String>[
-    'Apgar 1', 'Apgar 2', 'Apgar 3', 'Apgar 4', 'Apgar 5', 'Apgar 6'];
-  final List<String> _at15Min = <String>[
-    'Apgar 1', 'Apgar 2', 'Apgar 3', 'Apgar 4', 'Apgar 5', 'Apgar 6'];
-  final List<String> _at20Min = <String>[
-    'Apgar 1', 'Apgar 2', 'Apgar 3', 'Apgar 4', 'Apgar 5', 'Apgar 6'];
+  final List<String> _referral = <String>['Referral 1', 'Referral 2', 'Referral 3', 'Referral 4', 'Referral 5', 'Referral 6'];
+  final List<String> _at1Min = <String>['Apgar 1', 'Apgar 2', 'Apgar 3', 'Apgar 4', 'Apgar 5', 'Apgar 6'];
+  final List<String> _at5Min = <String>['Apgar 1', 'Apgar 2', 'Apgar 3', 'Apgar 4', 'Apgar 5', 'Apgar 6'];
+  final List<String> _at10Min = <String>['Apgar 1', 'Apgar 2', 'Apgar 3', 'Apgar 4', 'Apgar 5', 'Apgar 6'];
+  final List<String> _at15Min = <String>['Apgar 1', 'Apgar 2', 'Apgar 3', 'Apgar 4', 'Apgar 5', 'Apgar 6'];
+  final List<String> _at20Min = <String>['Apgar 1', 'Apgar 2', 'Apgar 3', 'Apgar 4', 'Apgar 5', 'Apgar 6'];
 
   bool _autoValidate = false;
 
@@ -118,8 +102,8 @@ class PatientInfoState extends State<PatientInfo> {
 
           child: new ListView(
             padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
-            children: <Widget>[
 
+            children: <Widget>[
               new TextFormField(
 //              initialValue: patient.birthWeight,
                 decoration: const InputDecoration(
@@ -521,7 +505,7 @@ class PatientInfoState extends State<PatientInfo> {
                         context: context,
                         child: new AlertDialog(
                           content: new Text(
-                              'Patient information saved successfully!'),
+                              'Patient information submitted successfully!'),
                           actions: <Widget>[
                             new RaisedButton(
                                 child: new Text("OK"),
@@ -541,10 +525,10 @@ class PatientInfoState extends State<PatientInfo> {
   }
 }
 
-void main() =>
-    runApp(
-        new MaterialApp(
-          title: 'Patient Information',
-          home: new PatientInfo(),
-        )
-    );
+//void main() =>
+//    runApp(
+//        new MaterialApp(
+//          title: 'Patient Information',
+//          home: new PatientInfo(),
+//        )
+//    );
