@@ -41,23 +41,16 @@ void main() {
 
         "/RiskHistory": (BuildContext context) => new RiskHistory(),
         "/RiskHistory/All": (BuildContext context) => new RiskHistory_All(),
-        "/RiskHistory/Hypoglycemia": (
-            BuildContext context) => new RiskHistory_Hypoglycemia(),
-        "/RiskHistory/Pneumothorax": (
-            BuildContext context) => new RiskHistory_Pneumothorax(),
-        "/RiskHistory/Hypothermia": (
-            BuildContext context) => new RiskHistory_Hypothermia(),
+        "/RiskHistory/Hypoglycemia": (BuildContext context) => new RiskHistory_Hypoglycemia(),
+        "/RiskHistory/Pneumothorax": (BuildContext context) => new RiskHistory_Pneumothorax(),
+        "/RiskHistory/Hypothermia": (BuildContext context) => new RiskHistory_Hypothermia(),
 
         "/LabWork": (BuildContext context) => new LabWork(),
         "/LabWork/ViewRecTest": (BuildContext context) => new ViewRecTest(),
-        "/LabWork/OrderAdditionalTest": (
-            BuildContext context) => new OrderAdditionalTests(),
-        "/LabWork/EnterPatientReports": (
-            BuildContext context) => new EnterPatientReports(),
-        "/LabWork/ViewPatientReports": (
-            BuildContext context) => new ViewPatientReports(),
-        "/LabWork/ViewRecMedications": (
-            BuildContext context) => new ViewRecMedications(),
+        "/LabWork/OrderAdditionalTest": (BuildContext context) => new OrderAdditionalTests(),
+        "/LabWork/EnterPatientReports": (BuildContext context) => new EnterPatientReports(),
+        "/LabWork/ViewPatientReports": (BuildContext context) => new ViewPatientReports(),
+        "/LabWork/ViewRecMedications": (BuildContext context) => new ViewRecMedications(),
 
         "/PssatFormDir": (BuildContext context) => new PssatFormDir(),
         "/PssatFormMenu": (BuildContext context) => new PssatFormMenu(),
@@ -65,10 +58,8 @@ void main() {
         "/PssatForm/TimeA": (BuildContext context) => new TimeA(),
         "/PssatForm/TimeB": (BuildContext context) => new TimeB(),
         "/PssatForm/TimeC": (BuildContext context) => new TimeC(),
-        "/PssatForm/Interventions": (
-            BuildContext context) => new Interventions(),
-        "/PssatForm/SelfEvaluation": (
-            BuildContext context) => new SelfEvaluation(),
+        "/PssatForm/Interventions": (BuildContext context) => new Interventions(),
+        "/PssatForm/SelfEvaluation": (BuildContext context) => new SelfEvaluation(),
       }
     )
   );

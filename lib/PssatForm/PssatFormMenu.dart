@@ -13,9 +13,8 @@ class PssatFormMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      endDrawer: new Drawer(
-        child: new MenuDrawer(),
-      ),
+      endDrawer: new Drawer(child: new MenuDrawer()),
+
       appBar: new AppBar(
         title: new Text(
             "PSSAT Form Menu", style: new TextStyle(color: Colors.black),
@@ -34,10 +33,7 @@ class PssatFormMenu extends StatelessWidget {
                       child: new Text("Patient Information",
                           style: new TextStyle(
                               color: Colors.black, fontSize: 20.0)),
-                      onPressed: () {
-                        Navigator.of(context).pushNamed(
-                            '/PssatForm/PatientInfo');
-                      },
+                      onPressed: () {Navigator.of(context).pushNamed('/PssatForm/PatientInfo');},
                     )
                 ),
 
@@ -47,9 +43,7 @@ class PssatFormMenu extends StatelessWidget {
                     child: new RaisedButton(
                       child: new Text("Time A", style: new TextStyle(
                           color: Colors.black, fontSize: 20.0)),
-                      onPressed: () {
-                        Navigator.of(context).pushNamed('/PssatForm/TimeA');
-                      },
+                      onPressed: () {Navigator.of(context).pushNamed('/PssatForm/TimeA');},
                     )
                 ),
 
@@ -59,9 +53,7 @@ class PssatFormMenu extends StatelessWidget {
                     child: new RaisedButton(
                       child: new Text("Time B", style: new TextStyle(
                           color: Colors.black, fontSize: 20.0)),
-                      onPressed: () {
-                        Navigator.of(context).pushNamed('/PssatForm/TimeB');
-                      },
+                      onPressed: () {Navigator.of(context).pushNamed('/PssatForm/TimeB');},
                     )
                 ),
 
@@ -71,9 +63,7 @@ class PssatFormMenu extends StatelessWidget {
                     child: new RaisedButton(
                       child: new Text("Time C", style: new TextStyle(
                           color: Colors.black, fontSize: 20.0)),
-                      onPressed: () {
-                        Navigator.of(context).pushNamed('/PssatForm/TimeC');
-                      },
+                      onPressed: () {Navigator.of(context).pushNamed('/PssatForm/TimeC');},
                     )
                 ),
 
@@ -84,10 +74,7 @@ class PssatFormMenu extends StatelessWidget {
                       child: new Text("Specific Interventions",
                           style: new TextStyle(
                               color: Colors.black, fontSize: 20.0)),
-                      onPressed: () {
-                        Navigator.of(context).pushNamed(
-                            '/PssatForm/Interventions');
-                      },
+                      onPressed: () {Navigator.of(context).pushNamed('/PssatForm/Interventions');},
                     )
                 ),
 
@@ -98,10 +85,7 @@ class PssatFormMenu extends StatelessWidget {
                       child: new Text("Self Evaluation Questions",
                           style: new TextStyle(
                               color: Colors.black, fontSize: 20.0)),
-                      onPressed: () {
-                        Navigator.of(context).pushNamed(
-                            '/PssatForm/SelfEvaluation');
-                      },
+                      onPressed: () {Navigator.of(context).pushNamed('/PssatForm/SelfEvaluation');},
                     )
                 ),
 
