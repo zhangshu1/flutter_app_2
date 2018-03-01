@@ -33,6 +33,7 @@ class ResultState extends State<Result> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      //Maybe need a navigation bar here
       body:
 //          new PreferredSize(
 //            preferredSize: const Size.fromHeight(48.0),
