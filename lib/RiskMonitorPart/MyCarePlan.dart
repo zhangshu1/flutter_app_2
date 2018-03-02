@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-void main() =>
-    runApp(new MaterialApp(
-      title: 'My Care Plan',
-      home: new MyCarePlan(),
-    ));
+//void main() =>
+//    runApp(new MaterialApp(
+//      title: 'My Care Plan',
+//      home: new MyCarePlan(),
+//    ));
 
 class MyCarePlan extends StatelessWidget {
   @override

@@ -12,8 +12,14 @@ class Calculations extends StatelessWidget {
       ),
 
       body: new Container(
-        child: new Card(
-          child: imageCalculations,
+        child: new Column(
+          children: <Widget>[
+            new Container(
+              padding: new EdgeInsets.all(20.0),
+              child: new Text('Here is the result of calculations :', style: new TextStyle(fontSize: 20.0),),
+            ),
+            imageCalculations,
+          ],
         ),
       ),
     );

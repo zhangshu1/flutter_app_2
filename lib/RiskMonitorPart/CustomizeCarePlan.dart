@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'CreateCarePlan.dart';
 
-void main() =>
-    runApp(new MaterialApp(
-      title: 'Customize Care Plan',
-      home: new CustomizeCarePlan(),
-      routes: <String, WidgetBuilder>{
-        '/CreateCarePlan': (BuildContext context) => new CreateCarePlan(),
-      },
-    ));
+//void main() =>
+//    runApp(new MaterialApp(
+//      title: 'Customize Care Plan',
+//      home: new CustomizeCarePlan(),
+//      routes: <String, WidgetBuilder>{
+//        '/CreateCarePlan': (BuildContext context) => new CreateCarePlan(),
+//      },
+//    ));
 
 class CustomizeCarePlan extends StatelessWidget {
   //TODO: cant go back after customized

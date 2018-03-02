@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import '../Material/MyDropDownButton.dart';
 
+void main() => runApp(
+  new MaterialApp(
+    title: 'Hourly Fluid Rate',
+    home: new HourlyFluidRate(),
+  ),
+);
+
 class HourlyFluidRate extends StatefulWidget {
 
   @override
   HourlyFluidRateState createState() => new HourlyFluidRateState();
 }
 
-var _value; // For slider use
+var _value = 50.0; // For slider use
 
 class HourlyFluidRateState extends State<HourlyFluidRate> {
 
@@ -27,14 +34,17 @@ class HourlyFluidRateState extends State<HourlyFluidRate> {
                 children: <Widget>[
                   new MyDropDownItem(new MyDropDownButton('Dextrose Conc.',  ['Option1', 'Option2', 'Option3'])),
                   new MyDropDownItem(new MyDropDownButton('Infusion Rate', ['Option1', 'Option2', 'Option3'])), // Failed assertion
+
                   new Container(
-                    padding: new EdgeInsets.symmetric(horizontal: 100.0),
+                    margin: new EdgeInsets.only(top: 20.0, bottom: 20.0),
+                    padding: new EdgeInsets.symmetric(horizontal: 95.0),
                     child: new Row(
                       children: <Widget>[
                         new RaisedButton(
                           onPressed: null,
                           child: new Text('Calculate'),
                         ),
+                        new Container(width: 20.0,),
                         new Icon(Icons.help, color: Colors.blue,),
                       ],
                     ),
@@ -44,7 +54,7 @@ class HourlyFluidRateState extends State<HourlyFluidRate> {
             ),
 
             new Container(
-              margin: new EdgeInsets.only(top: 20.0),
+              margin: new EdgeInsets.only(top: 20.0, bottom: 40.0),
               child: new RichText(
                 text: new TextSpan(
                   children: <TextSpan>[
@@ -66,14 +76,15 @@ class HourlyFluidRateState extends State<HourlyFluidRate> {
 
             new Container(
               child: new Slider(
+//                thumbOpenAtMin: true,
                 max: 100.0,
                 min: 0.0,
                 divisions: 10,
                 label: '$_value',
-                value: _value.toDouble(),
+                value:_value,
                 onChanged: (double newValue){
                   setState((){
-                    _value = newValue.round();
+                    _value = newValue;
                   });
                 },
               ),
