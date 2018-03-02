@@ -91,7 +91,8 @@ class PatientInfoState extends State<PatientInfo> {
       endDrawer: new Drawer(child: new MenuDrawer(),),
       appBar: new AppBar(
         title: new Text(
-            "Patient Information", style: new TextStyle(color: Colors.black),
+            "Patient Information",
+            style: new TextStyle(color: Colors.black),
             textAlign: TextAlign.left),
       ),
 

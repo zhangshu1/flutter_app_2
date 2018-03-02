@@ -489,7 +489,8 @@ class TimeCState extends State<TimeC> {
                       new Expanded(
                         child: new TextFormField(
                           decoration: const InputDecoration(
-                            labelText: 'O2 (%)',
+                              labelText: 'O2',
+                              suffixText: '%'
                           ),
                           keyboardType: TextInputType.number,
                           onSaved: (String val) {
@@ -504,7 +505,8 @@ class TimeCState extends State<TimeC> {
                       new Expanded(
                         child: new TextFormField(
                           decoration: const InputDecoration(
-                            labelText: 'FiO2 (%)',
+                              labelText: 'FiO2',
+                              suffixText: '%'
                           ),
                           keyboardType: TextInputType.number,
                           onSaved: (String val) {
@@ -519,7 +521,8 @@ class TimeCState extends State<TimeC> {
                       new Expanded(
                         child: new TextFormField(
                           decoration: const InputDecoration(
-                            labelText: 'PaO2 (%)',
+                              labelText: 'PaO2',
+                              suffixText: '%'
                           ),
                           keyboardType: TextInputType.number,
                           onSaved: (String val) {
