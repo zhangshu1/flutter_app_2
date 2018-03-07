@@ -17,7 +17,7 @@ class CreateCarePlan extends StatelessWidget {
       body: new Column(
         children: <Widget>[
           new Container(
-            padding: new EdgeInsets.all(15.0),
+            padding: new EdgeInsets.all(30.0),
             child: new Text(
                 'Please select the care actions in sequence to create your own customized care plan. You can use the protocols to create your own care plan'),
           ),
@@ -77,7 +77,7 @@ class DropDownState extends State<DropTownPart> {
     return new Column(
       children: <Widget>[
         new Container(
-          padding: new EdgeInsets.symmetric(horizontal: 20.0),
+          padding: new EdgeInsets.symmetric(horizontal: 30.0),
           child: new Row(
             children: <Widget>[
               new Expanded(child: new Text(
@@ -99,7 +99,7 @@ class DropDownState extends State<DropTownPart> {
         ),
 
         new Container(
-          padding: new EdgeInsets.symmetric(horizontal: 20.0),
+          padding: new EdgeInsets.symmetric(horizontal: 30.0),
           child: new Row(
             children: <Widget>[
               new Expanded(child: new Text('Select Treatment Protocol',

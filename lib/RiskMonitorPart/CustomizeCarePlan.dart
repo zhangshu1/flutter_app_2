@@ -21,13 +21,13 @@ class CustomizeCarePlan extends StatelessWidget {
       body: new Column(
         children: <Widget>[
           new Container(
-            padding: new EdgeInsets.all(15.0),
+            padding: new EdgeInsets.all(30.0),
             child: new Text(
                 'Please select the care actions in sequence to create your own customized care plan.'),
           ),
 
           new Container(
-            padding: new EdgeInsets.only(left: 15.0),
+            padding: new EdgeInsets.only(left: 30.0),
             alignment: Alignment.centerLeft,
             child: new Text(
               'Suggested Care Plan',
@@ -54,7 +54,7 @@ class CustomizeCarePlan extends StatelessWidget {
           ),
 
           new Container(
-            padding: new EdgeInsets.symmetric(horizontal: 15.0),
+            padding: new EdgeInsets.symmetric(horizontal: 30.0),
             alignment: Alignment.centerRight,
             child: new RaisedButton(
               onPressed: () {

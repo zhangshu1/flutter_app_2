@@ -29,6 +29,7 @@ void main() {
     new MaterialApp(
       title: 'Menu Page',
       home: new MenuPage(),
+      theme: new ThemeData(textTheme: new TextTheme(body1: new TextStyle(fontSize: 18.0))),
 //      home: new LogIn(),
       routes: <String, WidgetBuilder>{
         //home page is automatically defiend as:

@@ -27,7 +27,7 @@ class Introduction extends StatelessWidget {
         ),
 
         body: new Container(
-          padding: new EdgeInsets.all(20.0),
+          padding: new EdgeInsets.all(30.0),
           child: new RichText(
             text: new TextSpan(
               children: <TextSpan>[

@@ -38,7 +38,7 @@ class CurrentState extends StatelessWidget {
                       child: new SimpleDialog(
                         children: <Widget>[
                           new Container(
-                            padding: new EdgeInsets.all(15.0),
+                            padding: new EdgeInsets.all(30.0),
                             height: 300.0,
                             child: new Center(
                               child: new RichText(
@@ -127,7 +127,7 @@ class CurrentState extends StatelessWidget {
                       child: new SimpleDialog(
                         children: <Widget>[
                           new Container(
-                            padding: new EdgeInsets.all(15.0),
+                            padding: new EdgeInsets.all(30.0),
                             height: 300.0,
                             child: new Center(
                               child: new RichText(

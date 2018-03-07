@@ -17,7 +17,7 @@ class MyCarePlan extends StatelessWidget {
       body: new Column(
         children: <Widget>[
           new Container(
-            padding: new EdgeInsets.all(15.0),
+            padding: new EdgeInsets.all(30.0),
             alignment: Alignment.centerLeft,
             child: new Text(
               'My Care Plan',
