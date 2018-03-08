@@ -51,7 +51,7 @@ class ResultState extends State<Result> with SingleTickerProviderStateMixin {
         controller: _tabController,
         children: choices.map((Choice choice) {
           return new Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(30.0),
             child: new ChoiceCard(choice: choice),
           );
         }).toList(),
@@ -88,7 +88,7 @@ class Container1 extends StatelessWidget {
                     Icons.warning, color: Colors.red, size: 60.0,),
                 ),
                 new Container(
-                  padding: new EdgeInsets.all(15.0),
+                  padding: new EdgeInsets.all(30.0),
                   child: new RichText(
                     text: new TextSpan(
                       children: <TextSpan>[

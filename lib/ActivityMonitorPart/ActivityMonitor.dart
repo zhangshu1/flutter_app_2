@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../Material/MenuDrawer.dart';
 
-//void main() => runApp(new MaterialApp(
-//  title: 'Activity Monitor Page',
-//  home: new DefaultTabController(length: choices.length, child: new ActivityMonitor()),
-//));
+void main() => runApp(new MaterialApp(
+  title: 'Activity Monitor Page',
+  home: new DefaultTabController(length: choices.length, child: new ActivityMonitor()),
+  theme: new ThemeData(textTheme: new TextTheme(body1: new TextStyle(fontSize: 18.0),),)
+));
 
 class ActivityMonitor extends StatelessWidget {
   @override
@@ -27,7 +28,7 @@ class ActivityMonitor extends StatelessWidget {
       body: new TabBarView(
         children: choices.map((Choice choice) {
           return new Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(30.0),
             child: new ChoiceCard(choice: choice,),
           );
         }).toList(),
@@ -61,7 +62,7 @@ List<Choice> choices = <Choice>[
       child: new Column(
         children: <Widget>[
           new Container(
-            height: 50.0,
+            height: 55.0,
             width: 350.0,
             padding: const EdgeInsets.all(16.0),
             decoration: const BoxDecoration(
@@ -85,7 +86,7 @@ List<Choice> choices = <Choice>[
                   children: <Widget>[
                     new Expanded(
                         child: new Container(
-                            height: 50.0,
+                            height: 55.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
@@ -116,7 +117,7 @@ List<Choice> choices = <Choice>[
                   children: <Widget>[
                     new Expanded(
                         child: new Container(
-                            height: 50.0,
+                            height: 55.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
@@ -147,7 +148,7 @@ List<Choice> choices = <Choice>[
                   children: <Widget>[
                     new Expanded(
                         child: new Container(
-                            height: 50.0,
+                            height: 55.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text('12:12 a.m   Symptoms visible',)
@@ -177,7 +178,7 @@ List<Choice> choices = <Choice>[
                   children: <Widget>[
                     new Expanded(
                         child: new Container(
-                            height: 50.0,
+                            height: 55.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text('12:10 a.m   Bedside Evaluation',)
@@ -198,7 +199,7 @@ List<Choice> choices = <Choice>[
           new Container(
             decoration: const BoxDecoration(
                 border: const Border(
-                  bottom: const BorderSide(width: 1.0, color: Colors.grey),
+                  bottom: const BorderSide(width: 1.0, color: Colors.black),
                 )
             ),
             child: new FlatButton(
@@ -207,7 +208,7 @@ List<Choice> choices = <Choice>[
                   children: <Widget>[
                     new Expanded(
                         child: new Container(
-                            height: 50.0,
+                            height: 55.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
@@ -247,7 +248,7 @@ List<Choice> choices = <Choice>[
       child: new Column(
         children: <Widget>[
           new Container(
-            height: 50.0,
+            height: 55.0,
             width: 350.0,
             padding: const EdgeInsets.all(16.0),
             decoration: const BoxDecoration(
@@ -271,7 +272,7 @@ List<Choice> choices = <Choice>[
                   children: <Widget>[
                     new Expanded(
                         child: new Container(
-                            height: 50.0,
+                            height: 55.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
@@ -302,7 +303,7 @@ List<Choice> choices = <Choice>[
                   children: <Widget>[
                     new Expanded(
                         child: new Container(
-                            height: 50.0,
+                            height: 55.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text('12:30 a.m   IV Treatment Started',)
@@ -332,7 +333,7 @@ List<Choice> choices = <Choice>[
                   children: <Widget>[
                     new Expanded(
                         child: new Container(
-                            height: 50.0,
+                            height: 55.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
@@ -372,7 +373,7 @@ List<Choice> choices = <Choice>[
       child: new Column(
         children: <Widget>[
           new Container(
-            height: 50.0,
+            height: 55.0,
             width: 350.0,
             padding: const EdgeInsets.all(16.0),
             decoration: const BoxDecoration(
@@ -396,7 +397,7 @@ List<Choice> choices = <Choice>[
                   children: <Widget>[
                     new Expanded(
                         child: new Container(
-                            height: 50.0,
+                            height: 55.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
@@ -427,7 +428,7 @@ List<Choice> choices = <Choice>[
                   children: <Widget>[
                     new Expanded(
                         child: new Container(
-                            height: 50.0,
+                            height: 55.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(

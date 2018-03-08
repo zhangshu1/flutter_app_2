@@ -60,7 +60,7 @@ class AddAlertState extends State<AddAlert> {
                 ),
 
                 new Container(
-                  padding: new EdgeInsets.all(20.0),
+                  padding: new EdgeInsets.all(30.0),
                   alignment: Alignment.center,
                   child: new RaisedButton(
                     onPressed: null,
