@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../Material/MenuDrawer.dart';
+import '../Material/Zoomable_image.dart';
 
 void main() =>
     runApp(new MaterialApp(
@@ -8,8 +9,14 @@ void main() =>
       home: new CurrentState(),
     ));
 
-var assetImage = new AssetImage('images/pic.jpg');
-var image = new Image(image: assetImage);
+//var assetImage = new AssetImage('images/pic.jpg');
+//var image = new Image(image: assetImage);
+var image = new ZoomableImage(
+    new AssetImage('images/pic.jpg'),
+    scale: 16.0,
+    backgroundColor: Colors.grey
+);
+
 
 class CurrentState extends StatelessWidget {
   @override
@@ -27,6 +34,7 @@ class CurrentState extends StatelessWidget {
           new Container(
             child: new Expanded(child: image),
           ),
+
           new Container(
             child: new Row(
               children: <Widget>[

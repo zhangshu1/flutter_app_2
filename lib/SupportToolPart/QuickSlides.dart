@@ -15,7 +15,7 @@ class QuickSlidesState extends State<QuickSlides> {
         title: new Text('Quick Slides'),
       ),
 
-      body: ,
+//      body: ,
     );
   }
 }
