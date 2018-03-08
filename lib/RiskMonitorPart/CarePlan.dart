@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'CustomizeCarePlan.dart';
 import 'MyCarePlan.dart';
 
+import '../Material/MenuDrawer.dart';
+
 //void main() =>
 //    runApp(new MaterialApp(
 //      title: 'Care Plan Page',
@@ -16,6 +18,7 @@ class CarePlan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      endDrawer: new Drawer(child: new MenuDrawer(),),
       appBar: new AppBar(
         title: new Text(
           'Suggested Care Plan',
