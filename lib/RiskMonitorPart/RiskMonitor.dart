@@ -12,9 +12,8 @@ class RiskMonitor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        endDrawer: new Drawer(
-          child: new MenuDrawer(),
-        ),
+        endDrawer: new Drawer(child: new MenuDrawer(),),
+
         appBar: new AppBar(
           title: new Text(
               'Risk Monitor',

@@ -100,6 +100,18 @@ class MenuPage extends StatelessWidget {
                           Navigator.of(context).pushNamed("/PssatFormDir");
                         }
                     ),
+                  ),
+
+                  new Container(
+                    margin: new EdgeInsets.only(bottom: 1.0),
+                    height: 50.0,
+                    child: new RaisedButton(
+                        child: new Text("S.T.A.B.L.E", style: new TextStyle(
+                            color: Colors.black, fontSize: 20.0)),
+                        onPressed: () {
+                          Navigator.of(context).pushNamed("/Stable");
+                        }
+                    ),
                   )
 
                 ],

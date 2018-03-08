@@ -252,7 +252,10 @@ class MenuDrawer extends StatelessWidget {
           children: <Widget>[
             new ListTile(
               title: const Text('    Sugar'),
-//                      onTap: ,
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/Stable/Sugar');
+              },
             ),
             new ListTile(
               title: const Text('    Temperature'),

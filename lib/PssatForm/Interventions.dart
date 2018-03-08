@@ -36,14 +36,23 @@ class InterventionsState extends State<Interventions>{
   final TextStyle _titleStyle = new TextStyle(color: Colors.grey[700], fontFamily: 'Roboto', fontSize: 12.0,);
   final Decoration _myDeco = new BoxDecoration(border: new Border(bottom: new BorderSide(color: Colors.blueGrey[200])));
 
+  String validateEt(String value) {
+    if(value.isEmpty)
+      return 'ET tube location is required';
+
+    final RegExp numExp = new RegExp(r'^[0-9]{3}$');
+
+    if(!numExp.hasMatch(value))
+      return 'Only 3 digits allowed';
+
+    return null;
+  }
+
   String validateTime(String value) {
-    if (value.isEmpty)
-      return 'Calling Time is required';
+    final RegExp numExp = new RegExp(r'^[0-1][0-9]{3}$');
 
-    final RegExp numExp = new RegExp(r'^[0-9]{4}$');
-
-    if (!numExp.hasMatch(value))
-      return 'Must be 4 digits';
+    if (!value.isEmpty && !numExp.hasMatch(value))
+      return 'Must be 4 digits and the first number can only be 0 or 1';
     return null;
   }
 
@@ -69,17 +78,19 @@ class InterventionsState extends State<Interventions>{
               children: <Widget>[
                 new Container(
                   child: new Text('Airway', style: _titleStyle),
-                  padding: _titlePadding,
+                  padding: const EdgeInsets.only(top: 30.0, bottom: 5.0),
                   decoration: _myDeco,
                   alignment: Alignment.centerLeft,
                 ),
 
                 new TextFormField(
+                  initialValue: intervention.et,
                   decoration: const InputDecoration(
                     labelText: 'ET tube location when team arrived *',
                     suffixText: 'cm',
                   ),
                   keyboardType: TextInputType.number,
+                  validator: validateEt,
                   onSaved: (String val) {
                     intervention.et = val;
                   },
@@ -238,12 +249,8 @@ class InterventionsState extends State<Interventions>{
       _autoValidate = true;
 
       final redSnackbar = new SnackBar(
-        content: new Text('Please re-enter field that marked in red + ${intervention.et} et'),);
+        content: new Text('Please re-enter field that marked in red'),);
       _scaffoldKey.currentState.showSnackBar(redSnackbar);
-    } else if (intervention.et == '') {
-      final requiredSnackbar = new SnackBar(
-        content: new Text('Please enter all required fields + ${intervention.et} et'),);
-      _scaffoldKey.currentState.showSnackBar(requiredSnackbar);
     } else {
       form.save();
 
@@ -266,8 +273,7 @@ class InterventionsState extends State<Interventions>{
                     showDialog(
                         context: context,
                         child: new AlertDialog(
-                          content: new Text(
-                              'Time A form submitted successfully!'),
+                          content: new Text('Time A form submitted successfully!'),
                           actions: <Widget>[
                             new RaisedButton(
                                 child: new Text("OK"),
@@ -287,11 +293,9 @@ class InterventionsState extends State<Interventions>{
   }
 }
 
-
-
-void main() => runApp(
-  new MaterialApp(
-    title: 'Specific Interventions',
-    home: new Interventions(),
-  )
-);
+//void main() => runApp(
+//  new MaterialApp(
+//    title: 'Specific Interventions',
+//    home: new Interventions(),
+//  )
+//);

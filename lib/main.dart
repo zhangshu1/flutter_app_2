@@ -23,6 +23,8 @@ import 'PssatForm/TimeB.dart';
 import 'PssatForm/TimeC.dart';
 import 'PssatForm/Interventions.dart';
 import 'PssatForm/SelfEvaluation.dart';
+import 'SupportToolPart/SelectModule.dart';
+import 'SupportToolPart/Sugar.dart';
 
 void main() {
   runApp(
@@ -60,6 +62,9 @@ void main() {
         "/PssatForm/TimeC": (BuildContext context) => new TimeC(),
         "/PssatForm/Interventions": (BuildContext context) => new Interventions(),
         "/PssatForm/SelfEvaluation": (BuildContext context) => new SelfEvaluation(),
+
+        "/Stable": (BuildContext context) => new SelectModule(),
+        "/Stable/Sugar": (BuildContext context) => new Sugar(),
       }
     )
   );
