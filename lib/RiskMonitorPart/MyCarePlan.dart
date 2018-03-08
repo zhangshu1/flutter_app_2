@@ -29,11 +29,11 @@ class MyCarePlan extends StatelessWidget {
               child: new Column(
                 children: <Widget>[
                   new Container(
-                      padding: new EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 50.0),
+                      padding: new EdgeInsets.fromLTRB(30.0, 0.0, 30.0, 50.0),
                       child: new RichText(
                         text: new TextSpan(
                             style: new TextStyle(
-                                color: Colors.black, height: 1.3),
+                                color: Colors.black, height: 1.3, fontSize: 18.0),
                             children: <TextSpan>[
                               new TextSpan(text: '1. Establish IV access\n',),
                               new TextSpan(

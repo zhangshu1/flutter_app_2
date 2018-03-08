@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../Material/MenuDrawer.dart';
 
-void main() => runApp(new MaterialApp(
-  title: 'Activity Monitor Page',
-  home: new DefaultTabController(length: choices.length, child: new ActivityMonitor()),
-  theme: new ThemeData(textTheme: new TextTheme(body1: new TextStyle(fontSize: 18.0),),)
-));
+//void main() => runApp(new MaterialApp(
+//  title: 'Activity Monitor Page',
+//  home: new DefaultTabController(length: choices.length, child: new ActivityMonitor()),
+//  theme: new ThemeData(textTheme: new TextTheme(body1: new TextStyle(fontSize: 18.0),),)
+//));
 
 class ActivityMonitor extends StatelessWidget {
   @override
@@ -50,7 +50,6 @@ List<Choice> choices = <Choice>[
     'Previous',
     new Container(
       height: 450.0,
-      width: 350.0,
       decoration: const BoxDecoration(
           border: const Border(
             top: const BorderSide(width: 1.0, color: Colors.black),
@@ -61,17 +60,20 @@ List<Choice> choices = <Choice>[
       ),
       child: new Column(
         children: <Widget>[
-          new Container(
-            height: 55.0,
-            width: 350.0,
-            padding: const EdgeInsets.all(16.0),
-            decoration: const BoxDecoration(
-                color: Colors.grey,
-                border: const Border(
-                  bottom: const BorderSide(width: 1.0, color: Colors.black),
-                )
-            ),
-            child: new Text('12/12/2010', textAlign: TextAlign.center,),
+          new Row(
+            children: <Widget>[
+              new Expanded(child: new Container(
+                height: 55.0,
+                padding: const EdgeInsets.all(16.0),
+                decoration: const BoxDecoration(
+                    color: Colors.grey,
+                    border: const Border(
+                      bottom: const BorderSide(width: 1.0, color: Colors.black),
+                    )
+                ),
+                child: new Text('12/12/2010', textAlign: TextAlign.center,),
+              ),)
+            ],
           ),
 
           new Container(
@@ -247,17 +249,22 @@ List<Choice> choices = <Choice>[
       ),
       child: new Column(
         children: <Widget>[
-          new Container(
-            height: 55.0,
-            width: 350.0,
-            padding: const EdgeInsets.all(16.0),
-            decoration: const BoxDecoration(
-                color: Colors.grey,
-                border: const Border(
-                  bottom: const BorderSide(width: 1.0, color: Colors.black),
-                )
-            ),
-            child: new Text('12/12/2010', textAlign: TextAlign.center,),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Container(
+                  height: 55.0,
+                  padding: const EdgeInsets.all(16.0),
+                  decoration: const BoxDecoration(
+                    color: Colors.grey,
+                    border: const Border(
+                      bottom: const BorderSide(width: 1.0, color: Colors.black),
+                    )
+                  ),
+                child: new Text('12/12/2010', textAlign: TextAlign.center,),
+                ),
+              )
+            ],
           ),
 
           new Container(
@@ -372,17 +379,22 @@ List<Choice> choices = <Choice>[
       ),
       child: new Column(
         children: <Widget>[
-          new Container(
-            height: 55.0,
-            width: 350.0,
-            padding: const EdgeInsets.all(16.0),
-            decoration: const BoxDecoration(
-                color: Colors.grey,
-                border: const Border(
-                  bottom: const BorderSide(width: 1.0, color: Colors.black),
-                )
-            ),
-            child: new Text('12/12/2010', textAlign: TextAlign.center,),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Container(
+                  height: 55.0,
+                  padding: const EdgeInsets.all(16.0),
+                  decoration: const BoxDecoration(
+                      color: Colors.grey,
+                      border: const Border(
+                        bottom: const BorderSide(width: 1.0, color: Colors.black),
+                      )
+                  ),
+                  child: new Text('12/12/2010', textAlign: TextAlign.center,),
+                ),
+              )
+            ],
           ),
 
           new Container(

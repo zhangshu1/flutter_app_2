@@ -3,10 +3,10 @@ import 'CarePlan.dart';
 
 import '../Material/MenuDrawer.dart';
 
-void main() => runApp(new MaterialApp(
-  title: 'Risk Monitor Page',
-  home: new RiskMonitor(),
-));
+//void main() => runApp(new MaterialApp(
+//  title: 'Risk Monitor Page',
+//  home: new RiskMonitor(),
+//));
 
 class RiskMonitor extends StatelessWidget {
   @override
@@ -18,91 +18,99 @@ class RiskMonitor extends StatelessWidget {
         appBar: new AppBar(
           title: new Text(
               'Risk Monitor',
-              style: Theme.of(context).textTheme.display1.copyWith(color: Colors.black), textScaleFactor: 0.6
           ),
 //        backgroundColor: Colors.grey,
         ),
 
-        body: new Column(
-          children: <Widget>[
-            new Container(
-              decoration: const BoxDecoration(
-                  border: const Border(
-                    bottom: const BorderSide(width: 1.0, color: Colors.grey),
-                  )
-              ),
-              height: 80.0,
-              child: new FlatButton(
-                  onPressed: null,
-                  child: new Row(
-                    children: <Widget>[
-                      new Container(
-                        width: 180.0,
-                        child: new Text('Hypoglycemia',
-                          style: new TextStyle(color: Colors.black, fontSize: 20.0)),
-                      ),
-                      new Container(
-                        width: 150.0,
-                        alignment: Alignment.centerRight,
-                        child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
-                      )
-                    ],
-                  )
-              ),
-            ),
-
-            new Container(
-              decoration: const BoxDecoration(
-                  border: const Border(
-                    bottom: const BorderSide(width: 1.0, color: Colors.grey),
-                  )
-              ),
-              height: 80.0,
-              child: new FlatButton(
-                  onPressed: null,
-                  child: new Row(
-                    children: <Widget>[
-                      new Container(
-                        width: 180.0,
-                        child: new Text('Hypothermia',
-                          style: new TextStyle(color: Colors.black, fontSize: 20.0)),
-                      ),
-                      new Container(
-                        width: 150.0,
-                        alignment: Alignment.centerRight,
-                        child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
-                      )
-                    ],
-                  )
-              ),
-            ),
-
-            new Container(
-              decoration: const BoxDecoration(
-                  border: const Border(
-                    bottom: const BorderSide(width: 1.0, color: Colors.grey),
-                  )
-              ),
-              height: 80.0,
-              child: new FlatButton(
-                  onPressed: null,
-                  child: new Row(
-                    children: <Widget>[
-                      new Container(
-                        width: 180.0,
-                        child: new Text('Pneumothorax',
+        body: new Container(
+          padding: new EdgeInsets.symmetric(horizontal: 30.0),
+          child: new Column(
+            children: <Widget>[
+              new Container(
+                decoration: const BoxDecoration(
+                    border: const Border(
+                      bottom: const BorderSide(width: 1.0, color: Colors.grey),
+                    )
+                ),
+                height: 80.0,
+                child: new FlatButton(
+                    onPressed: null,
+                    child: new Row(
+                      children: <Widget>[
+                        new Expanded(
+                          child: new Container(
+                            child: new Text('Hypoglycemia',
                             style: new TextStyle(color: Colors.black, fontSize: 20.0)),
-                      ),
-                      new Container(
-                        width: 150.0,
-                        alignment: Alignment.centerRight,
-                        child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
-                      )
-                    ],
-                  )
+                          ),
+                        ),
+
+                        new Container(
+                          width: 50.0,
+                          alignment: Alignment.centerRight,
+                          child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
+                        )
+                      ],
+                    )
+                ),
               ),
-            ),
-          ],
+
+              new Container(
+                decoration: const BoxDecoration(
+                    border: const Border(
+                      bottom: const BorderSide(width: 1.0, color: Colors.grey),
+                    )
+                ),
+                height: 80.0,
+                child: new FlatButton(
+                    onPressed: null,
+                    child: new Row(
+                      children: <Widget>[
+                        new Expanded(
+                          child: new Container(
+                             child: new Text('Hypothermia',
+                             style: new TextStyle(color: Colors.black, fontSize: 20.0)),
+                          ),
+                        ),
+
+                        new Container(
+                          width: 50.0,
+                          alignment: Alignment.centerRight,
+                          child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
+                        )
+                      ],
+                    )
+                ),
+              ),
+
+              new Container(
+                decoration: const BoxDecoration(
+                    border: const Border(
+                      bottom: const BorderSide(width: 1.0, color: Colors.grey),
+                    )
+                ),
+                height: 80.0,
+                child: new FlatButton(
+                    onPressed: null,
+                    child: new Row(
+                      children: <Widget>[
+                        new Expanded(
+                          child: new Container(
+                            child: new Text('Pneumothorax',
+                                style: new TextStyle(color: Colors.black, fontSize: 20.0)),
+                          ),
+                        ),
+
+                        new Container(
+                          width: 50.0,
+                          alignment: Alignment.centerRight,
+                          child: new Icon(Icons.arrow_forward_ios, color: Colors.black),
+                        )
+                      ],
+                    )
+                ),
+              ),
+            ],
+          ),
         ),
 
         bottomNavigationBar: new Container(
