@@ -30,142 +30,155 @@ class CurrentState extends StatelessWidget {
           new Container(
             child: new Row(
               children: <Widget>[
-                new RaisedButton(
-                  // First dialog
-                  onPressed: () {
-                    showDialog(
-                      context: context,
-                      child: new SimpleDialog(
-                        children: <Widget>[
-                          new Container(
-                            padding: new EdgeInsets.all(30.0),
-                            height: 300.0,
-                            child: new Center(
-                              child: new RichText(
-                                text: new TextSpan(
-                                  children: <TextSpan>[
-                                    new TextSpan(
-                                        text: 'Chief Risk Indicator:\n\n',
-                                        style: new TextStyle(
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.bold)),
-                                    new TextSpan(text: 'The infant is ',
-                                        style: new TextStyle(
-                                            color: Colors.grey)),
-                                    new TextSpan(text: 'SGA\n\n\n',
-                                        style: new TextStyle(
-                                            color: Colors.red)),
-                                    new TextSpan(text: 'Visible Symptoms:\n\n',
-                                        style: new TextStyle(
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.bold)),
-                                    new TextSpan(
-                                        text: 'Jitteriness\nLethargy\nWeak Cry',
-                                        style: new TextStyle(
-                                            color: Colors.grey)),
-                                  ],
+                new Expanded(
+                  child: new RaisedButton(
+                    // First dialog
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        child: new SimpleDialog(
+                          children: <Widget>[
+                            new Container(
+                              padding: new EdgeInsets.all(30.0),
+                              height: 300.0,
+                              child: new Center(
+                                child: new RichText(
+                                  text: new TextSpan(
+                                    style: new TextStyle(fontSize: 18.0),
+                                    children: <TextSpan>[
+                                      new TextSpan(
+                                          text: 'Chief Risk Indicator:\n\n',
+                                          style: new TextStyle(
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.bold)),
+                                      new TextSpan(text: 'The infant is ',
+                                          style: new TextStyle(
+                                              color: Colors.grey)),
+                                      new TextSpan(text: 'SGA\n\n\n',
+                                          style: new TextStyle(
+                                              color: Colors.red)),
+                                      new TextSpan(text: 'Visible Symptoms:\n\n',
+                                          style: new TextStyle(
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.bold)),
+                                      new TextSpan(
+                                          text: 'Jitteriness\nLethargy\nWeak Cry',
+                                          style: new TextStyle(
+                                              color: Colors.grey)),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                  child: new Text('Risk Indicators'),
+                          ],
+                        ),
+                      );
+                    },
+                    child: new Text('Risk Indicators'),
+                  ),
                 ),
 
-                new RaisedButton(
-                  // Second dialog
-                  onPressed: () {
-                    showDialog(
-                      context: context,
-                      child: new SimpleDialog(
-                        children: <Widget>[
-                          new Container(
-                            padding: new EdgeInsets.all(15.0),
-                            height: 300.0,
-                            child: new Center(
-                              child: new RichText(
-                                text: new TextSpan(
-                                  children: <TextSpan>[
-                                    new TextSpan(text: 'Assessment:\n\n',
-                                        style: new TextStyle(
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.bold)),
-                                    new TextSpan(
-                                        text: 'The Bedside evaluation of Blood glucose is ',
-                                        style: new TextStyle(
-                                            color: Colors.grey)),
-                                    new TextSpan(text: '35 mg/dL\n\n\n',
-                                        style: new TextStyle(
-                                            color: Colors.red)),
-                                    new TextSpan(
-                                        text: 'The Serum Glucose analysis value is ',
-                                        style: new TextStyle(
-                                            color: Colors.grey)),
-                                    new TextSpan(text: '30 mg/dL',
-                                        style: new TextStyle(
-                                            color: Colors.red)),
-                                  ],
+//                new Container(width: 20.0,),
+
+                new Expanded(
+                  child: new RaisedButton(
+                    // Second dialog
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        child: new SimpleDialog(
+                          children: <Widget>[
+                            new Container(
+                              padding: new EdgeInsets.all(15.0),
+                              height: 300.0,
+                              child: new Center(
+                                child: new RichText(
+                                  text: new TextSpan(
+                                    style: new TextStyle(fontSize: 18.0),
+                                    children: <TextSpan>[
+                                      new TextSpan(text: 'Assessment:\n\n',
+                                          style: new TextStyle(
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.bold)),
+                                      new TextSpan(
+                                          text: 'The Bedside evaluation of Blood glucose is ',
+                                          style: new TextStyle(
+                                              color: Colors.grey)),
+                                      new TextSpan(text: '35 mg/dL\n\n\n',
+                                          style: new TextStyle(
+                                              color: Colors.red)),
+                                      new TextSpan(
+                                          text: 'The Serum Glucose analysis value is ',
+                                          style: new TextStyle(
+                                              color: Colors.grey)),
+                                      new TextSpan(text: '30 mg/dL',
+                                          style: new TextStyle(
+                                              color: Colors.red)),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                  child: new Text(' Assessment '),
+                          ],
+                        ),
+                      );
+                    },
+                    child: new Text('Assessment'),
+                  ),
                 ),
 
-                new RaisedButton(
-                  // Third dialog
-                  onPressed: () {
-                    showDialog(
-                      context: context,
-                      child: new SimpleDialog(
-                        children: <Widget>[
-                          new Container(
-                            padding: new EdgeInsets.all(30.0),
-                            height: 300.0,
-                            child: new Center(
-                              child: new RichText(
-                                text: new TextSpan(
-                                  children: <TextSpan>[
-                                    new TextSpan(text: 'Treatment:\n\n',
-                                        style: new TextStyle(
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.bold)),
-                                    new TextSpan(
-                                        text: 'IV is in place at Location ____\n\n',
-                                        style: new TextStyle(
-                                            color: Colors.grey)),
-                                    new TextSpan(
-                                        text: 'IV fluid infusing is started of type __ at the rate of __ ml/lg/day\n\n',
-                                        style: new TextStyle(
-                                            color: Colors.grey)),
-                                    new TextSpan(
-                                        text: 'UVC is in place at Location ____\n\n',
-                                        style: new TextStyle(
-                                            color: Colors.grey)),
-                                    new TextSpan(
-                                        text: 'Glucose bolus of 2mg/dL given\n\n',
-                                        style: new TextStyle(
-                                            color: Colors.grey)),
-                                    new TextSpan(text: 'UAC not in place\n\n',
-                                        style: new TextStyle(
-                                            color: Colors.grey)),
-                                  ],
+//                new Container(width: 20.0,),
+
+                new Expanded(
+                  child: new RaisedButton(
+                    // Third dialog
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        child: new SimpleDialog(
+                          children: <Widget>[
+                            new Container(
+                              padding: new EdgeInsets.all(30.0),
+                              height: 300.0,
+                              child: new Center(
+                                child: new RichText(
+                                  text: new TextSpan(
+                                    style: new TextStyle(fontSize: 18.0),
+                                    children: <TextSpan>[
+                                      new TextSpan(text: 'Treatment:\n\n',
+                                          style: new TextStyle(
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.bold)),
+                                      new TextSpan(
+                                          text: 'IV is in place at Location ____\n\n',
+                                          style: new TextStyle(
+                                              color: Colors.grey)),
+                                      new TextSpan(
+                                          text: 'IV fluid infusing is started of type __ at the rate of __ ml/lg/day\n\n',
+                                          style: new TextStyle(
+                                              color: Colors.grey)),
+                                      new TextSpan(
+                                          text: 'UVC is in place at Location ____\n\n',
+                                          style: new TextStyle(
+                                              color: Colors.grey)),
+                                      new TextSpan(
+                                          text: 'Glucose bolus of 2mg/dL given\n\n',
+                                          style: new TextStyle(
+                                              color: Colors.grey)),
+                                      new TextSpan(text: 'UAC not in place\n\n',
+                                          style: new TextStyle(
+                                              color: Colors.grey)),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                  child: new Text(' Treatment  '),
+                          ],
+                        ),
+                      );
+                    },
+                    child: new Text('Treatment'),
+                  ),
                 ),
               ],
             ),

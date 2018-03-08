@@ -92,7 +92,7 @@ List<Choice> choices = <Choice>[
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
-                              '12:32 a.m:   IV Treatment Started',)
+                              '12:32 a.m:   IV Treatment Started', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -123,7 +123,7 @@ List<Choice> choices = <Choice>[
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
-                              '12:20 a.m   Hypoglycemia confirmed',)
+                              '12:20 a.m   Hypoglycemia confirmed', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -153,7 +153,7 @@ List<Choice> choices = <Choice>[
                             height: 55.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
-                            child: new Text('12:12 a.m   Symptoms visible',)
+                            child: new Text('12:12 a.m   Symptoms visible', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -183,7 +183,7 @@ List<Choice> choices = <Choice>[
                             height: 55.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
-                            child: new Text('12:10 a.m   Bedside Evaluation',)
+                            child: new Text('12:10 a.m   Bedside Evaluation', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -214,7 +214,7 @@ List<Choice> choices = <Choice>[
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
-                              '12:01 a.m:  Potential Risk - Hypoglycemia',)
+                              '12:01 a.m:  Potential Risk - Hypoglycemia', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -283,7 +283,7 @@ List<Choice> choices = <Choice>[
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
-                              '12:45 a.m:   Administer Glucose Level',)
+                              '12:45 a.m:   Administer Glucose Level', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -313,7 +313,7 @@ List<Choice> choices = <Choice>[
                             height: 55.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
-                            child: new Text('12:30 a.m   IV Treatment Started',)
+                            child: new Text('12:30 a.m   IV Treatment Started', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -344,7 +344,7 @@ List<Choice> choices = <Choice>[
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
-                              '12:22 a.m   Waiting for Serum Glucose',)
+                              '12:22 a.m   Waiting for Serum Glucose', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -413,7 +413,7 @@ List<Choice> choices = <Choice>[
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
-                              '01:05 a.m:  Evaluate Pneumothorax',)
+                              '01:05 a.m:  Evaluate Pneumothorax', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -444,7 +444,7 @@ List<Choice> choices = <Choice>[
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
-                              '01:30 a.m   Evaluate Glucose Level',)
+                              '01:30 a.m   Evaluate Glucose Level', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
