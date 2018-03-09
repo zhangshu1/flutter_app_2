@@ -53,7 +53,7 @@ class ClassifyInfantsState extends State<ClassifyInfants> {
 
               new Container(
                 margin: new EdgeInsets.all(30.0),
-                padding: new EdgeInsets.symmetric(horizontal: 80.0),
+                padding: new EdgeInsets.symmetric(horizontal: 60.0),
                 child: new Row(
                   children: <Widget>[
                     new Expanded(

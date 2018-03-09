@@ -39,6 +39,7 @@ class HeparinSafetyState extends State<HeparinSafety> {
                   ),
                   
                   new Container(
+                    padding: new EdgeInsets.all(20.0),
                     child: new Text('The Dose to draw up 0.25ml = 250 unit'),
                   ),
                 ],
