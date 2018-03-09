@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import '../Material/Zoomable_image.dart';
 
 var assetCalculations = new AssetImage('images/calculations.png');
-var imageCalculations = new Image(image: assetCalculations);
+var imageCalculations = new ZoomableImage(assetCalculations, scale: 16.0, backgroundColor: Colors.grey,);
+
 class Calculations extends StatelessWidget {
   
   @override
