@@ -80,7 +80,7 @@ class ModuleItemState extends State<ModuleItem> {
       ),
       child: new ListTile(
         leading: module.icon,
-        title: new Text(module.title),
+        title: new Text(module.title, style: new TextStyle(fontSize: 18.0, color: Colors.black),),
         onTap: (){
           Navigator.push(
             context,

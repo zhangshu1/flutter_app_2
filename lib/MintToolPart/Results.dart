@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../Material/Zoomable_image.dart';
 
 void main() =>
     runApp(new MaterialApp(
@@ -7,7 +8,7 @@ void main() =>
     ));
 
 var assetImage = new AssetImage('images/result.png');
-var resultImage = new Image(image: assetImage);
+var resultImage = new ZoomableImage(assetImage, scale: 16.0, backgroundColor: Colors.grey,);
 
 class Result extends StatefulWidget {
   @override

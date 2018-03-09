@@ -23,7 +23,7 @@ import 'PssatForm/TimeB.dart';
 import 'PssatForm/TimeC.dart';
 import 'PssatForm/Interventions.dart';
 import 'PssatForm/SelfEvaluation.dart';
-import 'SupportToolPart/SelectModule.dart';
+import 'SupportToolPart/SelectOptions.dart';
 import 'SupportToolPart/Sugar.dart';
 
 void main() {
@@ -31,7 +31,7 @@ void main() {
     new MaterialApp(
       title: 'Menu Page',
       home: new LogIn(),
-//      theme: new ThemeData(textTheme: new TextTheme(body1: new TextStyle(fontSize: 18.0, color: Colors.black))),
+      theme: new ThemeData(textTheme: new TextTheme(body1: new TextStyle(fontSize: 18.0, color: Colors.black))),
       routes: <String, WidgetBuilder>{
         //home page is automatically defiend as:
         //"/": (BuildContext context) => new MenuPage(),
@@ -66,7 +66,7 @@ void main() {
         "/PssatForm/Interventions": (BuildContext context) => new Interventions(),
         "/PssatForm/SelfEvaluation": (BuildContext context) => new SelfEvaluation(),
 
-        "/Stable": (BuildContext context) => new SelectModule(),
+        "/Stable": (BuildContext context) => new SelectOptions(),
         "/Stable/Sugar": (BuildContext context) => new Sugar(),
       }
     )
@@ -92,9 +92,9 @@ class LogOut extends StatelessWidget {
           ),
         ),
 
-        body: new Container(
-          child: new Center(child: new Text('You are safely signed out.', style: Theme.of(context).textTheme.caption)),
-        )
+      body: new Container(
+        //TODO: add icon
+      )
     );
   }
 }

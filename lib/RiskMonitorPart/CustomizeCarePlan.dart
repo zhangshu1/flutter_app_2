@@ -65,7 +65,7 @@ class CustomizeCarePlan extends StatelessWidget {
                   context: context,
                   child: new AlertDialog(
                     content: new Text(
-                        'Are you sure you want to keep this care plan?'),
+                        'Are you sure you want to keep this care plan?', style: new TextStyle(fontSize: 18.0, color: Colors.black),),
                     actions: <Widget>[
                       new RaisedButton(onPressed: () {
                         Navigator.pop(context);
@@ -121,7 +121,7 @@ class CarePlanItemState extends State<CarePlanItem> {
               carePlan.isCheck = value;
             });
           }),
-          new Expanded(child: new Text(carePlan.content))
+          new Expanded(child: new Text(carePlan.content, style: new TextStyle(fontSize: 18.0, color: Colors.black),))
         ],
       ),
     );

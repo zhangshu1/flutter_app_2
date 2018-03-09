@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../Material/MyListView.dart';
 import 'SelectCalculators.dart';
+import 'QuickCards.dart';
 
 class Sugar extends StatefulWidget {
   @override
@@ -22,7 +23,7 @@ class SugarState extends State<Sugar> {
             new Option(new Icon(Icons.compare_arrows), 'Convertors', context, null),
             new Option(new Icon(Icons.local_hospital), 'Risks & Treatment', context, null),
             new Option(new Icon(Icons.disc_full), 'Quick Slides', context, null),
-            new Option(new Icon(Icons.card_membership), 'Quick Cards', context, null),
+            new Option(new Icon(Icons.card_membership), 'Quick Cards', context, new MaterialPageRoute(builder: (_) => new QuickCard())),
             new Option(new Icon(Icons.book), 'Educational Material', context, null),
           ],
         ),

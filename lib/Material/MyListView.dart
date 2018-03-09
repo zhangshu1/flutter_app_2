@@ -32,7 +32,7 @@ class OptionItemState extends State<OptionItem> {
       ),
       child: new ListTile(
         leading: option.icon,
-        title: new Text(option.title),
+        title: new Text(option.title, style: new TextStyle(fontSize: 18.0, color: Colors.black),),
         onTap: (){
           Navigator.push(
             option.context,

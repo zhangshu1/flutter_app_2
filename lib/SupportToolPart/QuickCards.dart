@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import '../Material/Zoomable_image.dart';
 
 var assetCard1 = new AssetImage('images/card1.jpeg');
-var imageCard1 = new Image(image: assetCard1, fit: BoxFit.fitWidth,);
+var imageCard1 = new ZoomableImage(assetCard1, scale: 16.0, backgroundColor: Colors.black,);
 
 var assetCard2 = new AssetImage('images/card2.jpeg');
-var imageCard2 = new Image(image: assetCard2, fit: BoxFit.fitWidth);
+var imageCard2 = new ZoomableImage(assetCard2, scale: 16.0, backgroundColor: Colors.black,);
 
 var assetCard3 = new AssetImage('images/card3.jpeg');
-var imageCard3 = new Image(image: assetCard3, fit: BoxFit.fitWidth);
+var imageCard3 = new ZoomableImage(assetCard3, scale: 16.0, backgroundColor: Colors.black,);
 
 class QuickCard extends StatefulWidget {
 
