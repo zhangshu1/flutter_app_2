@@ -3,28 +3,16 @@ import 'package:flutter/material.dart';
 class MenuDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ListView( //TODO: scroll panel
+    return new ListView(
       children: <Widget>[
         //DrawerHeader for future use (dashboard, login page etc.)
         new DrawerHeader(
           child: new Column(
             children: <Widget>[
-              new Container(
-                child: new FlatButton(
-                  onPressed: null, //TODO: add links for all onTaps
-                  child: new Text('Log In', style: new TextStyle(
-                      color: Colors.black,
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.w500), textAlign: TextAlign.left),
-                ),
-                alignment: Alignment.centerLeft,
-                padding: new EdgeInsets.all(1.0),
-              ),
-
+              new SizedBox(height: 20.0,),
               new Container(
                 child: new FlatButton(
                   onPressed: null,
-                  //TODO: user can search patient after logging in, if not can only see FAQs etc.
                   child: new Text(' Search Patient', style: new TextStyle(
                       color: Colors.black,
                       fontSize: 16.0,
@@ -36,7 +24,7 @@ class MenuDrawer extends StatelessWidget {
 
               new Container(
                 child: new FlatButton(
-                    onPressed: null,
+                    onPressed: (){Navigator.pushReplacementNamed(context, "/LogIn");},
                     //TODO: Go back to login page (main.dart) if log out
                     child: new Text(' Log Out', style: new TextStyle(
                         color: Colors.black,

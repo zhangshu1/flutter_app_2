@@ -451,7 +451,8 @@ class PatientInfoState extends State<PatientInfo> {
                 child: new Text('* indicates required field', style: Theme
                     .of(context)
                     .textTheme
-                    .caption),
+                    .caption
+                ),
               ),
 
               new Container(
@@ -474,15 +475,11 @@ class PatientInfoState extends State<PatientInfo> {
 
     if (!form.validate()) {
       _autoValidate = true; // Start validating on every change.
-      final redSnackbar = new SnackBar(
-        content: new Text('Please re-enter field that marked in red'),);
+      final redSnackbar = new SnackBar(content: new Text('Please re-enter field that marked in red'),);
       _scaffoldKey.currentState.showSnackBar(redSnackbar);
-    } else
-    if (patient.gender == '' || patient.estGa == '' || patient.growth == '' ||
-        patient.admitted == '' || patient.resuscitation == '' ||
-        patient.referral == '') {
-      final requiredSnackbar = new SnackBar(
-        content: new Text('Please enter all required fields'),);
+    } else if (patient.gender == '' || patient.estGa == '' || patient.growth == '' ||
+               patient.admitted == '' || patient.resuscitation == '' || patient.referral == '') {
+      final requiredSnackbar = new SnackBar(content: new Text('Please enter all required fields'),);
       _scaffoldKey.currentState.showSnackBar(requiredSnackbar);
     } else {
       form.save();
@@ -505,8 +502,7 @@ class PatientInfoState extends State<PatientInfo> {
                     showDialog(
                         context: context,
                         child: new AlertDialog(
-                          content: new Text(
-                              'Patient information submitted successfully!'),
+                          content: new Text('Patient information submitted successfully!'),
                           actions: <Widget>[
                             new RaisedButton(
                                 child: new Text("OK"),
