@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import '../Material/Zoomable_image.dart';
 
-var imageInterpreter = new Image(image: new AssetImage('images/interpreter.jpg'));
+var imageInterpreter = new ZoomableImage(new AssetImage('images/interpreter.jpg'), scale: 16.0, backgroundColor: Colors.grey,);
 
 class Interpreter extends StatefulWidget {
 
