@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/foundation.dart';
 
 import '../Material/MenuDrawer.dart';
 
@@ -87,8 +88,14 @@ class PatientInfoState extends State<PatientInfo> {
   Widget build(BuildContext context) {
     return new Scaffold(
       key: _scaffoldKey,
-
       endDrawer: new Drawer(child: new MenuDrawer(),),
+//      drawer: new MenuDrawer(
+//        useLightTheme: widget.useLightTheme,
+//        onThemeChanged: widget.onThemeChanged,
+//        textScaleFactor: widget.textScaleFactor,
+//        onTextScaleFactorChanged: widget.onTextScaleFactorChanged,
+//      ),
+
       appBar: new AppBar(
         title: new Text(
             "Patient Information",
