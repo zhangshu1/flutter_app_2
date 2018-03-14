@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../Material/MenuDrawer.dart';
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 //void main() => runApp(new MaterialApp(
 //  title: 'Test Tube',
@@ -20,12 +21,12 @@ class TestTube extends StatelessWidget {
 //          icon: new Icon(Icons.arrow_drop_down_circle, size: 42.0, color: Colors.white,),
 //          onPressed: null),
           title: new Text(
-            'Test Tube',
+            'Test Tube', textScaleFactor: globals.textScaleFactor,
             style: Theme
                 .of(context)
                 .textTheme
                 .display1
-                .copyWith(color: Colors.white), textScaleFactor: 0.6,
+                .copyWith(color: Colors.white),
           ),
         ),
 

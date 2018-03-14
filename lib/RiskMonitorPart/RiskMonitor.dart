@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'CarePlan.dart';
 
-import '../Material/MenuDrawer.dart';
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 //void main() => runApp(new MaterialApp(
 //  title: 'Risk Monitor Page',
@@ -16,7 +17,7 @@ class RiskMonitor extends StatelessWidget {
 
         appBar: new AppBar(
           title: new Text(
-              'Risk Monitor',
+              'Risk Monitor', textScaleFactor: globals.textScaleFactor,
           ),
 //        backgroundColor: Colors.grey,
         ),
@@ -38,7 +39,7 @@ class RiskMonitor extends StatelessWidget {
                       children: <Widget>[
                         new Expanded(
                           child: new Container(
-                            child: new Text('Hypoglycemia',
+                            child: new Text('Hypoglycemia', textScaleFactor: globals.textScaleFactor,
                             style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                           ),
                         ),
@@ -66,7 +67,7 @@ class RiskMonitor extends StatelessWidget {
                       children: <Widget>[
                         new Expanded(
                           child: new Container(
-                             child: new Text('Hypothermia',
+                             child: new Text('Hypothermia', textScaleFactor: globals.textScaleFactor,
                              style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                           ),
                         ),
@@ -94,7 +95,7 @@ class RiskMonitor extends StatelessWidget {
                       children: <Widget>[
                         new Expanded(
                           child: new Container(
-                            child: new Text('Pneumothorax',
+                            child: new Text('Pneumothorax', textScaleFactor: globals.textScaleFactor,
                                 style: new TextStyle(color: Colors.black, fontSize: 20.0)),
                           ),
                         ),
@@ -122,7 +123,7 @@ class RiskMonitor extends StatelessWidget {
               onPressed: (){Navigator.push(context, new MaterialPageRoute(builder: (_) => new CarePlan()));},
               child: new Text(
                   'Care Plan',
-                  style: Theme.of(context).textTheme.display1.copyWith(color: Colors.black), textScaleFactor: 0.5)
+                  style: Theme.of(context).textTheme.display1.copyWith(color: Colors.black), textScaleFactor: globals.textScaleFactor)
           ),
         )
     );

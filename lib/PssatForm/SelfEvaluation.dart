@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../Material/app.dart';
+import '../Material/all.dart';
 
 class EvaluationData {
   String healthProvider = '';
@@ -139,6 +139,7 @@ class SelfEvaluationState extends State<SelfEvaluation>{
                   ),
 
                   new TextFormField(
+                    style: new TextStyle(color: Colors.black),
                     decoration: const InputDecoration(
                         labelText: 'Time Consultations made *'
                     ),
@@ -153,6 +154,7 @@ class SelfEvaluationState extends State<SelfEvaluation>{
                   ),
 
                   new TextFormField(
+                    style: new TextStyle(color: Colors.black),
                     decoration: const InputDecoration(
                         labelText: 'Family practice called *'
                     ),

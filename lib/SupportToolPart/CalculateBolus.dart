@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import '../Material/MyDropDownButton.dart';
+
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 class CalculateBolus extends StatefulWidget {
 
@@ -13,7 +15,7 @@ class CalculateBolusState extends State<CalculateBolus> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Calculate Bolus'),
+        title: new Text('Calculate Bolus', textScaleFactor: globals.textScaleFactor),
       ),
 
       body: new Container(
@@ -31,7 +33,7 @@ class CalculateBolusState extends State<CalculateBolus> {
                       children: <Widget>[
                         new RaisedButton(
                           onPressed: null,
-                          child: new Text('Calculate'),
+                          child: new Text('Calculate', textScaleFactor: globals.textScaleFactor),
                         ),
                         new Icon(Icons.help, color: Colors.blue,),
                       ],
@@ -39,7 +41,7 @@ class CalculateBolusState extends State<CalculateBolus> {
                   ),
 
                   new Container(
-                    child: new Text('The Dose to draw up 0.25ml = 250 unit'),
+                    child: new Text('The Dose to draw up 0.25ml = 250 unit', textScaleFactor: globals.textScaleFactor),
                   ),
                 ],
               ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 //import 'AlertsDashboard.dart';
 
+import '../Material/globals.dart' as globals;
+
 void main() =>
     runApp(new MaterialApp(
       title: 'Add Alert',
@@ -31,7 +33,7 @@ class AddAlertState extends State<AddAlert> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Add Alert'),
+        title: new Text('Add Alert', textScaleFactor: globals.textScaleFactor),
       ),
 
       body: new Container(
@@ -64,7 +66,7 @@ class AddAlertState extends State<AddAlert> {
                   alignment: Alignment.center,
                   child: new RaisedButton(
                     onPressed: null,
-                    child: new Text('Save Alerts'),
+                    child: new Text('Save Alerts', textScaleFactor: globals.textScaleFactor),
                   ),
                 ),
               ],

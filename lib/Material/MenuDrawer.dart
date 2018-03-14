@@ -160,6 +160,40 @@ class MenuDrawerState extends State<MenuDrawer> {
           ],
         ),
 
+        new ExpansionTile(
+          title: new Text('Theme', textScaleFactor: globals.textScaleFactor,
+              style: new TextStyle(
+                  fontSize: 14.0,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black)),
+          backgroundColor: Theme.of(context).accentColor.withOpacity(0.025),
+          children: <Widget>[
+            new Row(
+              children: <Widget>[
+                const SizedBox(width: 5.0,),
+                new Radio<bool>(
+                  value: true,
+                  groupValue: globals.useLightTheme,
+                  onChanged: _applyTheme,
+                ),
+                new Container(child: new Text('Light', textScaleFactor: globals.textScaleFactor),),
+              ],
+            ),
+
+            new Row(
+              children: <Widget>[
+                const SizedBox(width: 5.0,),
+                new Radio<bool>(
+                  value: false,
+                  groupValue: globals.useLightTheme,
+                  onChanged: _applyTheme,
+                ),
+                new Container(child: new Text('Dark', textScaleFactor: globals.textScaleFactor),),
+              ],
+            ),
+          ],
+        ),
+
         const Divider(),
 
         new ListTile(
@@ -363,6 +397,12 @@ class MenuDrawerState extends State<MenuDrawer> {
   void _applyScaleFactor (double val){
     setState((){
       globals.textScaleFactor = val;
+    });
+  }
+
+  void _applyTheme (bool val){
+    setState((){
+      globals.useLightTheme = val;
     });
   }
 }

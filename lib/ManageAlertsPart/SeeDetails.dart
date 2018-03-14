@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Material/globals.dart' as globals;
+
 void main() =>
     runApp(new MaterialApp(
       title: 'See Details',
@@ -17,7 +19,7 @@ class SeeDetailsState extends State<SeeDetails> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Details'),
+        title: new Text('Details', textScaleFactor: globals.textScaleFactor),
       ),
 
       body: new Container(
@@ -50,11 +52,11 @@ class SeeDetailsState extends State<SeeDetails> {
                   children: <Widget>[
                     new RaisedButton(
                       onPressed: null,
-                      child: new Text('Delete'),
+                      child: new Text('Delete', textScaleFactor: globals.textScaleFactor),
                     ),
                     new RaisedButton(
                       onPressed: null,
-                      child: new Text('Edit'),
+                      child: new Text('Edit', textScaleFactor: globals.textScaleFactor),
                     ),
                   ],
                 ),

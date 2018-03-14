@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../Material/MyListView.dart';
-import 'SelectCalculators.dart';
-import 'QuickCards.dart';
-import 'BlankPage.dart';
+import 'package:flutter_app_2/Demo/MyListView.dart';
+
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 class Sugar extends StatefulWidget {
   @override
@@ -14,7 +14,7 @@ class SugarState extends State<Sugar> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Sugar'),
+        title: new Text('Sugar', textScaleFactor: globals.textScaleFactor),
       ),
 
       body: new Container(

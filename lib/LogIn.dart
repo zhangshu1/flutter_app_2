@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Material/globals.dart' as globals;
 
 import 'MenuPage.dart';
 import 'TileMenu.dart';
@@ -45,7 +46,7 @@ class LogInInfoState extends State<LogIn> {
         onWillPop: () async => false,
         child: new Scaffold(
             appBar: new AppBar(
-            title: new Text('Log In', textAlign: TextAlign.left, style: new TextStyle(color: Colors.white)),
+            title: new Text('Log In', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.left, style: new TextStyle(color: Colors.white)),
             automaticallyImplyLeading: false,   //works same as WillPopScope, which stops user from going back to previous routes
           ),
 
@@ -60,10 +61,14 @@ class LogInInfoState extends State<LogIn> {
                   children: <Widget>[
                     new TextFormField(
                       initialValue: user.userName,
-                      decoration: new InputDecoration(labelText: 'User Name'),
+                      decoration: new InputDecoration(
+                          labelText: 'User Name',
+                          isDense: true
+                      ),
                       keyboardType: TextInputType.text,
                       validator: validateUserName,
                       onSaved: (String value) {user.userName = value;},
+                      style: new TextStyle(color: Colors.black),
                     ),
 
                     new TextFormField(
@@ -73,11 +78,12 @@ class LogInInfoState extends State<LogIn> {
                       keyboardType: TextInputType.text,
                       validator: validatePassword,
                       onSaved: (String value) {user.password = value;},
+                      style: new TextStyle(color: Colors.black),
                     ),
 
                     new Container(
                       child: new RaisedButton(
-                          child: new Text('Log In'),
+                          child: new Text('Log In', textScaleFactor: globals.textScaleFactor),
                           onPressed: _handleSubmit,
                       ),
                     )
@@ -94,7 +100,7 @@ class LogInInfoState extends State<LogIn> {
 
     if(!form.validate()) {
       _autoValidate = true;
-      final redSnackbar = new SnackBar(content: const Text('Please re-enter field that marked in red', style: const TextStyle(fontSize: 18.0, color: Colors.black),));
+      final redSnackbar = new SnackBar(content: new Text('Please re-enter field that marked in red', textScaleFactor: globals.textScaleFactor, style: const TextStyle(fontSize: 18.0, color: Colors.black),));
       _scaffoldKey.currentState.showSnackBar(redSnackbar);
     } else {
       form.save();
@@ -102,11 +108,11 @@ class LogInInfoState extends State<LogIn> {
         showDialog(
             context: context,
             child: new AlertDialog(
-              title: const Text('Login sucessfully', style: const TextStyle(fontSize: 18.0, color: Colors.black),),
-              content: new Text('Welcome back ${user.userName}!', style: const TextStyle(fontSize: 18.0, color: Colors.black),),
+              title: new Text('Login sucessfully', textScaleFactor: globals.textScaleFactor, style: const TextStyle(fontSize: 18.0, color: Colors.black),),
+              content: new Text('Welcome back ${user.userName}!', textScaleFactor: globals.textScaleFactor, style: const TextStyle(fontSize: 18.0, color: Colors.black),),
               actions: <Widget>[
                 new RaisedButton(
-                    child: new Text('OK'),
+                    child: new Text('OK', textScaleFactor: globals.textScaleFactor),
                     onPressed: () {
                       Navigator.of(context).pop(true);
 //                      Navigator.push(context, new MaterialPageRoute(builder: (_) => new MenuPage()));
@@ -119,11 +125,11 @@ class LogInInfoState extends State<LogIn> {
         showDialog(
             context: context,
             child: new AlertDialog(
-              title: const Text('Login failed', style: const TextStyle(fontSize: 18.0, color: Colors.black),),
-              content: new Text("There's no match information matched in our system ${user.userName}", style: const TextStyle(fontSize: 18.0, color: Colors.black),),
+              title: new Text('Login failed', textScaleFactor: globals.textScaleFactor, style: const TextStyle(fontSize: 18.0, color: Colors.black),),
+              content: new Text("There's no match information matched in our system ${user.userName}", textScaleFactor: globals.textScaleFactor, style: const TextStyle(fontSize: 18.0, color: Colors.black),),
               actions: <Widget>[
                 new RaisedButton(
-                  child: new Text('OK'),
+                  child: new Text('OK', textScaleFactor: globals.textScaleFactor),
                   onPressed: (){Navigator.pop(context);},
                 )
               ],

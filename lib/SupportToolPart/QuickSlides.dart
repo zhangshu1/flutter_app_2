@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../Material/globals.dart' as globals;
 
 class QuickSlides extends StatefulWidget {
 
@@ -12,7 +13,7 @@ class QuickSlidesState extends State<QuickSlides> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Quick Slides'),
+        title: new Text('Quick Slides', textScaleFactor: globals.textScaleFactor,),
       ),
 
 //      body: ,

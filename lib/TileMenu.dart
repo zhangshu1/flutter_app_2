@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'Material/app.dart';
+import 'Material/all.dart';
+import 'Material/globals.dart' as globals;
 
 //void main() {
 //  runApp(new MaterialApp(
@@ -31,7 +32,8 @@ class MyHomePage extends StatelessWidget{
     return new Scaffold(
       drawer: new Drawer(child: new MenuDrawer(),),
       appBar: new AppBar(
-        title: new Text('Menu'),
+        title: new Text('Menu', textScaleFactor: globals.textScaleFactor,
+        ),
       ),
       body: new GridView.count(
         primary: false,
@@ -43,7 +45,7 @@ class MyHomePage extends StatelessWidget{
             color: Colors.blue.shade100,
             margin: new EdgeInsets.symmetric(vertical: 5.0),
             child: new ListTile(
-              title: new Text('Current State'),
+              title: new Text('Current State', textScaleFactor: globals.textScaleFactor),
               onTap: () {
                 Navigator.of(context).pushNamed("/CurrentState");
               },
@@ -53,7 +55,7 @@ class MyHomePage extends StatelessWidget{
             color: Colors.blue.shade100,
             margin: new EdgeInsets.symmetric(vertical: 5.0),
             child: new ListTile(
-              title: new Text('Risk Monitor'),
+              title: new Text('Risk Monitor', textScaleFactor: globals.textScaleFactor),
               onTap: () {
                 Navigator.of(context).pushNamed("/RiskMonitor");
               },
@@ -63,7 +65,7 @@ class MyHomePage extends StatelessWidget{
             color: Colors.blue.shade100,
             margin: new EdgeInsets.symmetric(vertical: 5.0),
             child: new ListTile(
-              title: new Text('Activity Monitor'),
+              title: new Text('Activity Monitor', textScaleFactor: globals.textScaleFactor),
               onTap: () {
                 Navigator.of(context).pushNamed("/ActivityMonitor");
               },
@@ -73,7 +75,7 @@ class MyHomePage extends StatelessWidget{
             color: Colors.blue.shade100,
             margin: new EdgeInsets.symmetric(vertical: 5.0),
             child: new ListTile(
-              title: new Text('Risk History'),
+              title: new Text('Risk History', textScaleFactor: globals.textScaleFactor),
               onTap: () {
                 Navigator.of(context).pushNamed("/RiskHistory");
               },
@@ -83,7 +85,7 @@ class MyHomePage extends StatelessWidget{
             color: Colors.blue.shade100,
             margin: new EdgeInsets.symmetric(vertical: 5.0),
             child: new ListTile(
-              title: new Text('Lab Work'),
+              title: new Text('Lab Work', textScaleFactor: globals.textScaleFactor),
               onTap: () {
                 Navigator.of(context).pushNamed("/LabWork");
               },
@@ -93,7 +95,7 @@ class MyHomePage extends StatelessWidget{
             color: Colors.blue.shade100,
             margin: new EdgeInsets.symmetric(vertical: 5.0),
             child: new ListTile(
-              title: new Text('PSSAT Form'),
+              title: new Text('PSSAT Form', textScaleFactor: globals.textScaleFactor),
               onTap: () {
                 Navigator.of(context).pushNamed("/PssatFormDir");
               },
@@ -103,7 +105,7 @@ class MyHomePage extends StatelessWidget{
             color: Colors.blue.shade100,
             margin: new EdgeInsets.symmetric(vertical: 5.0),
             child: new ListTile(
-              title: new Text('S.T.A.B.L.E'),
+              title: new Text('S.T.A.B.L.E', textScaleFactor: globals.textScaleFactor),
               onTap: () {
                 Navigator.of(context).pushNamed("/Stable");
               },

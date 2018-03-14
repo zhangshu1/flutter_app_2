@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'Calculations.dart';
+
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 //void main() => runApp(
 //  new MaterialApp(
@@ -19,7 +21,7 @@ class ClassifyInfantsState extends State<ClassifyInfants> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Classify Infants'),
+        title: new Text('Classify Infants', textScaleFactor: globals.textScaleFactor),
       ),
 
       body: new Container(
@@ -59,7 +61,7 @@ class ClassifyInfantsState extends State<ClassifyInfants> {
                     new Expanded(
                       child: new RaisedButton(
                         onPressed: (){Navigator.push(context, new MaterialPageRoute(builder: (_) => new Calculations(),));},
-                        child: new Text('Classify'),
+                        child: new Text('Classify', textScaleFactor: globals.textScaleFactor),
                       ),
                     ),
                     new Container(width: 20.0,),
@@ -73,7 +75,7 @@ class ClassifyInfantsState extends State<ClassifyInfants> {
                 child: new Row(
                   children: <Widget>[
                     new Icon(Icons.warning, color: Colors.red,),
-                    new Expanded(child: new Text('The Infant is LGA')),
+                    new Expanded(child: new Text('The Infant is LGA', textScaleFactor: globals.textScaleFactor)),
                   ],
                 ),
               ),

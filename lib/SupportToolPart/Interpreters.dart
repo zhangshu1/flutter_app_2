@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import '../Material/Zoomable_image.dart';
+
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 var imageInterpreter = new ZoomableImage(new AssetImage('images/interpreter.jpg'), scale: 16.0, backgroundColor: Colors.grey,);
 
@@ -15,7 +17,7 @@ class InterpreterState extends State<Interpreter> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Interpreters'),
+        title: new Text('Interpreters', textScaleFactor: globals.textScaleFactor,),
       ),
 
       body: new Container(

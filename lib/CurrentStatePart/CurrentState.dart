@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../Material/MenuDrawer.dart';
-import '../Material/Zoomable_image.dart';
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 void main() =>
     runApp(new MaterialApp(
@@ -26,7 +26,7 @@ class CurrentState extends StatelessWidget {
         child: new MenuDrawer(),
       ),
       appBar: new AppBar(
-        title: new Text('Current State'),
+        title: new Text('Current State', textScaleFactor: globals.textScaleFactor),
       ),
 
       body: new Column(
@@ -51,6 +51,7 @@ class CurrentState extends StatelessWidget {
                               height: 300.0,
                               child: new Center(
                                 child: new RichText(
+                                  textScaleFactor: globals.textScaleFactor,
                                   text: new TextSpan(
                                     style: new TextStyle(fontSize: 18.0),
                                     children: <TextSpan>[
@@ -82,7 +83,7 @@ class CurrentState extends StatelessWidget {
                         ),
                       );
                     },
-                    child: new Text('Risk Indicators'),
+                    child: new Text('Risk Indicators', textScaleFactor: globals.textScaleFactor),
                   ),
                 ),
 
@@ -101,6 +102,7 @@ class CurrentState extends StatelessWidget {
                               height: 300.0,
                               child: new Center(
                                 child: new RichText(
+                                  textScaleFactor: globals.textScaleFactor,
                                   text: new TextSpan(
                                     style: new TextStyle(fontSize: 18.0),
                                     children: <TextSpan>[
@@ -131,7 +133,7 @@ class CurrentState extends StatelessWidget {
                         ),
                       );
                     },
-                    child: new Text('Assessment'),
+                    child: new Text('Assessment', textScaleFactor: globals.textScaleFactor),
                   ),
                 ),
 
@@ -150,6 +152,7 @@ class CurrentState extends StatelessWidget {
                               height: 300.0,
                               child: new Center(
                                 child: new RichText(
+                                  textScaleFactor: globals.textScaleFactor,
                                   text: new TextSpan(
                                     style: new TextStyle(fontSize: 18.0),
                                     children: <TextSpan>[
@@ -185,7 +188,7 @@ class CurrentState extends StatelessWidget {
                         ),
                       );
                     },
-                    child: new Text('Treatment'),
+                    child: new Text('Treatment', textScaleFactor: globals.textScaleFactor),
                   ),
                 ),
               ],

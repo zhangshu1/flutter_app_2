@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'CustomizeCarePlan.dart';
 import 'MyCarePlan.dart';
 
-import '../Material/MenuDrawer.dart';
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 //void main() =>
 //    runApp(new MaterialApp(
@@ -35,6 +36,7 @@ class CarePlan extends StatelessWidget {
                   new Container(
                       padding: new EdgeInsets.fromLTRB(30.0, 50.0, 30.0, 50.0),
                       child: new RichText(
+                        textScaleFactor: globals.textScaleFactor,
                         text: new TextSpan(
                             style: new TextStyle(
                                 color: Colors.black, height: 1.3, fontSize: 18.0),
@@ -75,7 +77,7 @@ class CarePlan extends StatelessWidget {
                               onPressed: () {
                                 Navigator.push(context, new MaterialPageRoute(builder: (_) => new CustomizeCarePlan()));
                               },
-                              child: new Text('Customize My Plan',
+                              child: new Text('Customize My Plan', textScaleFactor: globals.textScaleFactor,
                                 style: new TextStyle(color: Colors.black),),
                             ),
                           ],
@@ -86,7 +88,7 @@ class CarePlan extends StatelessWidget {
                               onPressed: () {
                                 Navigator.push(context, new MaterialPageRoute(builder: (_) => new MyCarePlan()));
                               },
-                              child: new Text('Proceed >>',
+                              child: new Text('Proceed >>', textScaleFactor: globals.textScaleFactor,
                                 style: new TextStyle(color: Colors.black),),
                             ),
                           ],

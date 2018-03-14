@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../Material/MenuDrawer.dart';
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
+
 
 class RiskHistory_Hypothermia extends StatelessWidget {
   @override
@@ -29,7 +31,7 @@ class RiskHistory_Hypothermia extends StatelessWidget {
               alignment: Alignment.center,
               child: new Column(
                 children: <Widget>[
-                  new Text("To be continued")
+                  new Text("To be continued", textScaleFactor: globals.textScaleFactor)
                 ],
               )
           )

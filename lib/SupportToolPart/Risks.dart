@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../Material/MyListView.dart';
+import 'package:flutter_app_2/Demo/MyListView.dart';
+import '../Material/globals.dart' as globals;
 
 class Risk extends StatefulWidget {
 
@@ -13,7 +14,7 @@ class RiskState extends State<Risk> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Risk'),
+        title: new Text('Risk', textScaleFactor: globals.textScaleFactor),
       ),
 
       body: new Container(

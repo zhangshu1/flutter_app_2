@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../Material/MenuDrawer.dart';
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 //void main() =>
 //    runApp(new MaterialApp(
@@ -18,7 +19,7 @@ class CustomizeCarePlan extends StatelessWidget {
     return new Scaffold(
       endDrawer: new Drawer(child: new MenuDrawer(),),
       appBar: new AppBar(
-        title: new Text('Customize Care Plan'),
+        title: new Text('Customize Care Plan', textScaleFactor: globals.textScaleFactor),
       ),
 
       body: new Column(
@@ -26,7 +27,7 @@ class CustomizeCarePlan extends StatelessWidget {
           new Container(
             padding: new EdgeInsets.all(30.0),
             child: new Text(
-                'Please select the care actions in sequence to create your own customized care plan.'),
+                'Please select the care actions in sequence to create your own customized care plan.', textScaleFactor: globals.textScaleFactor),
           ),
 
           new Container(
@@ -65,19 +66,19 @@ class CustomizeCarePlan extends StatelessWidget {
                   context: context,
                   child: new AlertDialog(
                     content: new Text(
-                        'Are you sure you want to keep this care plan?', style: new TextStyle(fontSize: 18.0, color: Colors.black),),
+                        'Are you sure you want to keep this care plan?', textScaleFactor: globals.textScaleFactor, style: new TextStyle(fontSize: 18.0, color: Colors.black),),
                     actions: <Widget>[
                       new RaisedButton(onPressed: () {
                         Navigator.pop(context);
-                      }, child: new Text('Cancel'),),
+                      }, child: new Text('Cancel', textScaleFactor: globals.textScaleFactor),),
                       new RaisedButton(onPressed: () {
                         Navigator.of(context).pushNamed('/CreateCarePlan');
-                      }, child: new Text('Yes'),),
+                      }, child: new Text('Yes', textScaleFactor: globals.textScaleFactor),),
                     ],
                   ),
                 );
               },
-              child: new Text('Save'),
+              child: new Text('Save', textScaleFactor: globals.textScaleFactor),
             ),
           ),
         ],
