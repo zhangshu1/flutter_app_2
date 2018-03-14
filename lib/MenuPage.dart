@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'Material/app.dart';
+import 'Material/all.dart';
+import 'Material/globals.dart' as globals;
 
 class MenuPage extends StatelessWidget {
   @override
@@ -17,7 +18,7 @@ class MenuPage extends StatelessWidget {
 //          tooltip: 'Navigation menu',
 //          onPressed: null
 //        ),
-          title: new Text('Options', textAlign: TextAlign.left,
+          title: new Text('Options', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.left,
               style: new TextStyle(color: Colors.white)),
         ),
 
@@ -32,7 +33,7 @@ class MenuPage extends StatelessWidget {
                       height: 50.0,
                       child: new RaisedButton(
 //                  child: new Icon(Icons.note),
-                          child: new Text("Current State", style: new TextStyle(
+                          child: new Text("Current State", textScaleFactor: globals.textScaleFactor, style: new TextStyle(
                               color: Colors.black, fontSize: 20.0)),
                           onPressed: () {
                             Navigator.of(context).pushNamed("/CurrentState");
@@ -44,7 +45,7 @@ class MenuPage extends StatelessWidget {
                     margin: new EdgeInsets.only(bottom: 1.0),
                     height: 50.0,
                     child: new RaisedButton(
-                      child: new Text("Risk Monitor", style: new TextStyle(
+                      child: new Text("Risk Monitor", textScaleFactor: globals.textScaleFactor, style: new TextStyle(
                           color: Colors.black, fontSize: 20.0)),
                       onPressed: () {
                         Navigator.of(context).pushNamed("/RiskMonitor");
@@ -56,7 +57,7 @@ class MenuPage extends StatelessWidget {
                     margin: new EdgeInsets.only(bottom: 1.0),
                     height: 50.0,
                     child: new RaisedButton(
-                        child: new Text("Activity Monitor",
+                        child: new Text("Activity Monitor", textScaleFactor: globals.textScaleFactor,
                             style: new TextStyle(
                                 color: Colors.black, fontSize: 20.0)),
                         onPressed: () {
@@ -69,7 +70,7 @@ class MenuPage extends StatelessWidget {
                     margin: new EdgeInsets.only(bottom: 1.0),
                     height: 50.0,
                     child: new RaisedButton(
-                        child: new Text("Risk History", style: new TextStyle(
+                        child: new Text("Risk History", textScaleFactor: globals.textScaleFactor, style: new TextStyle(
                             color: Colors.black, fontSize: 20.0)),
                         onPressed: () {
                           Navigator.of(context).pushNamed("/RiskHistory");
@@ -82,7 +83,7 @@ class MenuPage extends StatelessWidget {
                     margin: new EdgeInsets.only(bottom: 1.0),
                     height: 50.0,
                     child: new RaisedButton(
-                        child: new Text("Lab Work", style: new TextStyle(
+                        child: new Text("Lab Work", textScaleFactor: globals.textScaleFactor, style: new TextStyle(
                             color: Colors.black, fontSize: 20.0)),
                         onPressed: () {
                           Navigator.of(context).pushNamed("/LabWork");
@@ -94,7 +95,7 @@ class MenuPage extends StatelessWidget {
                     margin: new EdgeInsets.only(bottom: 1.0),
                     height: 50.0,
                     child: new RaisedButton(
-                        child: new Text("PSSAT Form", style: new TextStyle(
+                        child: new Text("PSSAT Form", textScaleFactor: globals.textScaleFactor, style: new TextStyle(
                             color: Colors.black, fontSize: 20.0)),
                         onPressed: () {
                           Navigator.of(context).pushNamed("/PssatFormDir");
@@ -106,7 +107,7 @@ class MenuPage extends StatelessWidget {
                     margin: new EdgeInsets.only(bottom: 1.0),
                     height: 50.0,
                     child: new RaisedButton(
-                        child: new Text("S.T.A.B.L.E", style: new TextStyle(
+                        child: new Text("S.T.A.B.L.E", textScaleFactor: globals.textScaleFactor, style: new TextStyle(
                             color: Colors.black, fontSize: 20.0)),
                         onPressed: () {
                           Navigator.of(context).pushNamed("/Stable");

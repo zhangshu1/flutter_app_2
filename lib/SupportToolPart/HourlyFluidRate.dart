@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import '../Material/MyDropDownButton.dart';
 
-void main() => runApp(
-  new MaterialApp(
-    title: 'Hourly Fluid Rate',
-    home: new HourlyFluidRate(),
-  ),
-);
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
+
+//void main() => runApp(
+//  new MaterialApp(
+//    title: 'Hourly Fluid Rate',
+//    home: new HourlyFluidRate(),
+//  ),
+//);
 
 class HourlyFluidRate extends StatefulWidget {
 
@@ -22,7 +24,7 @@ class HourlyFluidRateState extends State<HourlyFluidRate> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Hourly Fluid Rate'),
+        title: new Text('Hourly Fluid Rate', textScaleFactor: globals.textScaleFactor),
       ),
 
       body: new Container(
@@ -42,7 +44,7 @@ class HourlyFluidRateState extends State<HourlyFluidRate> {
                       children: <Widget>[
                         new RaisedButton(
                           onPressed: null,
-                          child: new Text('Calculate'),
+                          child: new Text('Calculate', textScaleFactor: globals.textScaleFactor),
                         ),
                         new Container(width: 20.0,),
                         new Icon(Icons.help, color: Colors.blue,),
@@ -56,6 +58,7 @@ class HourlyFluidRateState extends State<HourlyFluidRate> {
             new Container(
               margin: new EdgeInsets.only(top: 20.0, bottom: 40.0),
               child: new RichText(
+                textScaleFactor: globals.textScaleFactor,
                 text: new TextSpan(
                   children: <TextSpan>[
                     new TextSpan(text: 'The hourly Fluid Rate is  ', style: new TextStyle(color: Colors.black)),
@@ -69,7 +72,7 @@ class HourlyFluidRateState extends State<HourlyFluidRate> {
             new Container(
               margin: new EdgeInsets.symmetric(vertical: 10.0),
               child: new InkWell(
-                child: new Text('Want to adjust the GIR ?', style: new TextStyle(color: Colors.blue, decoration: TextDecoration.underline),),
+                child: new Text('Want to adjust the GIR ?', textScaleFactor: globals.textScaleFactor, style: new TextStyle(color: Colors.blue, decoration: TextDecoration.underline),),
                 onTap: (){}, //Here is a hyperlink, to be implemented
               ),
             ),
@@ -92,7 +95,7 @@ class HourlyFluidRateState extends State<HourlyFluidRate> {
 
             new Container(
               margin: new EdgeInsets.symmetric(vertical: 5.0),
-              child: new Text('Updated hourly Fluid Rate is 7 ml/hr'),
+              child: new Text('Updated hourly Fluid Rate is 7 ml/hr', textScaleFactor: globals.textScaleFactor,),
             ),
           ],
         ),

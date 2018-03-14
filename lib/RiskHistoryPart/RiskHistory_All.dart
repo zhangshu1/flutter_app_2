@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../Material/MenuDrawer.dart';
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
+
 
 class RiskHistory_All extends StatelessWidget {
   @override
@@ -19,7 +21,7 @@ class RiskHistory_All extends StatelessWidget {
               .of(context)
               .textTheme
               .display1
-              .copyWith(color: Colors.white), textScaleFactor: 0.6,
+              .copyWith(color: Colors.white), textScaleFactor: globals.textScaleFactor,
         ),
 
         //TODO: show current patient info on/under AppBar
@@ -113,14 +115,14 @@ class RiskHistory_All extends StatelessWidget {
                   new TableCell(child: new Text(
                       'Time', textAlign: TextAlign.center,
                       style: new TextStyle(height: 1.8))),
-                  new TableCell(child: new Text('Hypoglycemia (Blood Glucose)',
+                  new TableCell(child: new Text('Hypoglycemia (Blood Glucose)', textScaleFactor: globals.textScaleFactor,
                       textAlign: TextAlign.center,
                       style: new TextStyle(height: 1.8))),
                   new TableCell(child: new Text(
-                      'Pneumothorax', textAlign: TextAlign.center,
+                      'Pneumothorax', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.center,
                       style: new TextStyle(height: 1.8))),
                   new TableCell(child: new Text(
-                      'Hypothermia', textAlign: TextAlign.center,
+                      'Hypothermia', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.center,
                       style: new TextStyle(height: 1.8)))
                 ],
                 decoration: new BoxDecoration(color: const Color(0xFFE0E0E0))
@@ -129,80 +131,80 @@ class RiskHistory_All extends StatelessWidget {
             new TableRow(
                 children: <Widget>[
                   new TableCell(child: new Text(
-                      '09:00', textAlign: TextAlign.center,
+                      '09:00', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.center,
                       style: new TextStyle(height: 1.8))),
                   new TableCell(child: new Text(
-                      'Normal - 60', textAlign: TextAlign.center,
+                      'Normal - 60', textAlign: TextAlign.center, textScaleFactor: globals.textScaleFactor,
                       style: new TextStyle(height: 1.8))),
                   new TableCell(child: new Text(
-                      'Potential Risk', textAlign: TextAlign.center,
+                      'Potential Risk', textAlign: TextAlign.center, textScaleFactor: globals.textScaleFactor,
                       style: new TextStyle(height: 1.8))),
                   new TableCell(child: new Text(
-                      'Potential Risk', textAlign: TextAlign.center,
+                      'Potential Risk', textAlign: TextAlign.center, textScaleFactor: globals.textScaleFactor,
                       style: new TextStyle(height: 1.8)))
                 ]
             ),
             new TableRow(
                 children: <Widget>[
                   new TableCell(child: new Text(
-                      '06:00', textAlign: TextAlign.center,
+                      '06:00', textAlign: TextAlign.center, textScaleFactor: globals.textScaleFactor,
                       style: new TextStyle(height: 1.8))),
                   new TableCell(child: new Text(
-                      'Under observation - 43', textAlign: TextAlign.center,
+                      'Under observation - 43', textAlign: TextAlign.center, textScaleFactor: globals.textScaleFactor,
                       style: new TextStyle(height: 1.8))),
                   new TableCell(child: new Text(
-                      'Potential Risk', textAlign: TextAlign.center,
+                      'Potential Risk', textAlign: TextAlign.center, textScaleFactor: globals.textScaleFactor,
                       style: new TextStyle(height: 1.8))),
                   new TableCell(child: new Text(
-                      'Potential Risk', textAlign: TextAlign.center,
+                      'Potential Risk', textAlign: TextAlign.center, textScaleFactor: globals.textScaleFactor,
                       style: new TextStyle(height: 1.8)))
                 ]
             ),
             new TableRow(
                 children: <Widget>[
                   new TableCell(child: new Text(
-                      '04:00', textAlign: TextAlign.center,
+                      '04:00', textAlign: TextAlign.center, textScaleFactor: globals.textScaleFactor,
                       style: new TextStyle(height: 1.8))),
                   new TableCell(child: new Text(
-                      'Actual Risk - 24', textAlign: TextAlign.center,
+                      'Actual Risk - 24', textAlign: TextAlign.center, textScaleFactor: globals.textScaleFactor,
                       style: new TextStyle(height: 1.8))),
                   new TableCell(child: new Text(
-                      'Potential Risk', textAlign: TextAlign.center,
+                      'Potential Risk', textAlign: TextAlign.center, textScaleFactor: globals.textScaleFactor,
                       style: new TextStyle(height: 1.8))),
                   new TableCell(child: new Text(
-                      'Potential Risk', textAlign: TextAlign.center,
+                      'Potential Risk', textAlign: TextAlign.center, textScaleFactor: globals.textScaleFactor,
                       style: new TextStyle(height: 1.8)))
                 ]
             ),
             new TableRow(
                 children: <Widget>[
                   new TableCell(child: new Text(
-                      '03:00', textAlign: TextAlign.center,
+                      '03:00', textAlign: TextAlign.center, textScaleFactor: globals.textScaleFactor,
                       style: new TextStyle(height: 1.8))),
                   new TableCell(child: new Text(
-                      'Actual Risk - 22.50', textAlign: TextAlign.center,
+                      'Actual Risk - 22.50', textAlign: TextAlign.center, textScaleFactor: globals.textScaleFactor,
                       style: new TextStyle(height: 1.8))),
                   new TableCell(child: new Text(
-                      'Potential Risk', textAlign: TextAlign.center,
+                      'Potential Risk', textAlign: TextAlign.center, textScaleFactor: globals.textScaleFactor,
                       style: new TextStyle(height: 1.8))),
                   new TableCell(child: new Text(
-                      'Potential Risk', textAlign: TextAlign.center,
+                      'Potential Risk', textAlign: TextAlign.center, textScaleFactor: globals.textScaleFactor,
                       style: new TextStyle(height: 1.8)))
                 ]
             ),
             new TableRow(
                 children: <Widget>[
                   new TableCell(child: new Text(
-                      '01:00', textAlign: TextAlign.center,
+                      '01:00', textAlign: TextAlign.center, textScaleFactor: globals.textScaleFactor,
                       style: new TextStyle(height: 1.8))),
                   new TableCell(child: new Text(
-                      'Potential Risk', textAlign: TextAlign.center,
+                      'Potential Risk', textAlign: TextAlign.center, textScaleFactor: globals.textScaleFactor,
                       style: new TextStyle(height: 1.8))),
                   new TableCell(child: new Text(
-                      'Potential Risk', textAlign: TextAlign.center,
+                      'Potential Risk', textAlign: TextAlign.center, textScaleFactor: globals.textScaleFactor,
                       style: new TextStyle(height: 1.8))),
                   new TableCell(child: new Text(
-                      'Potential Risk', textAlign: TextAlign.center,
+                      'Potential Risk', textAlign: TextAlign.center, textScaleFactor: globals.textScaleFactor,
                       style: new TextStyle(height: 1.8)))
                 ]
             )

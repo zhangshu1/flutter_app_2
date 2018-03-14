@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'Sugar.dart';
-import 'BlankPage.dart';
+
+import '../Material/all.dart';
 
 var assetImageSugar = new AssetImage('images/pic.jpg');
 var imageSugar = new Image(image: assetImageSugar);

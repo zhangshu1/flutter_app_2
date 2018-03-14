@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../Material/MyListView.dart';
+import 'package:flutter_app_2/Demo/MyListView.dart';
+import '../Material/globals.dart' as globals;
 
 class SelectConverter extends StatefulWidget {
 
@@ -13,7 +14,7 @@ class SelectConverterState extends State<SelectConverter> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Select Converter'),
+        title: new Text('Select Converter', textScaleFactor: globals.textScaleFactor),
       ),
 
       body: new Container(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../Material/MenuDrawer.dart';
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 //void main() => runApp(
 //  new MaterialApp(
@@ -16,7 +17,7 @@ class EnterPatientReports extends StatelessWidget {
         child: new MenuDrawer(),
       ),
       appBar: new AppBar(
-        title: new Text("Enter Patient Reports", style: new TextStyle(color: Colors.black), textAlign: TextAlign.left),
+        title: new Text("Enter Patient Reports", textScaleFactor: globals.textScaleFactor, style: new TextStyle(color: Colors.black), textAlign: TextAlign.left),
       ),
 
       body: new Container(
@@ -28,7 +29,7 @@ class EnterPatientReports extends StatelessWidget {
                     margin: new EdgeInsets.only(bottom: 1.0),
                     height: 50.0,
                     child: new RaisedButton(
-                        child: new Text("CRP (C-Reactive Protein)",
+                        child: new Text("CRP (C-Reactive Protein)", textScaleFactor: globals.textScaleFactor,
                             style: new TextStyle(
                                 color: Colors.black, fontSize: 20.0)),
 //                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/All");}
@@ -40,7 +41,7 @@ class EnterPatientReports extends StatelessWidget {
                     margin: new EdgeInsets.only(bottom: 1.0),
                     height: 50.0,
                     child: new RaisedButton(
-                        child: new Text("Blood Gas",
+                        child: new Text("Blood Gas", textScaleFactor: globals.textScaleFactor,
                             style: new TextStyle(
                                 color: Colors.black, fontSize: 20.0)),
 //                    onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Hypoglycemia");}
@@ -52,7 +53,7 @@ class EnterPatientReports extends StatelessWidget {
                     margin: new EdgeInsets.only(bottom: 1.0),
                     height: 50.0,
                     child: new RaisedButton(
-                        child: new Text("Electrolytes",
+                        child: new Text("Electrolytes", textScaleFactor: globals.textScaleFactor,
                             style: new TextStyle(
                                 color: Colors.black, fontSize: 20.0)),
 //                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Pneumothorax");}
@@ -64,7 +65,7 @@ class EnterPatientReports extends StatelessWidget {
                     margin: new EdgeInsets.only(bottom: 1.0),
                     height: 50.0,
                     child: new RaisedButton(
-                        child: new Text("Clotting Studies",
+                        child: new Text("Clotting Studies", textScaleFactor: globals.textScaleFactor,
                             style: new TextStyle(
                                 color: Colors.black, fontSize: 20.0)),
 //                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Hypothermia");}

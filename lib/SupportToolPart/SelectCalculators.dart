@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import '../Material/MyListView.dart';
-import 'ClassifyInfants.dart';
-import 'HourlyFluidRate.dart';
-import 'HeparinSafety.dart';
-import 'BlankPage.dart';
+import 'package:flutter_app_2/Demo/MyListView.dart';
+
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 class Calculator extends StatefulWidget {
   @override
@@ -15,7 +14,7 @@ class CalculatorState extends State<Calculator> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Select Calculators'),
+        title: new Text('Select Calculators', textScaleFactor: globals.textScaleFactor),
       ),
 
       body: new Container(

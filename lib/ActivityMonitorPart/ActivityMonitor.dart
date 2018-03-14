@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../Material/MenuDrawer.dart';
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 //void main() => runApp(new MaterialApp(
 //  title: 'Activity Monitor Page',
@@ -16,7 +17,7 @@ class ActivityMonitor extends StatelessWidget {
         child: new MenuDrawer(),
       ),
       appBar: new AppBar(
-        title: new Text('Activity Monitor'),
+        title: new Text('Activity Monitor', textScaleFactor: globals.textScaleFactor),
         bottom: new TabBar(
             tabs: choices.map((Choice choice) {
               return new Tab(
@@ -71,7 +72,7 @@ List<Choice> choices = <Choice>[
                       bottom: const BorderSide(width: 1.0, color: Colors.black),
                     )
                 ),
-                child: new Text('12/12/2010', textAlign: TextAlign.center,),
+                child: new Text('12/12/2010', textAlign: TextAlign.center, textScaleFactor: globals.textScaleFactor,),
               ),)
             ],
           ),
@@ -92,7 +93,7 @@ List<Choice> choices = <Choice>[
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
-                              '12:32 a.m:   IV Treatment Started', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
+                              '12:32 a.m:   IV Treatment Started', textScaleFactor: globals.textScaleFactor, style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -123,7 +124,7 @@ List<Choice> choices = <Choice>[
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
-                              '12:20 a.m   Hypoglycemia confirmed', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
+                              '12:20 a.m   Hypoglycemia confirmed', textScaleFactor: globals.textScaleFactor, style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -153,7 +154,7 @@ List<Choice> choices = <Choice>[
                             height: 55.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
-                            child: new Text('12:12 a.m   Symptoms visible', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
+                            child: new Text('12:12 a.m   Symptoms visible', textScaleFactor: globals.textScaleFactor, style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -183,7 +184,7 @@ List<Choice> choices = <Choice>[
                             height: 55.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
-                            child: new Text('12:10 a.m   Bedside Evaluation', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
+                            child: new Text('12:10 a.m   Bedside Evaluation', textScaleFactor: globals.textScaleFactor, style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -214,7 +215,7 @@ List<Choice> choices = <Choice>[
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
-                              '12:01 a.m:  Potential Risk - Hypoglycemia', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
+                              '12:01 a.m:  Potential Risk - Hypoglycemia', textScaleFactor: globals.textScaleFactor, style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -261,7 +262,7 @@ List<Choice> choices = <Choice>[
                       bottom: const BorderSide(width: 1.0, color: Colors.black),
                     )
                   ),
-                child: new Text('12/12/2010', textAlign: TextAlign.center,),
+                child: new Text('12/12/2010', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.center,),
                 ),
               )
             ],
@@ -283,7 +284,7 @@ List<Choice> choices = <Choice>[
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
-                              '12:45 a.m:   Administer Glucose Level', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
+                              '12:45 a.m:   Administer Glucose Level', textScaleFactor: globals.textScaleFactor, style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -313,7 +314,7 @@ List<Choice> choices = <Choice>[
                             height: 55.0,
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
-                            child: new Text('12:30 a.m   IV Treatment Started', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
+                            child: new Text('12:30 a.m   IV Treatment Started', textScaleFactor: globals.textScaleFactor, style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -344,7 +345,7 @@ List<Choice> choices = <Choice>[
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
-                              '12:22 a.m   Waiting for Serum Glucose', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
+                              '12:22 a.m   Waiting for Serum Glucose', textScaleFactor: globals.textScaleFactor, style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -391,7 +392,7 @@ List<Choice> choices = <Choice>[
                         bottom: const BorderSide(width: 1.0, color: Colors.black),
                       )
                   ),
-                  child: new Text('12/12/2010', textAlign: TextAlign.center,),
+                  child: new Text('12/12/2010', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.center,),
                 ),
               )
             ],
@@ -413,7 +414,7 @@ List<Choice> choices = <Choice>[
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
-                              '01:05 a.m:  Evaluate Pneumothorax', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
+                              '01:05 a.m:  Evaluate Pneumothorax', textScaleFactor: globals.textScaleFactor, style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 
@@ -444,7 +445,7 @@ List<Choice> choices = <Choice>[
                             padding: const EdgeInsets.all(8.0),
                             alignment: Alignment.centerLeft,
                             child: new Text(
-                              '01:30 a.m   Evaluate Glucose Level', style: new TextStyle(color: Colors.black, fontSize: 18.0),)
+                              '01:30 a.m   Evaluate Glucose Level', textScaleFactor: globals.textScaleFactor, style: new TextStyle(color: Colors.black, fontSize: 18.0),)
                         )
                     ),
 

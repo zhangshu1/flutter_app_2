@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../Material/MenuDrawer.dart';
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 //import 'TestTube.dart';
 //import 'ManroeChart.dart';
@@ -28,7 +29,7 @@ class CBCReport extends StatelessWidget {
                 .of(context)
                 .textTheme
                 .display1
-                .copyWith(color: Colors.white), textScaleFactor: 0.6,
+                .copyWith(color: Colors.white), textScaleFactor: globals.textScaleFactor,
           ),
         ),
 
@@ -39,10 +40,10 @@ class CBCReport extends StatelessWidget {
               new Container(
                 child: new Row(
                   children: <Widget>[
-                    new Text('While Blood Cell Count(K/uL):',
+                    new Text('While Blood Cell Count(K/uL):', textScaleFactor: globals.textScaleFactor,
                       textAlign: TextAlign.left,),
                     new Expanded(
-                        child: new Text('14400', textAlign: TextAlign.right)),
+                        child: new Text('14400', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.right)),
                   ],
                 ),
                 padding: new EdgeInsets.symmetric(vertical: 10.0),
@@ -55,9 +56,9 @@ class CBCReport extends StatelessWidget {
               new Container(
                 child: new Row(
                   children: <Widget>[
-                    new Text('Hgb (g/dL):', textAlign: TextAlign.left,),
+                    new Text('Hgb (g/dL):', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.left,),
                     new Expanded(
-                        child: new Text('889', textAlign: TextAlign.right,)),
+                        child: new Text('889', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.right,)),
                   ],
                 ),
                 padding: new EdgeInsets.symmetric(vertical: 10.0),
@@ -70,9 +71,9 @@ class CBCReport extends StatelessWidget {
               new Container(
                 child: new Row(
                   children: <Widget>[
-                    new Text('Hct (%):', textAlign: TextAlign.left,),
+                    new Text('Hct (%):', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.left,),
                     new Expanded(
-                        child: new Text('77', textAlign: TextAlign.right,)),
+                        child: new Text('77', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.right,)),
                   ],
                 ),
                 padding: new EdgeInsets.symmetric(vertical: 10.0),
@@ -85,25 +86,9 @@ class CBCReport extends StatelessWidget {
               new Container(
                 child: new Row(
                   children: <Widget>[
-                    new Text('Plts (%):', textAlign: TextAlign.left,),
+                    new Text('Plts (%):', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.left,),
                     new Expanded(
-                        child: new Text('77', textAlign: TextAlign.right,))
-                  ],
-                ),
-                padding: new EdgeInsets.symmetric(vertical: 10.0),
-                decoration: new BoxDecoration(
-                    border: new Border(bottom: new BorderSide(
-                        color: const Color(0x42000000), width: 1.0),)
-                ),
-              ),
-
-              new Container(
-                child: new Row(
-                  children: <Widget>[
-                    new Text(
-                      'Segmented Neutrophils (%):', textAlign: TextAlign.left,),
-                    new Expanded(
-                        child: new Text('77', textAlign: TextAlign.right,))
+                        child: new Text('77', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.right,))
                   ],
                 ),
                 padding: new EdgeInsets.symmetric(vertical: 10.0),
@@ -117,9 +102,9 @@ class CBCReport extends StatelessWidget {
                 child: new Row(
                   children: <Widget>[
                     new Text(
-                      'Band Neutrophils (%):', textAlign: TextAlign.left,),
+                      'Segmented Neutrophils (%):', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.left,),
                     new Expanded(
-                        child: new Text('77', textAlign: TextAlign.right,))
+                        child: new Text('77', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.right,))
                   ],
                 ),
                 padding: new EdgeInsets.symmetric(vertical: 10.0),
@@ -132,9 +117,10 @@ class CBCReport extends StatelessWidget {
               new Container(
                 child: new Row(
                   children: <Widget>[
-                    new Text('Metamyelocytes (%):', textAlign: TextAlign.left,),
+                    new Text(
+                      'Band Neutrophils (%):', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.left,),
                     new Expanded(
-                        child: new Text('77', textAlign: TextAlign.right,))
+                        child: new Text('77', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.right,))
                   ],
                 ),
                 padding: new EdgeInsets.symmetric(vertical: 10.0),
@@ -147,9 +133,9 @@ class CBCReport extends StatelessWidget {
               new Container(
                 child: new Row(
                   children: <Widget>[
-                    new Text('Lymphocytes (%):', textAlign: TextAlign.left,),
+                    new Text('Metamyelocytes (%):', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.left,),
                     new Expanded(
-                        child: new Text('77', textAlign: TextAlign.right,))
+                        child: new Text('77', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.right,))
                   ],
                 ),
                 padding: new EdgeInsets.symmetric(vertical: 10.0),
@@ -162,9 +148,9 @@ class CBCReport extends StatelessWidget {
               new Container(
                 child: new Row(
                   children: <Widget>[
-                    new Text('Basophils (%):', textAlign: TextAlign.left,),
+                    new Text('Lymphocytes (%):', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.left,),
                     new Expanded(
-                        child: new Text('77', textAlign: TextAlign.right,))
+                        child: new Text('77', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.right,))
                   ],
                 ),
                 padding: new EdgeInsets.symmetric(vertical: 10.0),
@@ -177,9 +163,24 @@ class CBCReport extends StatelessWidget {
               new Container(
                 child: new Row(
                   children: <Widget>[
-                    new Text('Eosinophils (%):', textAlign: TextAlign.left,),
+                    new Text('Basophils (%):', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.left,),
                     new Expanded(
-                        child: new Text('77', textAlign: TextAlign.right,))
+                        child: new Text('77', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.right,))
+                  ],
+                ),
+                padding: new EdgeInsets.symmetric(vertical: 10.0),
+                decoration: new BoxDecoration(
+                    border: new Border(bottom: new BorderSide(
+                        color: const Color(0x42000000), width: 1.0),)
+                ),
+              ),
+
+              new Container(
+                child: new Row(
+                  children: <Widget>[
+                    new Text('Eosinophils (%):', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.left,),
+                    new Expanded(
+                        child: new Text('77', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.right,))
                   ],
                 ),
                 padding: new EdgeInsets.symmetric(vertical: 10.0),
@@ -195,7 +196,7 @@ class CBCReport extends StatelessWidget {
                     new Expanded(child: new RaisedButton(
 //                      onPressed:  () {Navigator.push(context, new MaterialPageRoute(builder: (_) => new TestTube(),));},
                         onPressed: null,
-                        child: new Text('Test Tube',
+                        child: new Text('Test Tube', textScaleFactor: globals.textScaleFactor,
                           style: new TextStyle(color: Colors.black),
                           textAlign: TextAlign.center,)
                     )),
@@ -203,7 +204,7 @@ class CBCReport extends StatelessWidget {
                     new Expanded(child: new RaisedButton(
 //                      onPressed:  () {Navigator.push(context, new MaterialPageRoute(builder: (_) => new ManroeChart(),));},
                         onPressed: null,
-                        child: new Text('Manroe Chart',
+                        child: new Text('Manroe Chart', textScaleFactor: globals.textScaleFactor,
                           style: new TextStyle(color: Colors.black),
                           textAlign: TextAlign.center,)
                     ))

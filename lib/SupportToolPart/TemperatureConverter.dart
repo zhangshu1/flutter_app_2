@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Material/globals.dart' as globals;
+
 class TemperatureConverter extends StatefulWidget {
 
   @override
@@ -14,7 +16,7 @@ class TemperatureConverterState extends State<TemperatureConverter> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Temperature'),
+        title: new Text('Temperature', textScaleFactor: globals.textScaleFactor),
       ),
 
       body: new Container(
@@ -50,6 +52,7 @@ class TemperatureConverterState extends State<TemperatureConverter> {
               new Container(
                 padding: new EdgeInsets.symmetric(vertical: 20.0),
                 child: new RichText(
+                  textScaleFactor: globals.textScaleFactor,
                   text: new TextSpan(
                     children: <TextSpan>[
                       new TextSpan(text: celsiusController.text, style: new TextStyle(color: Colors.black)),

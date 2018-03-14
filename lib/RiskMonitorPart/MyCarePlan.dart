@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../Material/MenuDrawer.dart';
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 //void main() =>
 //    runApp(new MaterialApp(
@@ -14,7 +15,7 @@ class MyCarePlan extends StatelessWidget {
     return new Scaffold(
       endDrawer: new Drawer(child: new MenuDrawer(),),
       appBar: new AppBar(
-        title: new Text('My Care Plan'),
+        title: new Text('My Care Plan', textScaleFactor: globals.textScaleFactor),
       ),
 
       body: new Column(
@@ -23,7 +24,7 @@ class MyCarePlan extends StatelessWidget {
             padding: new EdgeInsets.all(30.0),
             alignment: Alignment.centerLeft,
             child: new Text(
-              'My Care Plan',
+              'My Care Plan', textScaleFactor: globals.textScaleFactor,
               style: new TextStyle(color: Colors.green, fontSize: 20.0),),
           ),
 
@@ -34,7 +35,8 @@ class MyCarePlan extends StatelessWidget {
                   new Container(
                       padding: new EdgeInsets.fromLTRB(30.0, 0.0, 30.0, 50.0),
                       child: new RichText(
-                        text: new TextSpan(
+                          textScaleFactor: globals.textScaleFactor,
+                          text: new TextSpan(
                             style: new TextStyle(
                                 color: Colors.black, height: 1.3, fontSize: 18.0),
                             children: <TextSpan>[
@@ -68,7 +70,7 @@ class MyCarePlan extends StatelessWidget {
                     alignment: Alignment.center,
                     child: new RaisedButton(
                       onPressed: null,
-                      child: new Text('Save & Proceed'),
+                      child: new Text('Save & Proceed', textScaleFactor: globals.textScaleFactor),
                     ),
                   )
                 ],

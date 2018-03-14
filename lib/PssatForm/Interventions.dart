@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../Material/app.dart';
+import '../Material/all.dart';
 import '../Material/globals.dart' as globals;
 
 class InterventionData {
@@ -85,6 +85,7 @@ class InterventionsState extends State<Interventions>{
                 ),
 
                 new TextFormField(
+                  style: new TextStyle(color: Colors.black),
                   initialValue: intervention.et,
                   decoration: const InputDecoration(
                     labelText: 'ET tube location when team arrived *',
@@ -146,6 +147,7 @@ class InterventionsState extends State<Interventions>{
                 ),
 
                 new TextFormField(
+                  style: new TextStyle(color: Colors.black),
                   decoration: const InputDecoration(
                     labelText: 'Antibiotics order time'
                   ),
@@ -188,6 +190,7 @@ class InterventionsState extends State<Interventions>{
                 ),
 
                 new TextFormField(
+                  style: new TextStyle(color: Colors.black),
                   decoration: const InputDecoration(
                       labelText: 'Blood culture obtained time'
                   ),
@@ -202,6 +205,7 @@ class InterventionsState extends State<Interventions>{
                 ),
 
                 new TextFormField(
+                  style: new TextStyle(color: Colors.black),
                   decoration: const InputDecoration(
                       labelText: 'Antibiotics began time'
                   ),

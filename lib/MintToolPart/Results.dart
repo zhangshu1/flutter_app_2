@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../Material/Zoomable_image.dart';
 
+import '../Material/globals.dart' as globals;
+
 void main() =>
     runApp(new MaterialApp(
       title: 'Results Dashboard',
@@ -91,6 +93,7 @@ class Container1 extends StatelessWidget {
                 new Container(
                   padding: new EdgeInsets.all(30.0),
                   child: new RichText(
+                    textScaleFactor: globals.textScaleFactor,
                     text: new TextSpan(
                       children: <TextSpan>[
                         new TextSpan(text: 'The MINT Score is ',
@@ -117,7 +120,7 @@ class Container1 extends StatelessWidget {
           new Container(
             padding: new EdgeInsets.symmetric(horizontal: 20.0),
             child: new Text(
-                'The higher the Mint score, the probability of death of the Infant is more. '),
+                'The higher the Mint score, the probability of death of the Infant is more. ', textScaleFactor: globals.textScaleFactor),
           ),
         ],
       ),
@@ -136,40 +139,13 @@ class Container2 extends StatelessWidget {
           new TableRow(
             children: <TableCell>[
               new TableCell(child: new Text(
-                'Factor', style: new TextStyle(height: 2.5,),
+                'Factor', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5,),
                 textAlign: TextAlign.center,)),
               new TableCell(child: new Text(
-                'Value', style: new TextStyle(height: 2.5),
+                'Value', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
                 textAlign: TextAlign.center,)),
               new TableCell(child: new Text(
-                'Points', style: new TextStyle(height: 2.5),
-                textAlign: TextAlign.center,)),
-            ],
-            decoration: new BoxDecoration(color: Colors.grey),
-          ),
-          new TableRow(
-            children: <TableCell>[
-              new TableCell(child: new Text(
-                'pH', style: new TextStyle(height: 2.5),
-                textAlign: TextAlign.center,)),
-              new TableCell(child: new Text(
-                '7.1', style: new TextStyle(height: 2.5),
-                textAlign: TextAlign.center,)),
-              new TableCell(child: new Text(
-                '4', style: new TextStyle(height: 2.5),
-                textAlign: TextAlign.center,)),
-            ],
-          ),
-          new TableRow(
-            children: <TableCell>[
-              new TableCell(child: new Text(
-                'Age', style: new TextStyle(height: 2.5),
-                textAlign: TextAlign.center,)),
-              new TableCell(child: new Text(
-                '2', style: new TextStyle(height: 2.5),
-                textAlign: TextAlign.center,)),
-              new TableCell(child: new Text(
-                '0', style: new TextStyle(height: 2.5),
+                'Points', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
                 textAlign: TextAlign.center,)),
             ],
             decoration: new BoxDecoration(color: Colors.grey),
@@ -177,53 +153,26 @@ class Container2 extends StatelessWidget {
           new TableRow(
             children: <TableCell>[
               new TableCell(child: new Text(
-                'Apgar (1min)', style: new TextStyle(height: 2.5),
+                'pH', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
                 textAlign: TextAlign.center,)),
               new TableCell(child: new Text(
-                '7', style: new TextStyle(height: 2.5),
+                '7.1', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
                 textAlign: TextAlign.center,)),
               new TableCell(child: new Text(
-                '0', style: new TextStyle(height: 2.5),
-                textAlign: TextAlign.center,)),
-            ],
-          ),
-          new TableRow(
-            children: <TableCell>[
-              new TableCell(child: new Text(
-                'Birth Weight', style: new TextStyle(height: 2.5),
-                textAlign: TextAlign.center,)),
-              new TableCell(child: new Text(
-                '1400', style: new TextStyle(height: 2.5),
-                textAlign: TextAlign.center,)),
-              new TableCell(child: new Text(
-                '1', style: new TextStyle(height: 2.5),
-                textAlign: TextAlign.center,)),
-            ],
-            decoration: new BoxDecoration(color: Colors.grey),
-          ),
-          new TableRow(
-            children: <TableCell>[
-              new TableCell(child: new Text(
-                'PaO2', style: new TextStyle(height: 2.5),
-                textAlign: TextAlign.center,)),
-              new TableCell(child: new Text(
-                '3', style: new TextStyle(height: 2.5),
-                textAlign: TextAlign.center,)),
-              new TableCell(child: new Text(
-                '2', style: new TextStyle(height: 2.5),
+                '4', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
                 textAlign: TextAlign.center,)),
             ],
           ),
           new TableRow(
             children: <TableCell>[
               new TableCell(child: new Text(
-                'Congenital abnormality', style: new TextStyle(height: 2.5),
+                'Age', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
                 textAlign: TextAlign.center,)),
               new TableCell(child: new Text(
-                'No', style: new TextStyle(height: 2.5),
+                '2', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
                 textAlign: TextAlign.center,)),
               new TableCell(child: new Text(
-                '0', style: new TextStyle(height: 2.5),
+                '0', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
                 textAlign: TextAlign.center,)),
             ],
             decoration: new BoxDecoration(color: Colors.grey),
@@ -231,26 +180,80 @@ class Container2 extends StatelessWidget {
           new TableRow(
             children: <TableCell>[
               new TableCell(child: new Text(
-                'Intubated Status', style: new TextStyle(height: 2.5),
+                'Apgar (1min)', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
                 textAlign: TextAlign.center,)),
               new TableCell(child: new Text(
-                'No', style: new TextStyle(height: 2.5),
+                '7', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
                 textAlign: TextAlign.center,)),
               new TableCell(child: new Text(
-                '0', style: new TextStyle(height: 2.5),
+                '0', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
                 textAlign: TextAlign.center,)),
             ],
           ),
           new TableRow(
             children: <TableCell>[
               new TableCell(child: new Text(
-                'Total', style: new TextStyle(color: Colors.red, height: 2.5),
+                'Birth Weight', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
                 textAlign: TextAlign.center,)),
               new TableCell(child: new Text(
-                '-', style: new TextStyle(color: Colors.red, height: 2.5),
+                '1400', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
                 textAlign: TextAlign.center,)),
               new TableCell(child: new Text(
-                '7', style: new TextStyle(color: Colors.red, height: 2.5),
+                '1', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+            ],
+            decoration: new BoxDecoration(color: Colors.grey),
+          ),
+          new TableRow(
+            children: <TableCell>[
+              new TableCell(child: new Text(
+                'PaO2', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                '3', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                '2', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+            ],
+          ),
+          new TableRow(
+            children: <TableCell>[
+              new TableCell(child: new Text(
+                'Congenital abnormality', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                'No', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                '0', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+            ],
+            decoration: new BoxDecoration(color: Colors.grey),
+          ),
+          new TableRow(
+            children: <TableCell>[
+              new TableCell(child: new Text(
+                'Intubated Status', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                'No', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                '0', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 2.5),
+                textAlign: TextAlign.center,)),
+            ],
+          ),
+          new TableRow(
+            children: <TableCell>[
+              new TableCell(child: new Text(
+                'Total', textScaleFactor: globals.textScaleFactor, style: new TextStyle(color: Colors.red, height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                '-', textScaleFactor: globals.textScaleFactor, style: new TextStyle(color: Colors.red, height: 2.5),
+                textAlign: TextAlign.center,)),
+              new TableCell(child: new Text(
+                '7', textScaleFactor: globals.textScaleFactor, style: new TextStyle(color: Colors.red, height: 2.5),
                 textAlign: TextAlign.center,)),
             ],
             decoration: new BoxDecoration(color: Colors.grey),

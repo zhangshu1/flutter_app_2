@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'Results.dart';
 
+import '../Material/globals.dart' as globals;
+
 //void main() => runApp(new MaterialApp(
 //  title: 'Mint Tool',
 //  home: new MintTool(),
@@ -16,16 +18,15 @@ class MintToolState extends State<MintTool> {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: new Text('Mint Tool'),
+          title: new Text('Mint Tool', textScaleFactor: globals.textScaleFactor),
         ),
 
         body: new CustomScrollView(
           slivers: <Widget>[
-            const SliverAppBar(
+            new SliverAppBar(
               expandedHeight: 150.0,
-              flexibleSpace: const FlexibleSpaceBar(
-                title: const Text(
-                    'Mortality Index for Neonatal\n            Transportation\n               (MINT) score'),
+              flexibleSpace: new FlexibleSpaceBar(
+                title: new Text('Mortality Index for Neonatal\n            Transportation\n               (MINT) score', textScaleFactor: globals.textScaleFactor),
               ),
             ),
 
@@ -60,7 +61,7 @@ class MintToolState extends State<MintTool> {
                                   ),
                                 );
                               },
-                              child: new Text('Calculate'),
+                              child: new Text('Calculate', textScaleFactor: globals.textScaleFactor),
                             ),
                           ],
                         ),
@@ -100,12 +101,12 @@ class pHState extends State<pH> {
           height: 50.0,
           child: new Row(
             children: <Widget>[
-              new Expanded(child: new Text('pH'),),
+              new Expanded(child: new Text('pH', textScaleFactor: globals.textScaleFactor),),
               new DropdownButton(
                 value: originalpH,
                 items: pHs.map((string) {
                   return new DropdownMenuItem(
-                    child: new Text(string),
+                    child: new Text(string, textScaleFactor: globals.textScaleFactor),
                     value: string,
                   );
                 }).toList(),

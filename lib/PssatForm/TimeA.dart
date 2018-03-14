@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../Material/MenuDrawer.dart';
+import '../Material/all.dart';
 
 class TimeAData {
   String callingTime = ''; //*textformfield
@@ -126,6 +126,7 @@ class TimeAState extends State<TimeA> {
 
                 children: <Widget>[
                   new TextFormField(
+                    style: new TextStyle(color: Colors.black),
                     decoration: const InputDecoration(
                       labelText: 'Calling Time *',
                       helperText: 'Four digits only'
@@ -232,6 +233,7 @@ class TimeAState extends State<TimeA> {
                     children: <Widget>[
                       new Expanded(
                         child: new TextFormField(
+                          style: new TextStyle(color: Colors.black),
                           decoration: const InputDecoration(
                             labelText: 'Temperature',
                           ),
@@ -247,6 +249,7 @@ class TimeAState extends State<TimeA> {
                       new SizedBox(width: 20.0),
                       new Expanded(
                         child: new TextFormField(
+                          style: new TextStyle(color: Colors.black),
                           decoration: const InputDecoration(
                             labelText: 'Heart Rate',
                           ),
@@ -268,6 +271,7 @@ class TimeAState extends State<TimeA> {
                       new Expanded(
 //                        padding: new EdgeInsets.only(top: 10.0),
                         child: new TextFormField(
+                          style: new TextStyle(color: Colors.black),
                           decoration: const InputDecoration(
                             labelText: 'Respiratory Rate',
                           ),
@@ -283,6 +287,7 @@ class TimeAState extends State<TimeA> {
                       new SizedBox(width: 20.0),
                       new Expanded(
                         child: new TextFormField(
+                          style: new TextStyle(color: Colors.black),
                           decoration: const InputDecoration(
                             labelText: 'Blood Pressure',
                           ),
@@ -302,6 +307,7 @@ class TimeAState extends State<TimeA> {
                     children: <Widget>[
                       new Expanded(
                         child: new TextFormField(
+                          style: new TextStyle(color: Colors.black),
                           decoration: const InputDecoration(
                             labelText: 'Mean',
                           ),
@@ -353,6 +359,7 @@ class TimeAState extends State<TimeA> {
                     children: <Widget>[
                       new Expanded(
                         child: new TextFormField(
+                          style: new TextStyle(color: Colors.black),
                           decoration: const InputDecoration(
                             labelText: 'CRT over Chest (s)',
                           ),
@@ -368,6 +375,7 @@ class TimeAState extends State<TimeA> {
                       new SizedBox(width: 20.0),
                       new Expanded(
                         child: new TextFormField(
+                          style: new TextStyle(color: Colors.black),
                           decoration: const InputDecoration(
                             labelText: 'CRT over Knee (s)',
                           ),
@@ -384,6 +392,7 @@ class TimeAState extends State<TimeA> {
                   ),
 
                   new TextFormField(
+                    style: new TextStyle(color: Colors.black),
                     decoration: const InputDecoration(labelText: 'Pulses',),
                     onSaved: (String val) {
                       timeA.pulses = val;
@@ -488,6 +497,7 @@ class TimeAState extends State<TimeA> {
                     children: <Widget>[
                       new Expanded(
                         child: new TextFormField(
+                          style: new TextStyle(color: Colors.black),
                           decoration: const InputDecoration(
                               labelText: 'O2',
                               suffixText: '%'
@@ -504,6 +514,7 @@ class TimeAState extends State<TimeA> {
                       new SizedBox(width: 20.0),
                       new Expanded(
                         child: new TextFormField(
+                          style: new TextStyle(color: Colors.black),
                           decoration: const InputDecoration(
                               labelText: 'FiO2',
                               suffixText: '%'
@@ -520,6 +531,7 @@ class TimeAState extends State<TimeA> {
                       new SizedBox(width: 20.0),
                       new Expanded(
                         child: new TextFormField(
+                          style: new TextStyle(color: Colors.black),
                           decoration: const InputDecoration(
                               labelText: 'PaO2',
                               suffixText: '%'
@@ -573,6 +585,7 @@ class TimeAState extends State<TimeA> {
                       new SizedBox(width: 20.0),
                       new Expanded(
                         child: new TextFormField(
+                          style: new TextStyle(color: Colors.black),
                           decoration: const InputDecoration(
                             labelText: 'Others',
                           ),
@@ -624,6 +637,7 @@ class TimeAState extends State<TimeA> {
                   ),
 
                   new TextFormField(
+                    style: new TextStyle(color: Colors.black),
                     initialValue: timeA.reasonGiven,
                     decoration: const InputDecoration(
                       hintText: 'Reason Given',
@@ -637,6 +651,7 @@ class TimeAState extends State<TimeA> {
                   ),
 
                   new TextFormField(
+                    style: new TextStyle(color: Colors.black),
                     initialValue: timeA.opioidsDose,
                     decoration: const InputDecoration(
                       hintText: 'Time/dose of all opioids given past 24 hours',
@@ -650,6 +665,7 @@ class TimeAState extends State<TimeA> {
                   ),
 
                   new TextFormField(
+                    style: new TextStyle(color: Colors.black),
                     initialValue: timeA.sedativesDose,
                     decoration: const InputDecoration(
                       hintText: 'Time/dose of all sedatives given past 24 hours',
@@ -709,6 +725,7 @@ class TimeAState extends State<TimeA> {
                   ),
 
                   new TextFormField(
+                    style: new TextStyle(color: Colors.black),
                     decoration: const InputDecoration(labelText: 'Location',),
                     onSaved: (String val) {
                       timeA.ivLocation = val;
@@ -754,6 +771,7 @@ class TimeAState extends State<TimeA> {
                   ),
 
                   new TextFormField(
+                    style: new TextStyle(color: Colors.black),
                     decoration: const InputDecoration(labelText: 'Location',),
                     onSaved: (String val) {
                       timeA.infusingLocation = val;
@@ -799,6 +817,7 @@ class TimeAState extends State<TimeA> {
                   ),
 
                   new TextFormField(
+                    style: new TextStyle(color: Colors.black),
                     decoration: const InputDecoration(
                       labelText: 'Tip Location',),
                     onSaved: (String val) {
@@ -845,6 +864,7 @@ class TimeAState extends State<TimeA> {
                   ),
 
                   new TextFormField(
+                    style: new TextStyle(color: Colors.black),
                     decoration: const InputDecoration(
                       labelText: 'Tip Location',),
                     onSaved: (String val) {
@@ -891,6 +911,7 @@ class TimeAState extends State<TimeA> {
                   ),
 
                   new TextFormField(
+                    style: new TextStyle(color: Colors.black),
                     decoration: const InputDecoration(
                       labelText: 'Value (mg/dL)',),
                     onSaved: (String val) {
@@ -903,6 +924,7 @@ class TimeAState extends State<TimeA> {
                     children: <Widget>[
                       new Expanded(
                         child: new TextFormField(
+                          style: new TextStyle(color: Colors.black),
                           decoration: const InputDecoration(
                             labelText: 'Indicate CBG, ABG Venous',
                           ),
@@ -918,6 +940,7 @@ class TimeAState extends State<TimeA> {
                       new SizedBox(width: 20.0),
                       new Expanded(
                         child: new TextFormField(
+                          style: new TextStyle(color: Colors.black),
                           decoration: const InputDecoration(
                             labelText: 'pH',
                           ),
@@ -937,6 +960,7 @@ class TimeAState extends State<TimeA> {
                     children: <Widget>[
                       new Expanded(
                         child: new TextFormField(
+                          style: new TextStyle(color: Colors.black),
                           decoration: const InputDecoration(
                             labelText: 'pCO2',
                           ),
@@ -952,6 +976,7 @@ class TimeAState extends State<TimeA> {
                       new SizedBox(width: 20.0),
                       new Expanded(
                         child: new TextFormField(
+                          style: new TextStyle(color: Colors.black),
                           decoration: const InputDecoration(
                             labelText: 'pO2',
                           ),
@@ -971,6 +996,7 @@ class TimeAState extends State<TimeA> {
                     children: <Widget>[
                       new Expanded(
                         child: new TextFormField(
+                          style: new TextStyle(color: Colors.black),
                           decoration: const InputDecoration(
                             labelText: 'HCO3',
                           ),
@@ -1012,6 +1038,7 @@ class TimeAState extends State<TimeA> {
                   ),
 
                   new TextFormField(
+                    style: new TextStyle(color: Colors.black),
                     decoration: const InputDecoration(labelText: 'Rate',),
                     onSaved: (String val) {
                       timeA.rate = val;

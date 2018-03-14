@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 
-import 'Material/app.dart';
+import 'Material/all.dart';
+import 'Material/globals.dart' as globals;
 
 void main() {
   runApp(
     new MaterialApp(
+      color: Colors.black,
       title: 'Menu Page',
       home: new LogIn(),
-//      theme: new ThemeData(textTheme: new TextTheme(body1: new TextStyle(fontSize: 18.0, color: Colors.black87))),
-//      theme: new ThemeData.dark(),
+      theme: new ThemeData(
+        textTheme: new TextTheme(body1: new TextStyle(fontSize: 18.0, color: Colors.black)),
+        brightness: globals.useLightTheme ? Brightness.light : Brightness.dark,
+        inputDecorationTheme: new InputDecorationTheme(hintStyle: new TextStyle(color: Colors.black)),
+      ),
 
       routes: <String, WidgetBuilder>{
         //home page is automatically defined as:

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import '../Material/MyListView.dart';
-import 'SelectModule.dart';
-import 'BlankPage.dart';
+import 'package:flutter_app_2/Demo/MyListView.dart';
+
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 //void main() => runApp(
 //  new MaterialApp(
@@ -21,7 +22,7 @@ class SelectOptionState extends State<SelectOptions> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Select Options'),
+        title: new Text('Select Options', textScaleFactor: globals.textScaleFactor),
       ),
 
       body: new Container(

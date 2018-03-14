@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../Material/MenuDrawer.dart';
-import 'CBCReport.dart';
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 //void main() => runApp(new MaterialApp(
 //  title: 'View Patient Reports',
@@ -21,12 +21,12 @@ class ViewPatientReports extends StatelessWidget {
 //          icon: new Icon(Icons.arrow_drop_down_circle, size: 42.0, color: Colors.white,),
 //          onPressed: null),
         title: new Text(
-          'View Patient Reports',
+          'View Patient Reports', textScaleFactor: globals.textScaleFactor,
           style: Theme
               .of(context)
               .textTheme
               .display1
-              .copyWith(color: Colors.white), textScaleFactor: 0.6,
+              .copyWith(color: Colors.white),
         ),
       ),
 
@@ -58,9 +58,9 @@ class ViewPatientReports extends StatelessWidget {
               new TableRow(
                   children: <Widget>[
                     new TableCell(child: new Text(
-                        '  Ordered Tests', style: new TextStyle(height: 1.8))),
-                    new TableCell(child: new Text('Date', textAlign: TextAlign.center, style: new TextStyle(height: 1.8))),
-                    new TableCell(child: new Text('Time', textAlign: TextAlign.center, style: new TextStyle(height: 1.8)))
+                        '  Ordered Tests', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 1.8))),
+                    new TableCell(child: new Text('Date', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.center, style: new TextStyle(height: 1.8))),
+                    new TableCell(child: new Text('Time', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.center, style: new TextStyle(height: 1.8)))
                   ],
                   decoration: new BoxDecoration(color: const Color(0xFFE0E0E0))
               ),
@@ -68,35 +68,35 @@ class ViewPatientReports extends StatelessWidget {
                   children: <Widget>[
                     new TableCell(child: new FlatButton(
                       onPressed: () {Navigator.push(context, new MaterialPageRoute(builder: (_) => new CBCReport(),));},
-                      child: new Text('  CBC with Differential', style: new TextStyle(height: 1.5)))),
-                    new TableCell(child: new Text('02/21/2018', textAlign: TextAlign.center, style: new TextStyle(height: 1.5))),
-                    new TableCell(child: new Text('13:33', textAlign: TextAlign.center, style: new TextStyle(height: 1.5)))
+                      child: new Text('  CBC with Differential', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 1.5)))),
+                    new TableCell(child: new Text('02/21/2018', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.center, style: new TextStyle(height: 1.5))),
+                    new TableCell(child: new Text('13:33', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.center, style: new TextStyle(height: 1.5)))
                   ]
               ),
               new TableRow(
                   children: <Widget>[
                     new TableCell(child: new FlatButton(onPressed: null,
-                        child: new Text('  CRP (C-Reactive Protein)', style: new TextStyle(height: 1.5)))),
-                    new TableCell(child: new Text('02/21/2018', textAlign: TextAlign.center, style: new TextStyle(height: 1.5))),
-                    new TableCell(child: new Text('13:33', textAlign: TextAlign.center, style: new TextStyle(height: 1.5)))
+                        child: new Text('  CRP (C-Reactive Protein)', textScaleFactor: globals.textScaleFactor, style: new TextStyle(height: 1.5)))),
+                    new TableCell(child: new Text('02/21/2018', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.center, style: new TextStyle(height: 1.5))),
+                    new TableCell(child: new Text('13:33', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.center, style: new TextStyle(height: 1.5)))
                   ]
               ),
               new TableRow(
                   children: <Widget>[
                     new TableCell(child: new FlatButton(onPressed: null,
-                        child: new Text('  Clotting Studies',
+                        child: new Text('  Clotting Studies', textScaleFactor: globals.textScaleFactor,
                             style: new TextStyle(height: 1.5)))),
-                    new TableCell(child: new Text('02/21/2018', textAlign: TextAlign.center, style: new TextStyle(height: 1.5))),
-                    new TableCell(child: new Text('13:33', textAlign: TextAlign.center, style: new TextStyle(height: 1.5)))
+                    new TableCell(child: new Text('02/21/2018', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.center, style: new TextStyle(height: 1.5))),
+                    new TableCell(child: new Text('13:33', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.center, style: new TextStyle(height: 1.5)))
                   ]
               ),
               new TableRow(
                   children: <Widget>[
                     new TableCell(child: new FlatButton(onPressed: null,
-                        child: new Text('  Electrolytes',
+                        child: new Text('  Electrolytes', textScaleFactor: globals.textScaleFactor,
                             style: new TextStyle(height: 1.5)))),
-                    new TableCell(child: new Text('02/21/2018', textAlign: TextAlign.center, style: new TextStyle(height: 1.5))),
-                    new TableCell(child: new Text('13:33', textAlign: TextAlign.center, style: new TextStyle(height: 1.5)))
+                    new TableCell(child: new Text('02/21/2018', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.center, style: new TextStyle(height: 1.5))),
+                    new TableCell(child: new Text('13:33', textScaleFactor: globals.textScaleFactor, textAlign: TextAlign.center, style: new TextStyle(height: 1.5)))
                   ]
               )
             ]

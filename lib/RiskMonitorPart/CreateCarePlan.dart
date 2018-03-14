@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../Material/MenuDrawer.dart';
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 //void main() =>
 //    runApp(new MaterialApp(
@@ -14,7 +15,7 @@ class CreateCarePlan extends StatelessWidget {
     return new Scaffold(
       endDrawer: new Drawer(child: new MenuDrawer(),),
       appBar: new AppBar(
-        title: new Text('Customize Care Plan'),
+        title: new Text('Customize Care Plan', textScaleFactor: globals.textScaleFactor,),
       ),
 
       body: new Column(
@@ -22,7 +23,7 @@ class CreateCarePlan extends StatelessWidget {
           new Container(
             padding: new EdgeInsets.all(30.0),
             child: new Text(
-                'Please select the care actions in sequence to create your own customized care plan. You can use the protocols to create your own care plan'),
+                'Please select the care actions in sequence to create your own customized care plan. You can use the protocols to create your own care plan', textScaleFactor: globals.textScaleFactor),
           ),
 
           new Container(

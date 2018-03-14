@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'AddAlert.dart';
 import 'SeeDetails.dart';
 
+import '../Material/globals.dart' as globals;
+
 void main() =>
     runApp(new MaterialApp(
       title: 'Alerts Dashboard',
@@ -35,9 +37,9 @@ class AlertsDashboard extends StatelessWidget {
               children: <Widget>[
                 new ListTile(
                   leading: new Icon(Icons.calendar_today),
-                  title: const Text('Smith Jones – Loc : 205'),
-                  subtitle: const Text('Blood Glucose Screening\n'
-                      'June 23, 2011 at 11:37 p.m'),
+                  title: new Text('Smith Jones – Loc : 205', textScaleFactor: globals.textScaleFactor),
+                  subtitle: new Text('Blood Glucose Screening\n'
+                      'June 23, 2011 at 11:37 p.m', textScaleFactor: globals.textScaleFactor),
                   isThreeLine: true,
                   onTap: () {
                     Navigator.of(context).pushNamed('/SeeDetails');
@@ -52,9 +54,9 @@ class AlertsDashboard extends StatelessWidget {
               children: <Widget>[
                 new ListTile(
                   leading: new Icon(Icons.calendar_today),
-                  title: const Text('Deliz Ryan – Loc : 207'),
-                  subtitle: const Text('Monitor Blood Pressure\n'
-                      'June 23, 2011 at 11:37 p.m'),
+                  title: new Text('Deliz Ryan – Loc : 207', textScaleFactor: globals.textScaleFactor),
+                  subtitle: new Text('Monitor Blood Pressure\n'
+                      'June 23, 2011 at 11:37 p.m', textScaleFactor: globals.textScaleFactor),
                   isThreeLine: true,
                   onTap: () {
                     Navigator.of(context).pushNamed('/SeeDetails');

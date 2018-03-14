@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import '../Material/Zoomable_image.dart';
+
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 var assetCard1 = new AssetImage('images/card1.jpeg');
 var imageCard1 = new ZoomableImage(assetCard1, scale: 16.0, backgroundColor: Colors.black,);
@@ -29,7 +31,7 @@ class QuickCardState extends State<QuickCard> with SingleTickerProviderStateMixi
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Quick Cards'),
+        title: new Text('Quick Cards', textScaleFactor: globals.textScaleFactor),
       ),
 
       body: new TabBarView(
@@ -94,7 +96,7 @@ class Card3 extends StatelessWidget {
   }
 }
 
-void main() => runApp(new MaterialApp(
-  title: 'suibian',
-  home: new QuickCard(),
-));
+//void main() => runApp(new MaterialApp(
+//  title: 'suibian',
+//  home: new QuickCard(),
+//));

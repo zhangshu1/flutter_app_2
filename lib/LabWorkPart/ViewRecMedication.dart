@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../Material/MenuDrawer.dart';
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 class ViewRecMedications extends StatelessWidget {
   @override
@@ -15,7 +16,7 @@ class ViewRecMedications extends StatelessWidget {
 //          onPressed: null),
         title: new Text(
           'View Recommended Medications',
-          style: Theme.of(context).textTheme.display1.copyWith(color: Colors.white), textScaleFactor: 0.6,
+          style: Theme.of(context).textTheme.display1.copyWith(color: Colors.white), textScaleFactor: globals.textScaleFactor,
         ),
       ),
 
@@ -25,7 +26,7 @@ class ViewRecMedications extends StatelessWidget {
               alignment: Alignment.center,
               child: new Column(
                 children: <Widget>[
-                  new Text("To be continued")
+                  new Text("To be continued", textScaleFactor: globals.textScaleFactor)
                 ],
               )
           )

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../Material/MenuDrawer.dart';
-import '../Material/MyCheckbox.dart';
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 //void main() => runApp(new MaterialApp(
 //  title: 'View Recommended Test',
@@ -30,7 +30,7 @@ class ViewRecTest extends StatelessWidget {
               .of(context)
               .textTheme
               .display1
-              .copyWith(color: Colors.white), textScaleFactor: 0.6,
+              .copyWith(color: Colors.white), textScaleFactor: globals.textScaleFactor,
         ),
       ),
 
@@ -51,13 +51,13 @@ class ViewRecTest extends StatelessWidget {
                 child: new Column(
                   children: <Widget>[
                     new Container(
-                        child: new Text('Risk-specific Medical Tests',
+                        child: new Text('Risk-specific Medical Tests', textScaleFactor: globals.textScaleFactor,
                           style: new TextStyle(fontSize: 16.0),),
                         alignment: Alignment.center
                     ),
                     new Container(
                       child: new Text(
-                        'Owing to, abnormal reflex, the following tests are recommended',
+                        'Owing to, abnormal reflex, the following tests are recommended', textScaleFactor: globals.textScaleFactor,
                         style: new TextStyle(color: Colors.orange),
                         textAlign: TextAlign.center,),
                     )
@@ -75,7 +75,7 @@ class ViewRecTest extends StatelessWidget {
               ),
 
               new RaisedButton(
-                  child: new Text('Submit'),
+                  child: new Text('Submit', textScaleFactor: globals.textScaleFactor),
 
                   onPressed: () {
                     if (!cb1.isChecked && !cb2.isChecked && !cb3.isChecked &&
@@ -83,14 +83,14 @@ class ViewRecTest extends StatelessWidget {
                       showDialog(
                           context: context,
                           child: new AlertDialog(
-                            content: const Text(
-                                'Please select at least one test to continue'),
+                            content: new Text(
+                                'Please select at least one test to continue', textScaleFactor: globals.textScaleFactor),
                             actions: <Widget>[
                               new RaisedButton(
                                 onPressed: () {
                                   Navigator.of(context).pop();
                                 },
-                                child: const Text('OK'),
+                                child: new Text('OK', textScaleFactor: globals.textScaleFactor),
                               )
                             ],
                           )
@@ -100,28 +100,27 @@ class ViewRecTest extends StatelessWidget {
                       showDialog(
                           context: context,
                           child: new AlertDialog(
-                            content: const Text(
-                                'Are you sure to order this test?'),
+                            content: new Text(
+                                'Are you sure to order this test?', textScaleFactor: globals.textScaleFactor),
                             actions: <Widget>[
                               new RaisedButton(
-                                  child: const Text('Cancel'),
+                                  child: new Text('Cancel', textScaleFactor: globals.textScaleFactor),
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   }
                               ),
 
                               new RaisedButton(
-                                  child: new Text('Submit'),
+                                  child: new Text('Submit', textScaleFactor: globals.textScaleFactor),
                                   onPressed: () {
                                     showDialog(
                                         context: context,
                                         child: new AlertDialog(
-                                          content: const Text(
-                                              'New test added successfully!'),
+                                          content: new Text(
+                                              'New test added successfully!', textScaleFactor: globals.textScaleFactor),
                                           actions: <Widget>[
-                                            //TODO: used 2 pop functions
                                             new RaisedButton(
-                                                child: const Text("OK"),
+                                                child: new Text("OK", textScaleFactor: globals.textScaleFactor),
                                                 onPressed: () {
                                                   Navigator.of(context).pop();
                                                   Navigator.of(context).pop();

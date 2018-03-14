@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../Material/MenuDrawer.dart';
-
-import 'RiskHistory_All.dart';
-import 'RiskHistory_Hypoglycemia.dart';
-import 'RiskHistory_Pneumothorax.dart';
-import 'RiskHistory_Hypothermia.dart';
+import '../Material/all.dart';
+import '../Material/globals.dart' as globals;
 
 //void main() => runApp(
 //  new MaterialApp(
@@ -29,7 +25,7 @@ class RiskHistory extends StatelessWidget {
       ),
       appBar: new AppBar(
         title: new Text(
-            "Risk History", style: new TextStyle(color: Colors.black),
+            "Risk History", textScaleFactor: globals.textScaleFactor, style: new TextStyle(color: Colors.black),
             textAlign: TextAlign.left),
       ),
 
@@ -42,7 +38,7 @@ class RiskHistory extends StatelessWidget {
                     margin: new EdgeInsets.only(bottom: 1.0),
                     height: 50.0,
                     child: new RaisedButton(
-                        child: new Text("All", style: new TextStyle(
+                        child: new Text("All", textScaleFactor: globals.textScaleFactor, style: new TextStyle(
                             color: Colors.black, fontSize: 20.0)),
 //                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/All");}
                         onPressed: () {
@@ -59,7 +55,7 @@ class RiskHistory extends StatelessWidget {
                     margin: new EdgeInsets.only(bottom: 1.0),
                     height: 50.0,
                     child: new RaisedButton(
-                        child: new Text("Hypoglycemia", style: new TextStyle(
+                        child: new Text("Hypoglycemia", textScaleFactor: globals.textScaleFactor, style: new TextStyle(
                             color: Colors.black, fontSize: 20.0)),
 //                    onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Hypoglycemia");}
                         onPressed: () {
@@ -76,7 +72,7 @@ class RiskHistory extends StatelessWidget {
                     margin: new EdgeInsets.only(bottom: 1.0),
                     height: 50.0,
                     child: new RaisedButton(
-                        child: new Text("Pneumothorax", style: new TextStyle(
+                        child: new Text("Pneumothorax", textScaleFactor: globals.textScaleFactor, style: new TextStyle(
                             color: Colors.black, fontSize: 20.0)),
 //                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Pneumothorax");}
                         onPressed: () {
@@ -93,7 +89,7 @@ class RiskHistory extends StatelessWidget {
                     margin: new EdgeInsets.only(bottom: 1.0),
                     height: 50.0,
                     child: new RaisedButton(
-                        child: new Text("Hypothermia", style: new TextStyle(
+                        child: new Text("Hypothermia", textScaleFactor: globals.textScaleFactor, style: new TextStyle(
                             color: Colors.black, fontSize: 20.0)),
 //                  onPressed: (){Navigator.of(context).pushNamed("/RiskHistory/Hypothermia");}
                         onPressed: () {

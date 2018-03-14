@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'MintTool.dart';
 
+import '../Material/globals.dart' as globals;
+
 void main() =>
     runApp(new MaterialApp(
       title: 'Introduction',
@@ -15,13 +17,13 @@ class Introduction extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: new Text('Introduction'),
+          title: new Text('Introduction', textScaleFactor: globals.textScaleFactor),
           actions: <Widget>[
             new FlatButton(
               onPressed: () {
                 Navigator.of(context).pushNamed('/MintTool');
               },
-              child: new Text('Skip'),
+              child: new Text('Skip', textScaleFactor: globals.textScaleFactor),
             )
           ],
         ),
@@ -29,6 +31,7 @@ class Introduction extends StatelessWidget {
         body: new Container(
           padding: new EdgeInsets.all(30.0),
           child: new RichText(
+            textScaleFactor: globals.textScaleFactor,
             text: new TextSpan(
               children: <TextSpan>[
                 new TextSpan(

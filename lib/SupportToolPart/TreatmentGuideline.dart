@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../Material/globals.dart' as globals;
 
 class TreatmentGuideline extends StatefulWidget {
 
@@ -12,11 +13,11 @@ class TreatmentState extends State<TreatmentGuideline> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Treatment Guidelines'),
+        title: new Text('Treatment Guidelines', textScaleFactor: globals.textScaleFactor),
         actions: <Widget>[
           new FlatButton(
             onPressed: null,
-            child: new Text('Next'),
+            child: new Text('Next', textScaleFactor: globals.textScaleFactor),
           )
         ],
       ),
@@ -28,7 +29,7 @@ class TreatmentState extends State<TreatmentGuideline> {
             '3. Screen blood glucose 15-30 minutes after bolus\n\n'
             '4. Document respond to treatment - do signs disappear once normoglycemic\n\n'
             '5. If Glucose Continues below 50mg/dL (2.8mmol/dL)\n\n'
-            '6. Repeat the Bolus of 2ml/kg of D10W'),
+            '6. Repeat the Bolus of 2ml/kg of D10W', textScaleFactor: globals.textScaleFactor),
       ),
     );
   }
