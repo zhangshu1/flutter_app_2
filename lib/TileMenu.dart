@@ -34,19 +34,23 @@ void main() {
 class MyHomePage extends StatelessWidget{
   @override
   Widget build(BuildContext context){
+    final Size screenSize = MediaQuery.of(context).size;
+    final double distance = screenSize.width * 0.02;
+    final double paddingVertical = screenSize.width * 0.08;
+    final double paddingHorizontal = screenSize.width * 0.07;
+
     return new Scaffold(
       appBar: new AppBar(
         title: new Text('Menu'),
       ),
       body: new GridView.count(
         primary: false,
-        padding: const EdgeInsets.all(30.0),
-        crossAxisSpacing: 10.0,
+        padding: new EdgeInsets.symmetric(vertical: paddingVertical, horizontal: paddingHorizontal,),
         crossAxisCount: 2,
         children: <Widget>[
           new Container(
-            color: Colors.blue.shade100,
-            margin: new EdgeInsets.symmetric(vertical: 5.0),
+            color: Colors.blue.shade400,
+            margin: new EdgeInsets.all(distance),
             child: new ListTile(
               title: new Text('Current State'),
               onTap: () {
@@ -55,8 +59,8 @@ class MyHomePage extends StatelessWidget{
             ),
           ),
           new Container(
-            color: Colors.blue.shade100,
-            margin: new EdgeInsets.symmetric(vertical: 5.0),
+            color: Colors.blue.shade400,
+            margin: new EdgeInsets.all(distance),
             child: new ListTile(
               title: new Text('Risk Monitor'),
               onTap: () {
@@ -65,8 +69,8 @@ class MyHomePage extends StatelessWidget{
             ),
           ),
           new Container(
-            color: Colors.blue.shade100,
-            margin: new EdgeInsets.symmetric(vertical: 5.0),
+            color: Colors.blue.shade300,
+            margin: new EdgeInsets.all(distance),
             child: new ListTile(
               title: new Text('Activity Monitor'),
               onTap: () {
@@ -75,8 +79,8 @@ class MyHomePage extends StatelessWidget{
             ),
           ),
           new Container(
-            color: Colors.blue.shade100,
-            margin: new EdgeInsets.symmetric(vertical: 5.0),
+            color: Colors.blue.shade300,
+            margin: new EdgeInsets.all(distance),
             child: new ListTile(
               title: new Text('Risk History'),
               onTap: () {
@@ -85,8 +89,8 @@ class MyHomePage extends StatelessWidget{
             ),
           ),
           new Container(
-            color: Colors.blue.shade100,
-            margin: new EdgeInsets.symmetric(vertical: 5.0),
+            color: Colors.blue.shade200,
+            margin: new EdgeInsets.all(distance),
             child: new ListTile(
               title: new Text('Lab Work'),
               onTap: () {
@@ -95,8 +99,8 @@ class MyHomePage extends StatelessWidget{
             ),
           ),
           new Container(
-            color: Colors.blue.shade100,
-            margin: new EdgeInsets.symmetric(vertical: 5.0),
+            color: Colors.blue.shade200,
+            margin: new EdgeInsets.all(distance),
             child: new ListTile(
               title: new Text('PSSAT Form'),
               onTap: () {
@@ -106,7 +110,7 @@ class MyHomePage extends StatelessWidget{
           ),
           new Container(
             color: Colors.blue.shade100,
-            margin: new EdgeInsets.symmetric(vertical: 5.0),
+            margin: new EdgeInsets.all(distance),
             child: new ListTile(
               title: new Text('S.T.A.B.L.E'),
               onTap: () {
