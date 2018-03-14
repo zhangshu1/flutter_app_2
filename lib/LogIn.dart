@@ -93,7 +93,7 @@ class LogInInfoState extends State<LogIn> {
 
     if(!form.validate()) {
       _autoValidate = true;
-      final redSnackbar = new SnackBar(content: const Text('Please re-enter field that marked in red'));
+      final redSnackbar = new SnackBar(content: const Text('Please re-enter field that marked in red', style: const TextStyle(fontSize: 18.0, color: Colors.black),));
       _scaffoldKey.currentState.showSnackBar(redSnackbar);
     } else {
       form.save();
@@ -101,11 +101,11 @@ class LogInInfoState extends State<LogIn> {
         showDialog(
             context: context,
             child: new AlertDialog(
-              title: const Text('Login sucessfully'),
-              content: new Text('Welcome back ${user.userName}!'),
+              title: const Text('Login sucessfully', style: const TextStyle(fontSize: 18.0, color: Colors.black),),
+              content: new Text('Welcome back ${user.userName}!', style: const TextStyle(fontSize: 18.0, color: Colors.black),),
               actions: <Widget>[
                 new RaisedButton(
-                    child: new Text("OK"),
+                    child: new Text('OK'),
                     onPressed: () {
                       Navigator.of(context).pop(true);
                       Navigator.push(context, new MaterialPageRoute(builder: (_) => new MenuPage()));
@@ -117,8 +117,8 @@ class LogInInfoState extends State<LogIn> {
         showDialog(
             context: context,
             child: new AlertDialog(
-              title: const Text('Login failed'),
-              content: new Text("There's no match information matched in our system ${user.userName}"),
+              title: const Text('Login failed', style: const TextStyle(fontSize: 18.0, color: Colors.black),),
+              content: new Text("There's no match information matched in our system ${user.userName}", style: const TextStyle(fontSize: 18.0, color: Colors.black),),
               actions: <Widget>[
                 new RaisedButton(
                   child: new Text('OK'),

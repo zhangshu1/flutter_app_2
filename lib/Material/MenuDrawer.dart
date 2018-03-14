@@ -163,7 +163,7 @@ class MenuDrawerState extends State<MenuDrawer> {
         const Divider(),
 
         new ListTile(
-          title: new Text('Current State', textScaleFactor: globals.textScaleFactor),
+          title: new Text('Current State', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black),
           onTap: () {
             Navigator.of(context).pop();
             Navigator.of(context).pushNamed('/CurrentState');
@@ -171,15 +171,21 @@ class MenuDrawerState extends State<MenuDrawer> {
         ),
 
         new ListTile(
-          title: new Text('Risk Monitor', textScaleFactor: globals.textScaleFactor),
+          title: new Text('Risk Monitor', textScaleFactor: globals.textScaleFactor, style: new TextStyle(
+    fontSize: 14.0, fontWeight: FontWeight.w500, color: Colors.black)),
+//          backgroundColor: Theme
+//              .of(context)
+//              .accentColor
+//              .withOpacity(0.025),
           onTap: () {
             Navigator.of(context).pop();
             Navigator.of(context).pushNamed('/RiskMonitor');
           },
+
         ),
 
         new ListTile(
-          title: new Text('Activity Monitor', textScaleFactor: globals.textScaleFactor),
+          title: new Text('Activity Monitor', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),
           onTap: () {
             Navigator.of(context).pop();
             Navigator.of(context).pushNamed('/ActivityMonitor');
@@ -188,41 +194,38 @@ class MenuDrawerState extends State<MenuDrawer> {
 
         new ExpansionTile(
           title: new Text('Risk Hisotry', textScaleFactor: globals.textScaleFactor, style: new TextStyle(
-              fontSize: 14.0, fontWeight: FontWeight.w500)),
+              fontSize: 14.0, fontWeight: FontWeight.w500, style: const TextStyle(color: Colors.black))),
           backgroundColor: Theme
               .of(context)
               .accentColor
               .withOpacity(0.025),
           children: <Widget>[
             new ListTile(
-              title: new Text('    All', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    All', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).pushNamed('/RiskHistory/All');
               },
             ),
             new ListTile(
-              title: new Text('    Hypoglycemia', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    Hypoglycemia', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),
               onTap: () {
                 Navigator.of(context).pop();
-                Navigator.of(context).pushNamed(
-                    '/RiskHistory/Hypoglycemia');
+                Navigator.of(context).pushNamed('/RiskHistory/Hypoglycemia');
               },
             ),
             new ListTile(
-              title: new Text('    Pneumothorax', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    Pneumothorax', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),
               onTap: () {
                 Navigator.of(context).pop();
-                Navigator.of(context).pushNamed(
-                    '/RiskHistory/Pneumothorax');
+                Navigator.of(context).pushNamed('/RiskHistory/Pneumothorax');
               },
             ),
             new ListTile(
-              title: new Text('    Hypothermia', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    Hypothermia', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),
               onTap: () {
                 Navigator.of(context).pop();
-                Navigator.of(context).pushNamed(
-                    '/RiskHistory/Hypothermia');
+                Navigator.of(context).pushNamed('/RiskHistory/Hypothermia');
               },
             )
           ],
@@ -230,49 +233,45 @@ class MenuDrawerState extends State<MenuDrawer> {
 
         new ExpansionTile(
           title: new Text('Lab Work', textScaleFactor: globals.textScaleFactor, style: new TextStyle(
-              fontSize: 14.0, fontWeight: FontWeight.w500)),
+              fontSize: 14.0, fontWeight: FontWeight.w500, style: const TextStyle(color: Colors.black))),
           backgroundColor: Theme
               .of(context)
               .accentColor
               .withOpacity(0.025),
           children: <Widget>[
             new ListTile(
-              title: new Text('    View Recommended Test', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    View Recommended Test', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).pushNamed('/LabWork/ViewRecTest');
               },
             ),
             new ListTile(
-              title: new Text('    Order Additional Test', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    Order Additional Test', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),
               onTap: () {
                 Navigator.of(context).pop();
-                Navigator.of(context).pushNamed(
-                    '/LabWork/OrderAdditionalTest');
+                Navigator.of(context).pushNamed('/LabWork/OrderAdditionalTest');
               },
             ),
             new ListTile(
-              title: new Text('    Enter Patient Report', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    Enter Patient Report', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),
               onTap: () {
                 Navigator.of(context).pop();
-                Navigator.of(context).pushNamed(
-                    '/LabWork/EnterPatientReports');
+                Navigator.of(context).pushNamed('/LabWork/EnterPatientReports');
               },
             ),
             new ListTile(
-              title: new Text('    View Patient Report', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    View Patient Report', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),
               onTap: () {
                 Navigator.of(context).pop();
-                Navigator.of(context).pushNamed(
-                    '/LabWork/ViewPatientReports');
+                Navigator.of(context).pushNamed('/LabWork/ViewPatientReports');
               },
             ),
             new ListTile(
-              title: new Text('Enter Recommended Medication', textScaleFactor: globals.textScaleFactor),
+              title: new Text('Enter Recommended Medication', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),
               onTap: () {
                 Navigator.of(context).pop();
-                Navigator.of(context).pushNamed(
-                    '/LabWork/ViewRecMedications');
+                Navigator.of(context).pushNamed('/LabWork/ViewRecMedications');
               },
             )
           ],
@@ -280,93 +279,91 @@ class MenuDrawerState extends State<MenuDrawer> {
 
         new ExpansionTile(
           title: new Text('PSSAT Form', textScaleFactor: globals.textScaleFactor, style: new TextStyle(
-              fontSize: 14.0, fontWeight: FontWeight.w500)),
+              fontSize: 14.0, fontWeight: FontWeight.w500, style: const TextStyle(color: Colors.black))),
           backgroundColor: Theme
               .of(context)
               .accentColor
               .withOpacity(0.025),
           children: <Widget>[
             new ListTile(
-              title: new Text('    PSSAT Form Direction', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    PSSAT Form Direction', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).pushNamed('/PssatFormDir');
               },
             ),
             new ListTile(
-              title: new Text('    Patient Information', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    Patient Information', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).pushNamed('/PssatForm/PatientInfo');
               },
             ),
             new ListTile(
-              title: new Text('    Time A', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    Time A', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).pushNamed('/PssatForm/TimeA');
               },
             ),
             new ListTile(
-              title: new Text('    Time B', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    Time B', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).pushNamed('/PssatForm/TimeB');
               },
             ),
             new ListTile(
-              title: new Text('    Time C', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    Time C', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).pushNamed('/PssatForm/TimeC');
               },
             ),
             new ListTile(
-              title: new Text('    Specific Interventions', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    Specific Interventions', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),
               onTap: () {
                 Navigator.of(context).pop();
-                Navigator.of(context).pushNamed(
-                    '/PssatForm/Interventions');
+                Navigator.of(context).pushNamed('/PssatForm/Interventions');
               },),
             new ListTile(
-              title: new Text('    Self Evaluation Questions', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    Self Evaluation Questions', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),
               onTap: () {
                 Navigator.of(context).pop();
-                Navigator.of(context).pushNamed(
-                    '/PssatForm/SelfEvaluation');
+                Navigator.of(context).pushNamed('/PssatForm/SelfEvaluation');
               },)
           ],
         ),
 
         new ExpansionTile(
           title: new Text('S.T.A.B.L.E', textScaleFactor: globals.textScaleFactor, style: new TextStyle(
-              fontSize: 14.0, fontWeight: FontWeight.w500)),
+              fontSize: 14.0, fontWeight: FontWeight.w500, color: Colors.black)),
           backgroundColor: Theme
               .of(context)
               .accentColor
               .withOpacity(0.025),
           children: <Widget>[
             new ListTile(
-              title: new Text('    Sugar', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    Sugar', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.of(context).pushNamed('/Stable/Sugar');
               },
             ),
             new ListTile(
-              title: new Text('    Temperature', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    Temperature', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black),
             ),
             new ListTile(
-              title: new Text('    Airway', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    Airway', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black),
             ),
             new ListTile(
-              title: new Text('    Blood Pressure', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    Blood Pressure', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black),
             ),
             new ListTile(
-              title: new Text('    Lab Work', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    Lab Work', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black),
             ),
             new ListTile(
-              title: new Text('    Emotional Support', textScaleFactor: globals.textScaleFactor),
+              title: new Text('    Emotional Support', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black),
             )
           ],
         ),

@@ -37,7 +37,7 @@ class HourlyFluidRateState extends State<HourlyFluidRate> {
 
                   new Container(
                     margin: new EdgeInsets.only(top: 20.0, bottom: 20.0),
-                    padding: new EdgeInsets.symmetric(horizontal: 95.0),
+                    padding: new EdgeInsets.symmetric(horizontal: 85.0),
                     child: new Row(
                       children: <Widget>[
                         new RaisedButton(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../Material/MyListView.dart';
 import 'SelectModule.dart';
+import 'BlankPage.dart';
 
 //void main() => runApp(
 //  new MaterialApp(
@@ -26,11 +27,11 @@ class SelectOptionState extends State<SelectOptions> {
       body: new Container(
         child: new MyListView(
           options: [
-            new Option(new Icon(Icons.account_circle), 'Manage Patients',context, null),
+            new Option(new Icon(Icons.account_circle), 'Manage Patients',context, new MaterialPageRoute(builder: (_) => new Blank())),
             new Option(new Icon(Icons.tag_faces), 'STABLE', context, new MaterialPageRoute(builder: (_) => new SelectModule())),
-            new Option(new Icon(Icons.add_alert), 'Manage Alerts', context, null),
-            new Option(new Icon(Icons.note), 'Manage Notes', context, null),
-            new Option(new Icon(Icons.help), 'FAQ', context, null), // TO BE IMPLEMENTED
+            new Option(new Icon(Icons.add_alert), 'Manage Alerts', context, new MaterialPageRoute(builder: (_) => new Blank())),
+            new Option(new Icon(Icons.note), 'Manage Notes', context, new MaterialPageRoute(builder: (_) => new Blank())),
+            new Option(new Icon(Icons.help), 'FAQ', context, new MaterialPageRoute(builder: (_) => new Blank())), // TO BE IMPLEMENTED
           ],
         ),
       ),

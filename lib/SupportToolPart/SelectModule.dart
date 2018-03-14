@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Sugar.dart';
+import 'BlankPage.dart';
 
 var assetImageSugar = new AssetImage('images/pic.jpg');
 var imageSugar = new Image(image: assetImageSugar);
@@ -37,11 +38,11 @@ class SelectModuleState extends State<SelectModule> {
           modules: [
             // Some problems with images, cannot be shown
             new Module(new ImageIcon(assetImageAirway), 'Sugar', new MaterialPageRoute(builder: (_) => new Sugar(),)),
-            new Module(new ImageIcon(assetImageAirway), 'Temperature', null),
-            new Module(new ImageIcon(assetImageAirway), 'Airway', null),
-            new Module(new ImageIcon(assetImageAirway), 'Blood Pressure', null),
-            new Module(new ImageIcon(assetImageAirway), 'Lab Work', null),
-            new Module(new ImageIcon(assetImageAirway), 'Emotional Support', null), // TO BE IMPLEMENTED
+            new Module(new ImageIcon(assetImageAirway), 'Temperature', new MaterialPageRoute(builder: (_) => new Blank())),
+            new Module(new ImageIcon(assetImageAirway), 'Airway', new MaterialPageRoute(builder: (_) => new Blank())),
+            new Module(new ImageIcon(assetImageAirway), 'Blood Pressure', new MaterialPageRoute(builder: (_) => new Blank())),
+            new Module(new ImageIcon(assetImageAirway), 'Lab Work', new MaterialPageRoute(builder: (_) => new Blank())),
+            new Module(new ImageIcon(assetImageAirway), 'Emotional Support', new MaterialPageRoute(builder: (_) => new Blank())), // TO BE IMPLEMENTED
           ],
         ),
       ),
