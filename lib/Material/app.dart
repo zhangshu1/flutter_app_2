@@ -1,5 +1,6 @@
 export 'MenuDrawer.dart';
 
+export '../TileMenu.dart';
 export '../LogIn.dart';
 export '../CurrentStatePart/CurrentState.dart';
 export '../RiskMonitorPart/RiskMonitor.dart';

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'MenuPage.dart';
+import 'TileMenu.dart';
 
 class User {
   String userName = '';
@@ -108,7 +109,8 @@ class LogInInfoState extends State<LogIn> {
                     child: new Text('OK'),
                     onPressed: () {
                       Navigator.of(context).pop(true);
-                      Navigator.push(context, new MaterialPageRoute(builder: (_) => new MenuPage()));
+//                      Navigator.push(context, new MaterialPageRoute(builder: (_) => new MenuPage()));
+                      Navigator.push(context, new MaterialPageRoute(builder: (_) => new MyHomePage()));
                     })
               ],
             )

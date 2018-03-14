@@ -163,7 +163,7 @@ class MenuDrawerState extends State<MenuDrawer> {
         const Divider(),
 
         new ListTile(
-          title: new Text('Current State', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black),
+          title: new Text('Current State', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),
           onTap: () {
             Navigator.of(context).pop();
             Navigator.of(context).pushNamed('/CurrentState');
@@ -194,7 +194,7 @@ class MenuDrawerState extends State<MenuDrawer> {
 
         new ExpansionTile(
           title: new Text('Risk Hisotry', textScaleFactor: globals.textScaleFactor, style: new TextStyle(
-              fontSize: 14.0, fontWeight: FontWeight.w500, style: const TextStyle(color: Colors.black))),
+              fontSize: 14.0, fontWeight: FontWeight.w500, color: Colors.black)),
           backgroundColor: Theme
               .of(context)
               .accentColor
@@ -233,7 +233,7 @@ class MenuDrawerState extends State<MenuDrawer> {
 
         new ExpansionTile(
           title: new Text('Lab Work', textScaleFactor: globals.textScaleFactor, style: new TextStyle(
-              fontSize: 14.0, fontWeight: FontWeight.w500, style: const TextStyle(color: Colors.black))),
+              fontSize: 14.0, fontWeight: FontWeight.w500, color: Colors.black)),
           backgroundColor: Theme
               .of(context)
               .accentColor
@@ -279,7 +279,7 @@ class MenuDrawerState extends State<MenuDrawer> {
 
         new ExpansionTile(
           title: new Text('PSSAT Form', textScaleFactor: globals.textScaleFactor, style: new TextStyle(
-              fontSize: 14.0, fontWeight: FontWeight.w500, style: const TextStyle(color: Colors.black))),
+              fontSize: 14.0, fontWeight: FontWeight.w500, color: Colors.black)),
           backgroundColor: Theme
               .of(context)
               .accentColor
@@ -336,12 +336,10 @@ class MenuDrawerState extends State<MenuDrawer> {
         ),
 
         new ExpansionTile(
-          title: new Text('S.T.A.B.L.E', textScaleFactor: globals.textScaleFactor, style: new TextStyle(
-              fontSize: 14.0, fontWeight: FontWeight.w500, color: Colors.black)),
-          backgroundColor: Theme
-              .of(context)
-              .accentColor
-              .withOpacity(0.025),
+          title: new Text('S.T.A.B.L.E',
+              textScaleFactor: globals.textScaleFactor,
+              style: new TextStyle(fontSize: 14.0, fontWeight: FontWeight.w500, color: Colors.black)),
+          backgroundColor: Theme.of(context).accentColor.withOpacity(0.025),
           children: <Widget>[
             new ListTile(
               title: new Text('    Sugar', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),
@@ -350,21 +348,11 @@ class MenuDrawerState extends State<MenuDrawer> {
                 Navigator.of(context).pushNamed('/Stable/Sugar');
               },
             ),
-            new ListTile(
-              title: new Text('    Temperature', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black),
-            ),
-            new ListTile(
-              title: new Text('    Airway', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black),
-            ),
-            new ListTile(
-              title: new Text('    Blood Pressure', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black),
-            ),
-            new ListTile(
-              title: new Text('    Lab Work', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black),
-            ),
-            new ListTile(
-              title: new Text('    Emotional Support', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black),
-            )
+            new ListTile(title: new Text('    Temperature', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),),
+            new ListTile(title: new Text('    Airway', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),),
+            new ListTile(title: new Text('    Blood Pressure', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),),
+            new ListTile(title: new Text('    Lab Work', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),),
+            new ListTile(title: new Text('    Emotional Support', textScaleFactor: globals.textScaleFactor, style: const TextStyle(color: Colors.black)),)
           ],
         ),
 
