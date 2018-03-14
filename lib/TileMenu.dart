@@ -1,47 +1,48 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'Material/app.dart';
 
-//void main() {
-//  runApp(new MaterialApp(
-//    home: new MyHomePage(),
-//      routes: <String, WidgetBuilder>{
-//        //home page is automatically defiend as:
-//        "/CurrentState": (BuildContext context) => new CurrentState(),
-//
-//        "/RiskMonitor": (BuildContext context) => new RiskMonitor(),
-//
-//        "/ActivityMonitor": (BuildContext context) => new DefaultTabController(length: choices.length, child: new ActivityMonitor()),
-//
-//        "/RiskHistory": (BuildContext context) => new RiskHistory(),
-//
-//        "/LabWork": (BuildContext context) => new LabWork(),
-//
-//        "/PssatFormDir": (BuildContext context) => new PssatFormDir(),
-//        "/PssatFormMenu": (BuildContext context) => new PssatFormMenu(),
-//
-//        "/Stable": (BuildContext context) => new SelectOptions(),
-//      }
-//  ));
-//}
+void main() {
+  runApp(new MaterialApp(
+    home: new MyHomePage(),
+      routes: <String, WidgetBuilder>{
+        //home page is automatically defiend as:
+        "/CurrentState": (BuildContext context) => new CurrentState(),
+
+        "/RiskMonitor": (BuildContext context) => new RiskMonitor(),
+
+        "/ActivityMonitor": (BuildContext context) => new DefaultTabController(length: choices.length, child: new ActivityMonitor()),
+
+        "/RiskHistory": (BuildContext context) => new RiskHistory(),
+
+        "/LabWork": (BuildContext context) => new LabWork(),
+
+        "/PssatFormDir": (BuildContext context) => new PssatFormDir(),
+        "/PssatFormMenu": (BuildContext context) => new PssatFormMenu(),
+
+        "/Stable": (BuildContext context) => new SelectOptions(),
+      }
+  ));
+}
 
 class MyHomePage extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     final Size screenSize = MediaQuery.of(context).size;
-    final double distance = screenSize.width * 0.02;
+    final double distance = screenSize.width * 0.01;
     final double paddingVertical = screenSize.width * 0.08;
     final double paddingHorizontal = screenSize.width * 0.07;
 
     return new Scaffold(
-      drawer: new Drawer(child: new MenuDrawer(),),
       appBar: new AppBar(
         title: new Text('Menu'),
       ),
-      body: new GridView.count(
-        primary: false,
+      body: new StaggeredGridView.count(
         padding: new EdgeInsets.symmetric(vertical: paddingVertical, horizontal: paddingHorizontal,),
-        crossAxisCount: 2,
+        primary: false,
+        crossAxisCount: 4,
+        mainAxisSpacing: 4.0,
+        crossAxisSpacing: 4.0,
         children: <Widget>[
           new Container(
             color: Colors.blue.shade400,
@@ -114,7 +115,17 @@ class MyHomePage extends StatelessWidget{
             ),
           ),
         ],
-      )
+        staggeredTiles: const <StaggeredTile>[
+          const StaggeredTile.count(2, 2),
+          const StaggeredTile.count(2, 1),
+          const StaggeredTile.count(2, 2),
+          const StaggeredTile.count(2, 1),
+          const StaggeredTile.count(2, 2),
+          const StaggeredTile.count(2, 1),
+          const StaggeredTile.count(2, 2),
+          const StaggeredTile.count(2, 1),
+        ],
+      ),
     );
   }
 }
