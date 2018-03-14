@@ -3,12 +3,12 @@ import '../Material/MyListView.dart';
 import 'SelectModule.dart';
 import 'BlankPage.dart';
 
-void main() => runApp(
-  new MaterialApp(
-    title: 'Select Options',
-    home: new SelectOptions(),
-  ),
-);
+//void main() => runApp(
+//  new MaterialApp(
+//    title: 'Select Options',
+//    home: new SelectOptions(),
+//  ),
+//);
 
 class SelectOptions extends StatefulWidget {
   @override

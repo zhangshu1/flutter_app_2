@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'MenuPage.dart';
+import 'TileMenu.dart';
 
 class User {
   String userName = '';
@@ -43,7 +44,7 @@ class LogInInfoState extends State<LogIn> {
     return new WillPopScope(
         onWillPop: () async => false,
         child: new Scaffold(
-          appBar: new AppBar(
+            appBar: new AppBar(
             title: new Text('Log In', textAlign: TextAlign.left, style: new TextStyle(color: Colors.white)),
             automaticallyImplyLeading: false,   //works same as WillPopScope, which stops user from going back to previous routes
           ),
@@ -59,7 +60,7 @@ class LogInInfoState extends State<LogIn> {
                   children: <Widget>[
                     new TextFormField(
                       initialValue: user.userName,
-                      decoration: const InputDecoration(labelText: 'User Name',),
+                      decoration: new InputDecoration(labelText: 'User Name'),
                       keyboardType: TextInputType.text,
                       validator: validateUserName,
                       onSaved: (String value) {user.userName = value;},
@@ -97,7 +98,7 @@ class LogInInfoState extends State<LogIn> {
       _scaffoldKey.currentState.showSnackBar(redSnackbar);
     } else {
       form.save();
-      if (user.userName == 'Test' && user.password == '1'){
+      if ((user.userName == 'Test' || user.userName == 'test') && user.password == '1'){
         showDialog(
             context: context,
             child: new AlertDialog(
@@ -108,7 +109,8 @@ class LogInInfoState extends State<LogIn> {
                     child: new Text('OK'),
                     onPressed: () {
                       Navigator.of(context).pop(true);
-                      Navigator.push(context, new MaterialPageRoute(builder: (_) => new MenuPage()));
+//                      Navigator.push(context, new MaterialPageRoute(builder: (_) => new MenuPage()));
+                      Navigator.push(context, new MaterialPageRoute(builder: (_) => new MyHomePage()));
                     })
               ],
             )

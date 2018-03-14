@@ -1,35 +1,29 @@
 import 'package:flutter/material.dart';
-import 'CurrentStatePart/CurrentState.dart';
-import 'RiskMonitorPart/RiskMonitor.dart';
-import 'ActivityMonitorPart/ActivityMonitor.dart';
-import 'RiskHistoryPart/RiskHistory.dart';
-import 'LabWorkPart/LabWork.dart';
-import 'PssatForm/PssatFormDir.dart';
-import 'PssatForm/PssatFormMenu.dart';
-import 'SupportToolPart/SelectOptions.dart';
 
-void main() {
-  runApp(new MaterialApp(
-    home: new MyHomePage(),
-      routes: <String, WidgetBuilder>{
-        //home page is automatically defiend as:
-        "/CurrentState": (BuildContext context) => new CurrentState(),
+import 'Material/app.dart';
 
-        "/RiskMonitor": (BuildContext context) => new RiskMonitor(),
-
-        "/ActivityMonitor": (BuildContext context) => new DefaultTabController(length: choices.length, child: new ActivityMonitor()),
-
-        "/RiskHistory": (BuildContext context) => new RiskHistory(),
-
-        "/LabWork": (BuildContext context) => new LabWork(),
-
-        "/PssatFormDir": (BuildContext context) => new PssatFormDir(),
-        "/PssatFormMenu": (BuildContext context) => new PssatFormMenu(),
-
-        "/Stable": (BuildContext context) => new SelectOptions(),
-      }
-  ));
-}
+//void main() {
+//  runApp(new MaterialApp(
+//    home: new MyHomePage(),
+//      routes: <String, WidgetBuilder>{
+//        //home page is automatically defiend as:
+//        "/CurrentState": (BuildContext context) => new CurrentState(),
+//
+//        "/RiskMonitor": (BuildContext context) => new RiskMonitor(),
+//
+//        "/ActivityMonitor": (BuildContext context) => new DefaultTabController(length: choices.length, child: new ActivityMonitor()),
+//
+//        "/RiskHistory": (BuildContext context) => new RiskHistory(),
+//
+//        "/LabWork": (BuildContext context) => new LabWork(),
+//
+//        "/PssatFormDir": (BuildContext context) => new PssatFormDir(),
+//        "/PssatFormMenu": (BuildContext context) => new PssatFormMenu(),
+//
+//        "/Stable": (BuildContext context) => new SelectOptions(),
+//      }
+//  ));
+//}
 
 class MyHomePage extends StatelessWidget{
   @override
@@ -40,6 +34,7 @@ class MyHomePage extends StatelessWidget{
     final double paddingHorizontal = screenSize.width * 0.07;
 
     return new Scaffold(
+      drawer: new Drawer(child: new MenuDrawer(),),
       appBar: new AppBar(
         title: new Text('Menu'),
       ),
