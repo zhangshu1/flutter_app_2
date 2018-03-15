@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_2/Demo/MyListView.dart';
+import '../Demo/MyListView.dart';
 import '../Material/globals.dart' as globals;
 
 class Risk extends StatefulWidget {
